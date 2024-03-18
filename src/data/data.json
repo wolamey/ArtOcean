@@ -1,0 +1,248 @@
+{
+    "HeaderTopPart": [
+        {
+            "id": 1,
+            "pic": "./choice1.png",
+            "choice_name": "Рукоделие"
+        },
+        {
+            "id": 2,
+            "pic": "./choice2.png",
+            "choice_name": "Ювелирные изделия"
+        },
+        {
+            "id": 3,
+            "pic": "./choice3.png",
+            "choice_name": "Одежда и аксессуары"
+        },
+        {
+            "id": 4,
+            "pic": "./choice4.png",
+            "choice_name": "Искусство"
+        }
+    ],
+    "copperDishesForCatalog": [
+        {
+            "id": 1,
+            "pic": "./catalog1.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 2,
+            "pic": "./catalog2.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 3,
+            "pic": "./catalog3.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 4,
+            "pic": "./catalog1.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 5,
+            "pic": "./catalog2.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 6,
+            "pic": "./catalog3.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 7,
+            "pic": "./catalog1.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 8,
+            "pic": "./catalog2.png",
+            "text": "Рукоделие",
+            "price": 1953
+        },
+        {
+            "id": 9,
+            "pic": "./catalog3.png",
+            "text": "Рукоделие",
+            "price": 1953
+        }
+    ],
+    "copperDishesForCatalog2": [
+        {
+            "id": 1,
+            "pic": "./catalog1.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 2,
+            "pic": "./catalog2.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 3,
+            "pic": "./catalog3.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 4,
+            "pic": "./catalog1.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 5,
+            "pic": "./catalog2.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 6,
+            "pic": "./catalog3.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 7,
+            "pic": "./catalog1.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 8,
+            "pic": "./catalog2.png",
+            "text": "jewerly",
+            "price": 1953
+        },
+        {
+            "id": 9,
+            "pic": "./catalog3.png",
+            "text": "jewerly",
+            "price": 1953
+        }
+    ],
+    "copperDishesForCatalog3": [
+        {
+            "id": 1,
+            "pic": "./catalog1.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 2,
+            "pic": "./catalog2.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 3,
+            "pic": "./catalog3.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 4,
+            "pic": "./catalog1.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 5,
+            "pic": "./catalog2.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 6,
+            "pic": "./catalog3.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 7,
+            "pic": "./catalog1.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 8,
+            "pic": "./catalog2.png",
+            "text": "accesoiries",
+            "price": 1953
+        },
+        {
+            "id": 9,
+            "pic": "./catalog3.png",
+            "text": "accesoiries",
+            "price": 1953
+        }
+    ],
+    "copperDishesForCatalog4": [
+        {
+            "id": 1,
+            "pic": "./catalog1.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 2,
+            "pic": "./catalog2.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 3,
+            "pic": "./catalog3.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 4,
+            "pic": "./catalog1.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 5,
+            "pic": "./catalog2.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 6,
+            "pic": "./catalog3.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 7,
+            "pic": "./catalog1.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 8,
+            "pic": "./catalog2.png",
+            "text": "art",
+            "price": 1953
+        },
+        {
+            "id": 9,
+            "pic": "./catalog3.png",
+            "text": "art",
+            "price": 1953
+        }
+    ]
+}

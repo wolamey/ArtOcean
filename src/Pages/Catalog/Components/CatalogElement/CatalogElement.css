@@ -1,0 +1,48 @@
+.catalog_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: 30px auto 0 auto;
+  max-width: 1600px;
+}
+.catalog_list .item_catalog_element {
+  margin: auto;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.catalog_list .item_catalog_element:hover {
+  box-shadow: rgba(0, 0, 0, 0.179) 0px 0px 30px;
+  scale: 1.02;
+}
+.catalog_list .item_catalog_element .item_description {
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.catalog_list .item_catalog_element .item_description .prod_name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 19px;
+}
+.catalog_list .item_catalog_element .item_description .prod_price {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 29px;
+  white-space: nowrap;
+  padding: 0 0 0 10px;
+}
+.catalog_list .item_catalog_element .set_like {
+  border: none;
+  outline: none;
+  background: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+img {
+  max-width: 100%;
+}/*# sourceMappingURL=CatalogElement.css.map */

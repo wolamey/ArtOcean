@@ -1,0 +1,105 @@
+.catalog_top_part {
+    width: 90%;
+    margin: 31px auto 0px auto;
+    max-width: 1600px;
+
+    .page_path {
+        font-size: 18px;
+        line-height: 17px;
+    }
+
+    .page_name {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 53px;
+        margin: 0 0 31px 0;
+
+    }
+
+    .shop_choice {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        .choice {
+            padding: 42.857% 0 0 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            cursor: pointer;
+
+            .gradient-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(171.3deg, rgba(203, 141, 98, 0) 33.24%, #CB8D62 104.72%);
+                transition: 0.4s all ease;
+
+
+            }
+
+            p {
+                font-family: "Montserrat", sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #FFFFFF;
+                position: relative;
+                z-index: 1;
+                padding: 0 10px;
+
+            }
+
+            &:hover {
+                .gradient-overlay {
+                    transition: 0.3s;
+                    background: linear-gradient(0deg, rgba(7, 44, 38, 0.5) 0%, rgba(7, 44, 38, 0) 100%);
+                }
+
+                p {
+                    font-weight: 800;
+
+                }
+            }
+
+            &.selected {
+                .gradient-overlay {
+                    background: linear-gradient(0deg, rgba(7, 44, 38, 0.5) 0%, rgba(7, 44, 38, 0) 100%);
+                }
+
+                p {
+                    font-weight: 800;
+
+                }
+            }
+
+        }
+
+    }
+
+    .separate_line {
+        margin: 40px 0;
+        border: none;
+        border-top: 1px solid #EBEBEB;
+    }
+}
+
+@media(max-width: 1000px) {
+    .catalog_top_part .shop_choice {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .catalog_top_part .shop_choice .choice {
+        padding: 33.857% 0 0 0;
+    }
+}
