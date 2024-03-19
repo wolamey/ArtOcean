@@ -1,0 +1,139 @@
+.img_logo {
+  height: 43.75px;
+  width: 175px;
+}
+.nav {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 140px;
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.nav_1 {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+}
+.nav_2 {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+.nav_menu {
+  display: none;
+}
+.menu_open {
+  position: fixed;
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(92.18deg, #e4a16f 20.13%, #5e3928 92.93%);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 200px;
+}
+.menu_open p {
+  margin-top: 30px;
+}
+.nav_div {
+  padding-top: 50px;
+  height: 100px;
+  width: 50px;
+  background: #ffffff;
+}
+.nav_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav_div:hover {
+  cursor: pointer;
+}
+.nav_p:hover {
+  cursor: pointer;
+}
+.nav_p {
+  margin-top: 10px;
+}
+@media (max-width: 1440px) {
+  .nav {
+    padding: 0;
+  }
+  .nav_2 {
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+  .div_but {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .nav {
+    flex-direction: column-reverse;
+    padding-top: 220px;
+    padding-bottom: 20px;
+  }
+  .nav_1 {
+    padding-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .nav_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@media (max-width: 765px) {
+  input {
+    width: 96%;
+    margin-right: 0;
+  }
+  .button_all {
+    width: 96%;
+  }
+}
+@media (max-width: 600px) {
+  .nav {
+    padding-top: 180px;
+  }
+  .nav_p {
+    display: none;
+  }
+  .nav_1 {
+    display: flex;
+  }
+  .nav_menu {
+    background: linear-gradient(92.18deg, #e4a16f 20.13%, #5e3928 92.93%);
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .nav_1 {
+    padding-left: 2%;
+  }
+  .img_logo {
+    width: 150px;
+    height: 40px;
+  }
+}
+.none {
+  display: none;
+}

@@ -4,7 +4,9 @@ import { useEffect } from 'react'
 
 import './App.scss'
 import Catalog from '../Pages/Catalog/Catalog'
-import Header from '../Components/Header/Header'
+import Nav from '../Components/Nav/Nav'
+import Footer from '../Components/Footer/Footer'
+import Cabinet from '../Pages/Cabinet/Cabinet'
 import Cart from '../Pages/Cart/Cart'
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
 
 
 
-        <Header
+        <Nav
           likeCount={likeCount}
           cartCounter = {cartCounter}
 
@@ -46,9 +48,16 @@ function App() {
               setCartCounter = {setCartCounter}
               
             />} />
+                        <Route path="/cabinet" element = {
+              <Cabinet
+              cartCounter = {cartCounter}
+              setCartCounter = {setCartCounter}
+              
+            />} />
 
         </Routes>
       </Router>
+      <Footer/>
     </div>
   )
 }
