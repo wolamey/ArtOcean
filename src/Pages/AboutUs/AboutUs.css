@@ -1,0 +1,344 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+.container {
+  max-width: 1397px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.firstBlock_aboutUs {
+    padding-top: 40px;
+    background: #FAFAFA;
+  }
+  
+  .firstBlock_aboutUs p {
+    margin-bottom: 130px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #031412;
+  }
+  
+  .firstBlock_aboutUs .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .firstBlock_aboutUs .textBlock_aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #031412;
+  }
+  
+  .firstBlock_aboutUs .textBlock_aboutUs h1 {
+    font-size: 100px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .firstBlock_aboutUs .textBlock_aboutUs h1::after {
+    content: " ";
+    display: block;
+    width: 623px;
+    height: 1px;
+    background: #031412;
+    margin-top: 50px;
+  }
+  
+  .firstBlock_aboutUs .textBlock_aboutUs h3 {
+    width: 614px;
+    text-align: left;
+    margin-top: 50px;
+    font-size: 50px;
+    background: linear-gradient(300deg, #E4A16F, #5E3928);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  
+  .firstBlock_aboutUs .textBlock_aboutUs p {
+    width: 165px;
+    text-align: left;
+    margin-top: 60px;
+    font-size: 30px;
+    font-weight: 400;
+    background: linear-gradient(300deg, #E4A16F, #5E3928);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+  
+  .ourClients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 124px 0;
+    color: #031412;
+  }
+  
+  .ourClients .textBlock, .ourClients .counterOfClients {
+    text-align: left;
+  }
+  
+  .ourClients .textBlock h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #031412;
+  }
+  
+  .ourClients .textBlock p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #031412;
+    width: 584px;
+    margin-top: 40px;
+  }
+  
+  .ourClients .counterOfClients h1{
+    font-size: 50px;
+    font-weight: 400;
+    background: linear-gradient(300deg, #E4A16F, #5E3928);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ourClients .counterOfClients p {
+    font-size: 200px;
+    font-weight: 400;
+  }
+  
+  .ourGeography {
+    padding: 80px 0;
+    background: #FAFAF9;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .ourGeography .textBlock {
+    margin-top: 135px;
+    width: 365px;
+    text-align: left;
+    color: #031412;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ourGeography .textBlock h1 {
+    font-size: 50px;
+    font-weight: 400;
+  }
+  
+  .ourGeography .textBlock p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+  }
+  
+  .ourValues {
+    padding: 80px 0;
+    color: #031412;
+  }
+  
+  .ourValues h1 {
+    font-size: 50px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .ourValues ul {
+    margin-top: 40px;
+    line-height: 70px;
+    padding-left: 0;
+  }
+  
+  .ourValues ul li {
+    list-style: none;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 400;
+  }
+  
+  .ourValues ul li img {
+    margin-right: 30px;
+  }
+
+  @media (max-width: 768px) {
+    #root {
+      overflow: hidden;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs h1 {
+      font-size: 60px;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs h1::after {
+      width: 435px;
+      margin-top: 30px;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs h3 {
+      font-size: 30px;
+      width: 368px;
+      margin-top: 40px;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs p {
+      font-size: 18px;
+      width: 114px;
+    }
+  
+    .ourClients {
+      flex-direction: column;
+      padding: 56px;
+    }
+  
+    .ourClients .textBlock, .ourClients .counterOfClients {
+      text-align: center;
+    }
+  
+    .ourClients .textBlock h1 {
+      font-size: 40px;
+    }
+  
+    .ourClients .counterOfClients h1 {
+      font-size: 30px;
+      margin-top: 90px;
+    }
+  
+    .ourClients .counterOfClients p {
+      font-size: 183px;
+      margin-top: 5px;
+    }
+  
+  
+  
+    .ourValues h1{
+      font-size: 40px;
+    }
+  
+    .ourValues ul li {
+      font-size: 16px;
+    }
+  
+    .container {
+      max-width: 90% !important;
+    } 
+}
+
+@media (max-width: 320px) {
+
+    .firstBlock_aboutUs p {
+      margin-bottom: 40px;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs h1 {
+      font-size: 30px;
+      margin-bottom: 0;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs h1::after {
+      width: 155px;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs h3 {
+      font-size: 20px;
+      width: 246px;
+    }
+  
+    .firstBlock_aboutUs .textBlock_aboutUs p {
+      font-size: 16px;
+      margin-top: 40px;
+    }
+  
+    .ourClients {
+      padding: 56px 0;
+    }
+  
+    .ourClients .textBlock h1 {
+      font-size: 20px;
+      width: 265px;
+    }
+  
+    .ourClients .textBlock p {
+      font-size: 16px;
+      width: 265px;
+      margin-top: 20px;
+    }
+  
+    .ourClients .counterOfClients h1 {
+      font-size: 18px;
+      margin-top: 50px;
+    }
+  
+    .ourClients .counterOfClients p {
+      font-size: 87px;
+    }
+  
+    .ourGeography .textBlock {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: 265px;
+    }
+  
+    .ourGeography .textBlock h1 {
+      font-size: 20px;
+    }
+  
+    .ourGeography .textBlock p {
+      font-size: 16px;
+    }
+  
+    .ourValues {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .ourValues h1 {
+      font-size: 20px;
+    }
+  
+    .ourValues ul li {
+      font-size: 16px;
+    }
+  
+    .main .whyPeopleChooseUs {
+      padding: 40px 0;
+      margin: 0 0;
+    }
+  
+    .main .whyPeopleChooseUs h1 {
+      font-size: 24px;
+    }
+  
+    .main .whyPeopleChooseUs .block h1 {
+      margin: 20px 0 20px 0;
+      font-size: 16px;
+    }
+  
+    .main .whyPeopleChooseUs .block p {
+      font-size: 12px;
+    }
+  
+    .main .whyPeopleChooseUs .block button {
+      font-size: 14px;
+    }
+  
+    .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+      font-size: 18px;
+      padding: 16px 36px;
+      margin-top: 60px;
+      width: auto;
+    }
+    
+  }
