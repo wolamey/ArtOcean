@@ -6,6 +6,7 @@
   height: 100px;
   padding-top: 20px;
   cursor: pointer;
+  transition: 0.1s linear;
 }
 .footer_up_button:hover{
   transform: scale(1.1);
@@ -46,9 +47,11 @@
   cursor: pointer;
   margin-top: 10px;
   margin-bottom: 10px;
+  display: inline;
 }
 .footer_p:hover {
   cursor: pointer;
+  border-bottom: 1px #adbab6 solid;
 }
 .footer_contacts {
   margin-right: 20px;

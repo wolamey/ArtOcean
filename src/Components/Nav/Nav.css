@@ -2,6 +2,7 @@ a{
   text-decoration: none;
   display: block;
   color: #ffffff;
+  transition: 0.2s linear;
 }
 a:hover{
   color: #ffffff;
@@ -139,6 +140,10 @@ a:hover{
     width: 100px;
     padding: 10px;
     display: block;
+    transition: 0.2s linear;
+  }
+  .nav_menu:hover{
+    transform: scale(1.1);
   }
 }
 @media (max-width: 500px) {
