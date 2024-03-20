@@ -1,8 +1,26 @@
 import "./Footer.css";
+import { useEffect, useState } from "react";
 
 export default function Footer(likeCount, cartCounter) {
+
+
+  const [help, setHelp] = useState(0);
+  useEffect(() => {
+      window.addEventListener('scroll', () => {
+      });
+      document.querySelector('.footer_up_button').onclick = () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+    }
+}, [help]);
   return (
     <div className="footer">
+      <div className="footer_up_button ">
+        <p onClick={() => setHelp(help + 1)} className="footer_up_p">ВВЕРХ</p>
+      </div>
       <div className="footer_div">
         <img className="img_logo" src="/cabinet/logo.png" alt="" />
         <p className="footer_p">© 2021 “Copper Pro” Все права защищенны</p>

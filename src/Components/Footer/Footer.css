@@ -1,3 +1,18 @@
+.footer_up_button{
+  background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+  position: fixed;
+  right: 10%;
+  bottom: 0;
+  height: 100px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+.footer_up_button:hover{
+  transform: scale(1.1);
+}
+.footer_up_p{
+  rotate: 90deg;
+}
 .footer {
     padding-left: 10%;
   margin-top: 80px;

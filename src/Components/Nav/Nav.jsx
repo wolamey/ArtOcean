@@ -52,6 +52,7 @@ export default function Nav(likeCount, cartCounter) {
           <img className="nav_img" src="/cabinet/man_nav.svg" alt="" />
         </NavLink>
         <NavLink to='cart' className="nav_div">
+          <p className="nav_cart_p">0</p>
           <img className="nav_img" src="/cabinet/busket_nav.svg" alt="" />
         </NavLink>
       </div>
