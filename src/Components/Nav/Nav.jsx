@@ -1,5 +1,6 @@
 import "./Nav.css";
 import { useEffect, useState } from "react";
+import { NavLink } from 'react-router-dom'
 
 export default function Nav(likeCount, cartCounter) {
 
@@ -24,35 +25,35 @@ export default function Nav(likeCount, cartCounter) {
   return (
     <div className="nav">
       <div onClick={() => setMenu(menu + 1)} className="menu_open">
-        <p>Каталог</p>
-        <p>Новости</p>
-        <p>Доставка</p>
-        <p>О нас</p>
-        <p>Контакты</p>
+        <NavLink to='catalog'>Каталог</NavLink>
+        <NavLink to='#'>Новости</NavLink>
+        <NavLink to='#'>Доставка</NavLink>
+        <NavLink to='#'>О нас</NavLink>
+        <NavLink to='#'>Контакты</NavLink>
       </div>
 
       <div className="nav_1">
         <img className="img_logo" src="/cabinet/logo.png" alt="" />
-        <p className="nav_p">Каталог</p>
-        <p className="nav_p">Новости</p>
-        <p className="nav_p">Доставка</p>
-        <p className="nav_p">О нас</p>
-        <p className="nav_p">Контакты</p>
+        <NavLink to='catalog' className="nav_p">Каталог</NavLink>
+        <NavLink to='#' className="nav_p">Новости</NavLink>
+        <NavLink to='#' className="nav_p">Доставка</NavLink>
+        <NavLink to='#' className="nav_p">О нас</NavLink>
+        <NavLink to='#' className="nav_p">Контакты</NavLink>
         <div onClick={() => setMenu(menu + 1)} id="nav_menu_id" className="nav_menu">
           <img src="/cabinet/menu.svg" alt="" />
         </div>
 
       </div>
       <div className="nav_2">
-        <div className="nav_div">
+        <NavLink to='#' className="nav_div">
           <img className="nav_img" src="/cabinet/heart_nav.svg" alt="" />
-        </div>
-        <div className="nav_div">
+        </NavLink>
+        <NavLink to='cabinet' className="nav_div">
           <img className="nav_img" src="/cabinet/man_nav.svg" alt="" />
-        </div>
-        <div className="nav_div">
+        </NavLink>
+        <NavLink to='cart' className="nav_div">
           <img className="nav_img" src="/cabinet/busket_nav.svg" alt="" />
-        </div>
+        </NavLink>
       </div>
     </div>
   );

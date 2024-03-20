@@ -1,3 +1,12 @@
+a{
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+}
+a:hover{
+  color: #ffffff;
+  transform: scale(1.1);
+}
 .img_logo {
   height: 43.75px;
   width: 175px;
