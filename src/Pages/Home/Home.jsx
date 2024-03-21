@@ -1,10 +1,10 @@
 import './Home.css'
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import BlockMaker from '../../Components/BlockMaker/BlockMaker'
-import DarkCarousel from '../../Components/Carousel';
-import { Carousel } from 'react-bootstrap';
+import DarkCarousel from '../../Components/Carousel/Carousel';
+
 
 function App() {
 

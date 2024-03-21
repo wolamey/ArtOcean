@@ -15,7 +15,10 @@ export default function Header({likeCount,cartCounter}) {
             <div className="head_cont">
                 <div className="header_container">
                     <div className="head_container_left">
-                        <img className='logoImg' src={logoHead} alt="" />
+                        <NavLink onClick={()=> setPage('Home')} to ='/home'>
+                         <img className='logoImg' src={logoHead} alt="" />
+                           
+                        </NavLink>
                         <div className="head_links">
                         <NavLink  onClick={() => setPage('catalog')}   to='/catalog'> <p className="menu_link">Catalog</p></NavLink>
 

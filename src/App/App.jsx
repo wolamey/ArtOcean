@@ -6,6 +6,7 @@ import './App.scss'
 import Catalog from '../Pages/Catalog/Catalog'
 import Header from '../Components/Header/Header'
 import Cart from '../Pages/Cart/Cart'
+import Home from '../Pages/Home/Home'
 
 function App() {
 
@@ -46,6 +47,10 @@ function App() {
               setCartCounter = {setCartCounter}
               
             />} />
+
+            <Route path = '/home' element={
+              <Home/>
+            }/>
 
         </Routes>
       </Router>
