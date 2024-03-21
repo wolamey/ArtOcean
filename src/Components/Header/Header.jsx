@@ -22,10 +22,9 @@ export default function Header({likeCount,cartCounter}) {
                         <div className="head_links">
                         <NavLink  onClick={() => setPage('catalog')}   to='/catalog'> <p className="menu_link">Catalog</p></NavLink>
 
-                            <a href="#">News</a>
-                            <a href="#">Delivery</a>
+
                             <NavLink onClick={()=>setPage('aboutus')} to='/aboutus'>About Us</NavLink>
-                            <a href="#">Contacts</a>
+                            <a href="#">Sell the product</a>
                         </div>
                     </div></div>
                 <div className="head_container_right">

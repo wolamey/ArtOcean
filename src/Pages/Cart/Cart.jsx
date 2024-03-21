@@ -3,8 +3,7 @@ import "./Cart.scss"
 
 
 export default function Cart({ cartCounter, setCartCounter }) {
-    // const savedCartCounter = JSON.parse(localStorage.getItem('cartCounter')) || [];
-    // console.log(savedCartCounter);
+
     
     return (
         <div className='cart_container'>
