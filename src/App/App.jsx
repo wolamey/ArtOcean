@@ -7,6 +7,7 @@ import Catalog from '../Pages/Catalog/Catalog'
 import Header from '../Components/Header/Header'
 import Cart from '../Pages/Cart/Cart'
 import Home from '../Pages/Home/Home'
+import AboutUs from '../Pages/AboutUs/AboutUs'
 
 function App() {
 
@@ -48,8 +49,11 @@ function App() {
               
             />} />
 
-            <Route path = '/home' element={
+            <Route path = '/' element={
               <Home/>
+            }/>
+            <Route path='/aboutus' element ={
+              <AboutUs/>
             }/>
 
         </Routes>

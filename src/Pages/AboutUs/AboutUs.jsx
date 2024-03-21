@@ -1,8 +1,9 @@
-import './styles/App.css'
+// import './styles/App.css'
+import './AboutUs.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import BlockMaker from './Components/BlockMaker/BlockMaker';
+import BlockMaker from '../../Components/BlockMaker/BlockMaker';
 
 function App() {
 
