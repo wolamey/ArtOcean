@@ -1,0 +1,157 @@
+p {
+  margin-bottom: 0;
+}
+.input_db {
+  padding: 15px;
+  border: #a1a1a1 1px solid;
+}
+.big_text_cabinet {
+  font-weight: 900;
+  font-size: 22px;
+}
+.All {
+  padding-left: 15%;
+}
+.All2 {
+  margin-bottom: 55px;
+  margin-top: 20px;
+}
+.p_big {
+  padding-top: 20px;
+  font-size: 53px;
+}
+.p_but {
+  color: #ffffff;
+}
+.p_but,
+.p_but_4 {
+  margin: 0;
+  font-size: 17px;
+  display: inline-block;
+  margin-left: 24px;
+}
+.div_but_4 {
+  font-weight: 800;
+  color: #000000;
+}
+.div_but,
+.div_but_4 {
+  padding: 12px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.div_but {
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+  transition-duration: 0.2s;
+}
+.div_but:hover {
+  background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+  transform: scale(1.015);
+}
+.img_but {
+  position: relative;
+  top: -2px;
+}
+.All_but {
+  position: absolute;
+  width: 300px;
+}
+.All_akk {
+  margin-left: 500px;
+  width: 700px;
+}
+.all_main {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.all_main_p {
+  display: inline;
+}
+.input_db {
+  margin-right: 50px;
+  width: 300px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.button_all {
+  padding: 4.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.1s;
+  cursor: pointer;
+  font-size: 17px;
+  width: 300px;
+  display: inline-block;
+  color: #ffffff;
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+}
+.button_all:hover {
+  background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+  transform: scale(1.015);
+}
+.button_all_1 {
+  padding-left: 20px;
+}
+.button_all_2 {
+  text-align: center;
+}
+.p_big {
+  font-family: "Playfair Display", serif;
+}
+@media (max-width: 1440px) {
+  .p_big {
+    margin-left: 20px;
+  }
+  .All_but {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+  }
+  .All_akk {
+    margin-left: 0;
+    margin-top: 130px;
+  }
+  .div_but {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1150px) {
+  .All {
+    padding-left: 2%;
+  }
+  .All_but {
+    width: 96%;
+  }
+}
+@media (max-width: 765px) {
+  .All_but {
+    display: block;
+  }
+  .All_akk {
+    margin-top: 300px;
+    width: 100%;
+  }
+  .input_db {
+    width: 96%;
+    margin-right: 0;
+  }
+  .button_all {
+    width: 96%;
+  }
+}
+@media (max-width: 500px) {
+  .all_main_img {
+    width: 150px;
+  }
+  .all_main {
+    width: 290px;
+  }
+}
+.none {
+  display: none;
+}

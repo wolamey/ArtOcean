@@ -55,6 +55,8 @@
                 position: relative;
                 z-index: 1;
                 padding: 0 10px;
+                white-space: nowrap;
+
 
             }
 
@@ -97,6 +99,12 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
+        .choice{
+            p{
+                white-space: wrap;
+
+            }
+        }
     }
 
     .catalog_top_part .shop_choice .choice {

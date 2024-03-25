@@ -22,10 +22,9 @@ export default function Header({likeCount,cartCounter}) {
                         <div className="head_links">
                         <NavLink  onClick={() => setPage('catalog')}   to='/catalog'> <p className="menu_link">Catalog</p></NavLink>
 
-                            <a href="#">News</a>
-                            <a href="#">Delivery</a>
+
                             <NavLink onClick={()=>setPage('aboutus')} to='/aboutus'>About Us</NavLink>
-                            <a href="#">Contacts</a>
+                            <a href="#">Sell the product</a>
                         </div>
                     </div></div>
                 <div className="head_container_right">
@@ -34,9 +33,13 @@ export default function Header({likeCount,cartCounter}) {
                         <p>{likeCount}</p>
                         <img src={favIcon} alt="" />
                     </div>
-                    <div className='my_icon'>
+                    <NavLink  className='my_icon' onClick={()=>setPage('cabinet')} to ='/cabinet'>
+
+                    <div>
                         <img src={userIcon} alt="" />
                     </div>
+
+                    </NavLink>
                     <NavLink className='cart' onClick={()=> setPage('cart')} to = '/cart'>
                     <div >
                     <p>{cartCounter.length}</p>

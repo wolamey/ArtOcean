@@ -31,7 +31,7 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
     setShowNotification(true);
     setTimeout(() => {
       setShowNotification(false);
-    }, 3000); // Увеличиваем время отображения уведомления на 3 секунды
+    }, 3000);
   }
 
   let a = 0;

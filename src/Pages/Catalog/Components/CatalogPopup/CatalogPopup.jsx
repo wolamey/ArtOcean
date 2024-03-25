@@ -47,11 +47,11 @@ export default function CatalogPopup({ item, text, pic, positionName, price, clo
                         </div>
                     </div>
                     <div className="popup_bottom_part">
-                        <div className="calc">
+                        {/* <div className="calc">
                             <button className='menus' onClick={() => { changeNum(-1) }}>-</button>
                             <p>{number}</p>
                             <button className='plus' onClick={() => { changeNum(+1) }}>+</button>
-                        </div>
+                        </div> */}
                         <button className="add_to_cart_button" onClick={() => {
                             showNotificationMessage();
                             closePopup();
