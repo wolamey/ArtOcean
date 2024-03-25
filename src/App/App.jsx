@@ -8,7 +8,6 @@ import Nav from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
 import Cabinet from '../Pages/Cabinet/Cabinet'
 import Cart from '../Pages/Cart/Cart'
-import Home from '../Pages/Home/Home'
 import AboutUs from '../Pages/AboutUs/AboutUs'
 import Header from '../Components/Header/Header'
 
@@ -61,9 +60,6 @@ function App() {
               
             />} />
 
-            <Route path = '/' element={
-              <Home/>
-            }/>
             <Route path='/aboutus' element ={
               <AboutUs/>
             }/>
