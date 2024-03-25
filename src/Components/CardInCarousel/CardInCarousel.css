@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.card, .firstCard, .secondCard, .thirdCard {
+    position: relative;
+    display: flex;
+    width: 446px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px;
+    --bs-card-bg: rgba(0, 0, 0, 0);
+}
+
+.cardImg {
+    border-radius: 0px;
+    width: 100%;
+}
+
+.cardBody {
+    padding: 0;
+}
+
+.cardTitle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(7, 44, 38, .7), rgba(7, 44, 38, 0));
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0 20px 0;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .thirdCard {
+        display: none;
+    }
+
+    .card {
+        width: 324px;
+    }
+}
+
+@media (max-width: 320px) {
+    .secondCard {
+        display: none;
+    }
+
+    .card {
+        width: 230px;
+    }
+}
