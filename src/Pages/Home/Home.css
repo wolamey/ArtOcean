@@ -1,3 +1,8 @@
+.container {
+  max-width: 1600px !important;
+  width: 90% !important;
+}
+
 .main .ourProducts, .main .newItems, .main .weRecomend, .main .whyPeopleChooseUs {
     margin: 80px 0  ;
   }
@@ -15,14 +20,14 @@
     margin-top: 46px;
   }
   
-  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton{
+  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     color: #fff;
     background: linear-gradient(90deg, #5E3928, #E4A15F);
     padding: 16px 77px;
     border: none;
     font-size: 18px;
     font-weight: 700;
-    margin-top: 121px;
+    margin-top: 45px;
     cursor: pointer;
     width: 337px;
   }
@@ -38,6 +43,8 @@
   }
   
   .main .littleBaner .container {
+    max-width: 1600px;
+    width: 90%;
     margin: 0 300px;
   }
   
@@ -82,7 +89,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 29px;
+    gap: 65px;
     justify-content: space-between;
   }
 
@@ -104,7 +111,6 @@
   
   .textBlock h1 {
     font-size: 100px;
-    /* padding-bottom: 50px; */
   }
   
   .textBlock h1::after {
@@ -150,3 +156,137 @@
     cursor: pointer;
     width: 327px;
   }
+
+@media (max-width: 768px) {
+  .firstBlock .carousel {
+    height: 500px !important;
+  }
+
+  .carousel {
+    height: 350px !important;
+  }
+
+  .textBlock {
+    margin-left: 40px;
+  }
+
+  .textBlock h1 {
+    font-size: 60px;
+  }
+
+  .textBlock h1::after {
+    width: 368px;
+  }
+
+  .textBlock .h3 {
+    font-size: 30px;
+    width: 357px;
+  }
+
+  .textBlock .price {
+    font-size: 24px;
+  }
+
+  .main .littleBaner .container {
+    margin: 0 auto ;
+  }
+
+  .main .littleBaner .littleBanerTextContent {
+    gap: 35px;
+  }
+
+  .main .littleBaner .littleBanerTextContent .number {
+    font-size: 100px;
+  }
+
+  .main .littleBaner .littleBanerTextContent p {
+    font-size: 20px;
+    width: 306px;
+  }
+
+  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .firstBlock {
+    padding: 30px 0;
+  }
+
+  .firstBlock .carousel {
+    height: 350px !important;
+    margin-top: 30px !important;
+  }
+
+  .carousel {
+    margin-top: 30px;
+    height: 310px !important;
+  }
+
+  .textBlock {
+    margin-left: 20px;
+  }
+
+  .textBlock h1 {
+    font-size: 30px;
+  }
+
+  .textBlock h1::after {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .textBlock .h3 {
+    font-size: 20px;
+    width: 188px;
+    margin: 15px 0;
+  }
+
+  .textBlock .price {
+    width: 188px;
+    font-size: 16px;
+  }
+
+  .main .littleBaner .container {
+    margin: 0 auto ;
+  }
+
+  .main .littleBaner .littleBanerTextContent {
+    gap: 15px;
+  }
+
+  .main .littleBaner .littleBanerTextContent .number {
+    font-size: 60px;
+  }
+
+  .main .littleBaner .littleBanerTextContent p {
+    font-size: 14px;
+    width: 165px;
+  }
+
+  .main .textBlock button, .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .littleBaner .littleBanerTextContent button, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+    padding: 16px 40px;
+    width: 271px;
+  }
+
+  .main .textBlock button {
+    width: 150px;
+  }
+
+  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+    margin-top: 30px;
+  }
+
+  .main .ourProducts, .main .newItems, .main .weRecomend, .main .whyPeopleChooseUs {
+    margin: 40px 0;
+  }
+
+  .main .bestSells, .main .whyPeopleChooseUs {
+    padding: 40px 0 ;
+  }
+
+  .main .littleBaner {
+    padding: 40px 0;
+  }
+}

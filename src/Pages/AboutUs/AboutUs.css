@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.textBlock {
+  margin-left: 0px;
+}
+
 .firstBlock_aboutUs {
     padding-top: 40px;
     background: #FAFAFA;
@@ -145,30 +149,45 @@
   
   .ourValues {
     padding: 80px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .ourValues .mainImg {
+    width: 684px;
+    height: 622px;
+  }
+
+  .ourValues .textBlock {
     color: #031412;
   }
   
-  .ourValues h1 {
+  .ourValues .textBlock h1 {
     font-size: 50px;
     font-weight: 400;
     text-align: left;
   }
   
-  .ourValues ul {
-    margin-top: 40px;
-    line-height: 70px;
+  .ourValues .textBlock ul {
+    /* line-height: 70px; */
     padding-left: 0;
   }
   
-  .ourValues ul li {
+  .ourValues .textBlock ul li {
     list-style: none;
     text-align: left;
     font-size: 25px;
     font-weight: 400;
   }
   
-  .ourValues ul li img {
+  .ourValues .textBlock ul li img {
     margin-right: 30px;
+    display: inline-block;
+  }
+
+  .second, .third {
+    margin-top: 40px;
   }
 
   @media (max-width: 768px) {
@@ -220,18 +239,28 @@
     }
   
   
+
+    .ourValues .mainImg {
+      width: 310px;
+      height: 282px;
+      margin-right: 30px;
+    }
   
-    .ourValues h1{
+    .ourValues .textBlock h1{
       font-size: 40px;
     }
   
-    .ourValues ul li {
+    .ourValues .textBlock ul li {
       font-size: 16px;
     }
   
     .container {
       max-width: 90% !important;
     } 
+
+    .second, .third {
+      margin-top: 20px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -297,19 +326,30 @@
     .ourGeography .textBlock p {
       font-size: 16px;
     }
-  
+
     .ourValues {
+      flex-direction: column;
+    }
+
+    .ourValues .mainImg {
+      width: 289px;
+      height: 262px;
+    }
+  
+    .ourValues .textBlock{
       align-items: center;
       display: flex;
       flex-direction: column;
     }
   
-    .ourValues h1 {
+    .ourValues .textBlock h1 {
       font-size: 20px;
+      margin-top: 28px;
     }
   
-    .ourValues ul li {
+    .ourValues .textBlock ul li {
       font-size: 16px;
+      width: 230px;
     }
   
     .main .whyPeopleChooseUs {
