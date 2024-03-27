@@ -1,7 +1,8 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
-import { Cropper } from "react-cropper";
+import {Cropper} from 'react-cropper';
 import "cropperjs/dist/cropper.css";
 import "./styles/imageupload.css";
+import React from "react";
 
 interface IMGProps {
   setCroppedImage: (value: string) => void;
