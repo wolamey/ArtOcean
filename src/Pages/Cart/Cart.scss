@@ -1,9 +1,171 @@
-.cart_container{
+p {
+    margin-bottom: 0rem;
+}
+
+.cart_container {
     width: 90%;
     margin: 31px auto 0px auto;
     max-width: 1600px;
+
     .page_path {
         font-size: 18px;
         line-height: 17px;
+    }
+
+    .page_name {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 53px;
+        // margin: 0 0 31px 0;
+
+    }
+
+
+    .cart_main {
+        display: flex;
+        justify-content: space-between;
+
+        .cart_left {
+            max-width: 1000px;
+            width: 100%;
+
+            table {
+                width: 100%;
+
+                .table_title {
+                    color: #A1A1A1;
+                    font-size: 16px;
+                    border: none;
+                    padding: 27px 0 14px 0;
+
+                    p {
+                        padding: 20px 0;
+
+                    }
+
+                }
+
+                tr {
+                    border-top: 1px solid #E6E8E7;
+
+                    td {
+                        margin: 0 10px;
+
+                        p {
+                            margin-bottom: 0rem;
+
+                        }
+                    }
+
+                }
+
+                .title_n_pic {
+                    display: flex;
+                    padding: 20px 0;
+                    align-items: center;
+                    max-width: 300px;
+                    justify-content: space-between;
+                    margin-left: 0;
+
+                    .position_picture {
+                        max-width: 90px;
+                    }
+
+                    .name_prod {
+                        font-size: 18px;
+                        font-weight: 800;
+                        line-height: 23.83px;
+                        text-align: left;
+                        color: #031412;
+                        display: block;
+
+                    }
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+
+        }
+
+        .cart_right {
+            box-shadow: 0px 0px 40px 0px #0000000D;
+            max-width: 546px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            padding: 23px 0;
+
+            .cart_pic {
+                position: absolute;
+                right: 0;
+                top: -25px;
+            }
+
+            .total_price {
+
+                padding: 30px;
+                border-bottom: 1px solid #E6E8E7;
+
+                .total_price_title {
+                    font-size: 35px;
+                    font-weight: 400;
+                    line-height: 33.74px;
+                    text-align: left;
+                    color: #031412;
+
+                }
+
+                .total_price_count {
+                    font-size: 40px;
+                    font-weight: 800;
+                    line-height: 38.56px;
+                    text-align: left;
+
+                }
+            }
+
+            .place_order {
+                padding: 30px;
+
+                .delivery_part {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 18.62px;
+                        text-align: left;
+                        color: #A1A1A1;
+                        width: 184px;
+                        margin-bottom: 0;
+                        margin-left: 19px;
+
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+                    margin: 29px 0 0 0;
+                    height: 50px;
+                    font-size: 18px;
+                    font-weight: 800;
+                    line-height: 17.35px;
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+            }
+        }
     }
 }

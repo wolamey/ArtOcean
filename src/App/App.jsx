@@ -4,10 +4,13 @@ import { useEffect } from 'react'
 
 import './App.scss'
 import Catalog from '../Pages/Catalog/Catalog'
-import Header from '../Components/Header/Header'
+import Nav from '../Components/Nav/Nav'
+import Footer from '../Components/Footer/Footer'
+import Cabinet from '../Pages/Cabinet/Cabinet'
 import Cart from '../Pages/Cart/Cart'
-import Home from '../Pages/Home/Home'
 import AboutUs from '../Pages/AboutUs/AboutUs'
+import Header from '../Components/Header/Header'
+
 
 function App() {
 
@@ -32,6 +35,8 @@ function App() {
 
         />
 
+        
+
         <Routes>
           <Route path="/Catalog" element={
             <Catalog
@@ -48,16 +53,20 @@ function App() {
               setCartCounter = {setCartCounter}
               
             />} />
+                        <Route path="/cabinet" element = {
+              <Cabinet
+              cartCounter = {cartCounter}
+              setCartCounter = {setCartCounter}
+              
+            />} />
 
-            <Route path = '/' element={
-              <Home/>
-            }/>
             <Route path='/aboutus' element ={
               <AboutUs/>
             }/>
 
         </Routes>
       </Router>
+      <Footer/>
     </div>
   )
 }
