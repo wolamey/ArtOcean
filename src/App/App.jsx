@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-do
 import { useEffect } from 'react'
 
 import './App.scss'
+import Home from "../Pages/Home/Home"
 import Catalog from '../Pages/Catalog/Catalog'
 import Nav from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
@@ -38,6 +39,10 @@ function App() {
         
 
         <Routes>
+          <Route path='' element={
+            <Home />
+          }/>
+
           <Route path="/Catalog" element={
             <Catalog
               setLikeCount={setLikeCount}
@@ -53,7 +58,7 @@ function App() {
               setCartCounter = {setCartCounter}
               
             />} />
-                        <Route path="/cabinet" element = {
+            <Route path="/cabinet" element = {
               <Cabinet
               cartCounter = {cartCounter}
               setCartCounter = {setCartCounter}

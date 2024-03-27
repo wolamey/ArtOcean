@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
 .card, .firstCard, .secondCard, .thirdCard {
     position: relative;
     display: flex;
@@ -16,6 +14,10 @@
     border: none;
     border-radius: 0px;
     --bs-card-bg: rgba(0, 0, 0, 0);
+}
+
+.card {
+    padding: 0em !important;
 }
 
 .cardImg {

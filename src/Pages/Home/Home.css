@@ -3,6 +3,10 @@
   width: 90% !important;
 }
 
+button {
+  border-radius: 0px !important;
+}
+
 .main .ourProducts, .main .newItems, .main .weRecomend, .main .whyPeopleChooseUs {
     margin: 80px 0  ;
   }
@@ -167,7 +171,7 @@
   }
 
   .textBlock {
-    margin-left: 40px;
+    margin-left: 40px !important;
   }
 
   .textBlock h1 {
@@ -225,7 +229,7 @@
   }
 
   .textBlock {
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 
   .textBlock h1 {
