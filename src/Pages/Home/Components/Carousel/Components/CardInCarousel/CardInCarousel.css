@@ -6,16 +6,18 @@
     box-sizing: border-box;
 }
 
-
-
 .card, .firstCard, .secondCard, .thirdCard {
     position: relative;
     display: flex;
-    width: 446px;
+    width: 350px;
     cursor: pointer;
     border: none;
     border-radius: 0px;
     --bs-card-bg: rgba(0, 0, 0, 0);
+}
+
+.card {
+    padding: 0em !important;
 }
 
 .cardImg {
@@ -47,7 +49,7 @@
     }
 
     .card {
-        width: 324px;
+        width: 266px;
     }
 }
 

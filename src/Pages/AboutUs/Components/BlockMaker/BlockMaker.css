@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 302px;
+    width: 269px !important;
 }
 
 .block h1 {
