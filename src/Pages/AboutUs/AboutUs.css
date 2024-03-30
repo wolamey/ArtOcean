@@ -170,7 +170,6 @@
   }
   
   .ourValues .textBlock ul {
-    /* line-height: 70px; */
     padding-left: 0;
   }
   
@@ -238,7 +237,9 @@
       margin-top: 5px;
     }
   
-  
+    .ourValues .textBlock {
+      margin-left: 0px !important;
+    }
 
     .ourValues .mainImg {
       width: 310px;
@@ -264,6 +265,9 @@
 }
 
 @media (max-width: 320px) {
+    .textBlock {
+      margin-left: 0px !important;
+    }
 
     .firstBlock_aboutUs p {
       margin-bottom: 40px;

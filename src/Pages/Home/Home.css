@@ -106,18 +106,18 @@ button {
     justify-content: flex-start;
   }
   
-  .textBlock {
+  .homeTextBlock {
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 400;
     max-width: 624px;
   }
   
-  .textBlock h1 {
+  .homeTextBlock h1 {
     font-size: 100px;
   }
   
-  .textBlock h1::after {
+  .homeTextBlock h1::after {
     content: " ";
     background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
     height: 2px;
@@ -126,13 +126,13 @@ button {
     margin-top: 50px;
   }
   
-  .textBlock .h3 {
+  .homeTextBlock .h3 {
     font-size: 50px;
     font-weight: 700;
     margin: 50px 0 40px 0;
   }
   
-  .textBlock .price {
+  .homeTextBlock .price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,15 +142,15 @@ button {
     margin-bottom: 40px;
   }
   
-  .textBlock .price h3 {
+  .homeTextBlock .price h3 {
     font-weight: 300;
   }
   
-  .textBlock .price p {
+  .homeTextBlock .price p {
     font-weight: 700;
   }
   
-  .textBlock button {
+  .homeTextBlock button {
     color: #fff;
     background: linear-gradient(90deg, #5E3928, #E4A15F);
     padding: 16px 77px;
@@ -170,24 +170,24 @@ button {
     height: 350px !important;
   }
 
-  .textBlock {
+  .homeTextBlock {
     margin-left: 40px !important;
   }
 
-  .textBlock h1 {
+  .homeTextBlock h1 {
     font-size: 60px;
   }
 
-  .textBlock h1::after {
+  .homeTextBlock h1::after {
     width: 368px;
   }
 
-  .textBlock .h3 {
+  .homeTextBlock .h3 {
     font-size: 30px;
     width: 357px;
   }
 
-  .textBlock .price {
+  .homeTextBlock .price {
     font-size: 24px;
   }
 
@@ -228,26 +228,26 @@ button {
     height: 310px !important;
   }
 
-  .textBlock {
+  .homeTextBlock {
     margin-left: 20px !important;
   }
 
-  .textBlock h1 {
+  .homeTextBlock h1 {
     font-size: 30px;
   }
 
-  .textBlock h1::after {
+  .homeTextBlock h1::after {
     width: 200px;
     margin-top: 20px;
   }
 
-  .textBlock .h3 {
+  .homeTextBlock .h3 {
     font-size: 20px;
     width: 188px;
     margin: 15px 0;
   }
 
-  .textBlock .price {
+  .homeTextBlock .price {
     width: 188px;
     font-size: 16px;
   }
@@ -269,12 +269,12 @@ button {
     width: 165px;
   }
 
-  .main .textBlock button, .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .littleBaner .littleBanerTextContent button, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+  .main .homeTextBlock button, .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .littleBaner .littleBanerTextContent button, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     padding: 16px 40px;
     width: 271px;
   }
 
-  .main .textBlock button {
+  .main .homeTextBlock button {
     width: 150px;
   }
 
