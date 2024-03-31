@@ -1,6 +1,15 @@
 import './Home.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import authenticity from "../../../public/authenticity.jpg"
+import sophistication from "../../../public/sophistication.jpg"
+import fairPayment from "../../../public/fairPayment.jpg"
+import bigAsortiment from "../../../public/bigAsortiment.jpg"
+import deliviryAllOverTheWorld from "../../../public/deliviryAllOverTheWorld.jpg"
+import qualityAssurance from "../../../public/qualityAssurance.jpg"
+import comfortToUse from "../../../public/comfortToUse.jpg"
+import carryAboutNature from "../../../public/carryAboutNature.jpg"
+
 import BlockMaker from './Components/BlockMaker/BlockMaker';
 import DarkCarousel from './Components/Carousel/Carousel';
 import { Carousel } from 'react-bootstrap';
@@ -14,7 +23,7 @@ function App() {
           <Carousel >
             <Carousel.Item>
               <div className="containerCarousel">
-                <div className="textBlock">
+                <div className="homeTextBlock">
                   <h1>Хит продаж</h1>
                   <h3 className='h3'>Дистиллятор для эфирных масел</h3>
                   <div className="price">
@@ -27,7 +36,7 @@ function App() {
             </Carousel.Item>
             <Carousel.Item>
                 <div className="containerCarousel">
-                <div className="textBlock">
+                <div className="homeTextBlock">
                   <h1>Хит продаж</h1>
                   <h3 className='h3'>Дистиллятор для эфирных масел</h3>
                   <div className="price">
@@ -40,7 +49,7 @@ function App() {
             </Carousel.Item>
             <Carousel.Item>
               <div className="containerCarousel">
-                <div className="textBlock">
+                <div className="homeTextBlock">
                   <h1>Хит продаж</h1>
                   <h3 className='h3'>Дистиллятор для эфирных масел</h3>
                   <div className="price">
@@ -86,14 +95,14 @@ function App() {
           <div className="container">
             <h1>Почему выбирают нас</h1>
             <div className="blocks">
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
+              <BlockMaker i={authenticity}/>
+              <BlockMaker i={sophistication}/>
+              <BlockMaker i={fairPayment}/>
+              <BlockMaker i={bigAsortiment}/>
+              <BlockMaker i={deliviryAllOverTheWorld}/>
+              <BlockMaker i={qualityAssurance}/>
+              <BlockMaker i={comfortToUse}/>
+              <BlockMaker i={carryAboutNature}/>
             </div>
           </div>
         </div>
