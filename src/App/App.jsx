@@ -29,7 +29,7 @@ function App() {
 
 
 
-        <Header
+        <Nav
           likeCount={likeCount}
           cartCounter = {cartCounter}
 

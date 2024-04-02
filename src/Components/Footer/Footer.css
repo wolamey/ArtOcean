@@ -12,9 +12,11 @@
   transform: scale(1.1);
 }
 .footer_up_p{
+  margin-bottom: 0 !important;
   rotate: 90deg;
 }
 .footer {
+  margin-bottom: 0 !important;
     padding-left: 10%;
   margin-top: 80px;
   padding-bottom: 70px;

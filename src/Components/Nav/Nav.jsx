@@ -25,11 +25,11 @@ export default function Nav(likeCount, cartCounter) {
   return (
     <div className="nav">
       <div onClick={() => setMenu(menu + 1)} className="menu_open">
-        <NavLink to='catalog'>Каталог</NavLink>
-        <NavLink to='#'>Новости</NavLink>
-        <NavLink to='#'>Доставка</NavLink>
-        <NavLink to='#'>О нас</NavLink>
-        <NavLink to='#'>Контакты</NavLink>
+        <NavLink className="nav_p2" to='catalog'>Каталог</NavLink>
+        <NavLink className="nav_p2" to='#'>Новости</NavLink>
+        <NavLink className="nav_p2" to='#'>Доставка</NavLink>
+        <NavLink className="nav_p2" to='#'>О нас</NavLink>
+        <NavLink className="nav_p2" to='#'>Контакты</NavLink>
       </div>
 
       <div className="nav_1">
