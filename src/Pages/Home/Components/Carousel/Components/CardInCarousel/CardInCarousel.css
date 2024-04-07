@@ -53,12 +53,24 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     .secondCard {
         display: none;
     }
 
     .card {
-        width: 230px;
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .card {
+      width: 270px !important;
+    }
+  }
+
+@media (max-width: 320px) {
+    .card {
+        width: 230px !important;
     }
 }

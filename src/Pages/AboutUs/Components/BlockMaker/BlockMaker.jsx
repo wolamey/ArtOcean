@@ -2,7 +2,7 @@ import './BlockMaker.css'
 
 export default function BlockMaker(i) {
     return (
-        <div className='block'>
+        <div className='block_aboutUs'>
             <img src={i.i} alt="someImage" />
             <h1>Some title</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati placeat laborum inventore exercitationem quod. Consectetur?</p>

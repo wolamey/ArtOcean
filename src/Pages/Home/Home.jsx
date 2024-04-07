@@ -10,6 +10,11 @@ import qualityAssurance from "../../../public/qualityAssurance.jpg"
 import comfortToUse from "../../../public/comfortToUse.jpg"
 import carryAboutNature from "../../../public/carryAboutNature.jpg"
 
+import choice1 from "../../../public/choice1.png"
+import choice2 from "../../../public/choice2.png"
+import choice3 from "../../../public/choice3.png"
+import choice4 from "../../../public/choice4.png"
+
 import BlockMaker from './Components/BlockMaker/BlockMaker';
 import DarkCarousel from './Components/Carousel/Carousel';
 import { Carousel } from 'react-bootstrap';
@@ -63,9 +68,39 @@ function App() {
             </Carousel>
           </div>
           <div className="ourProducts">
-            <div className="container"><h1>Наша продукция</h1></div>
-              <DarkCarousel />
-              <div className="container"><button className='katalogButton'>Перейти в каталог</button></div>
+            <div className="container">
+              <h1>Наша продукция</h1>
+              <div className="shoping_choice">
+                <div className="firstPart">
+                  <div className="ourProducts_firstCard ourProducts_card">
+                    <img src={choice1} />
+                    <div className="ourProducts_textBlock">
+                      <p>Рукоделие</p>
+                    </div>
+                  </div>
+                  <div className="ourProducts_secondCard ourProducts_card">
+                    <img src={choice2} />
+                    <div className="ourProducts_textBlock">
+                      <p>Ювилирные изделия</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="secondPart">
+                  <div className="ourProducts_thirdCard ourProducts_card">
+                    <img src={choice3} />
+                    <div className="ourProducts_textBlock">
+                      <p>Одежда и аксессуары</p>
+                    </div>
+                  </div>
+                  <div className="ourProducts_foursCard ourProducts_card">
+                    <img src={choice4} />
+                    <div className="ourProducts_textBlock">
+                      <p>Искусство</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         <div className="bestSells">
           <div className="container"><h1>Лучшие продажи</h1></div>

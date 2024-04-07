@@ -1,3 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
 .container {
   max-width: 1600px !important;
   width: 90% !important;
@@ -5,6 +14,53 @@
 
 button {
   border-radius: 0px !important;
+  padding: 0em 0em !important;
+}
+
+.shoping_choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.shoping_choice img {
+  width: 100%;
+}
+
+.shoping_choice .firstPart, .shoping_choice .secondPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.shoping_choice .ourProducts_card {
+  position: relative;
+  width: 300px;
+}
+
+.shoping_choice .ourProducts_textBlock {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  background: (0deg, #072c26b3, #072c2600);
+}
+
+.shoping_choice .ourProducts_textBlock p {
+  font-size: 18px;
+  background: linear-gradient(0deg, rgba(7, 44, 38, .7), transparent);
+  padding: 96px 0 10px 0;
+}
+
+.shoping_choice .ourProducts_textBlock p:hover {
+  background: linear-gradient(0deg, rgba(208, 155,123, .7), transparent);
+}
+
+.main .ourProducts h1 {
+  margin-bottom: 46px;
 }
 
 .main .ourProducts, .main .newItems, .main .weRecomend, .main .whyPeopleChooseUs {
@@ -27,7 +83,7 @@ button {
   .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     color: #fff;
     background: linear-gradient(90deg, #5E3928, #E4A15F);
-    padding: 16px 77px;
+    padding: 16px 77px !important;
     border: none;
     font-size: 18px;
     font-weight: 700;
@@ -44,12 +100,6 @@ button {
     align-items: flex-start;
     color: #fff;
     padding: 80px 0;
-  }
-  
-  .main .littleBaner .container {
-    max-width: 1600px;
-    width: 90%;
-    margin: 0 300px;
   }
   
   .main .littleBaner .littleBanerTextContent {
@@ -74,7 +124,7 @@ button {
   .main .littleBaner .littleBanerTextContent button {
     color: #fff;
     background: linear-gradient(90deg, #5E3928, #E4A15F);
-    padding: 16px 77px;
+    padding: 16px 77px !important;
     border: none;
     font-size: 18px;
     font-weight: 700;
@@ -95,6 +145,10 @@ button {
     flex-direction: row;
     gap: 65px;
     justify-content: space-between;
+  }
+
+  .main .whyPeopleChooseUs .block h1 {
+    margin-bottom: 0px;
   }
 
   .firstBlock {
@@ -153,7 +207,7 @@ button {
   .homeTextBlock button {
     color: #fff;
     background: linear-gradient(90deg, #5E3928, #E4A15F);
-    padding: 16px 77px;
+    padding: 16px 77px !important;
     border: none;
     font-size: 18px;
     font-weight: 700;
@@ -161,13 +215,142 @@ button {
     width: 327px;
   }
 
-@media (max-width: 768px) {
+@media (max-width: 1340px) {
+  .firstBlock .carousel {
+    height: 590px !important;
+  }
+
+  .carousel {
+    height: 440px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 340px !important;
+  }
+
+  .block {
+    width: 246px !important;
+  }
+
+  .shoping_choice {
+    height: 570px;
+  }
+
+  .shoping_choice .ourProducts_textBlock p {
+    padding: 86px 0 10px 0;
+  }
+
+  .shoping_choice .ourProducts_card {
+    width: 95%;
+  }
+
+  .shoping_choice .firstPart, .shoping_choice .secondPart {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .shoping_choice {
+    height: 530px;
+  }
+
+  .carousel {
+    height: 410px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 310px !important;
+  }
+
+  .block {
+    width: 224px !important;
+  }
+}
+
+@media (max-width: 1140px) {
+  .shoping_choice {
+    height: 500px;
+  }
+
+  .carousel {
+    height: 380px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 290px !important;
+  }
+
+  .block {
+    width: 201px !important;
+  }
+}
+
+@media (max-width: 1040px) {
+  .shoping_choice {
+    height: 450px;
+  }
+
+  .carousel {
+    height: 340px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 260px !important;
+  }
+
+  .block {
+    width: 179px !important;
+  }
+}
+
+@media (max-width: 940px) {
+  .shoping_choice {
+    height: 400px;
+  }
+
+  .carousel {
+    height: 320px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 240px !important;
+  }
+
+  .block {
+    width: 156px !important;
+  }
+
+  .shoping_choice {
+    gap: 10px;
+  }
+
+  .shoping_choice .ourProducts_textBlock p {
+    padding: 46px 0 10px 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 840px) {
+  .shoping_choice {
+    height: 350px;
+  }
+
   .firstBlock .carousel {
     height: 500px !important;
   }
 
   .carousel {
-    height: 350px !important;
+    height: 300px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard{
+    width: 210px !important;
+  }
+
+  .block {
+    width: 210px !important;
   }
 
   .homeTextBlock {
@@ -213,7 +396,58 @@ button {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
+  .shoping_choice {
+    height: 320px;
+  }
+
+  .carousel {
+    height: 360px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 270px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .shoping_choice {
+    height: 280px;
+  }
+
+  .carousel {
+    height: 320px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 240px !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .shoping_choice {
+    height: 240px;
+  }
+
+  .carousel {
+    height: 280px !important;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 200px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .shoping_choice {
+    height: 640px;
+    flex-direction: column;
+  }
+
+  .card, .firstCard, .secondCard, .thirdCard {
+    width: 200px !important;
+  }
+
   .firstBlock {
     padding: 30px 0;
   }
@@ -225,7 +459,7 @@ button {
 
   .carousel {
     margin-top: 30px;
-    height: 310px !important;
+    height: 390px !important;
   }
 
   .homeTextBlock {
@@ -269,9 +503,10 @@ button {
     width: 165px;
   }
 
-  .main .homeTextBlock button, .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .littleBaner .littleBanerTextContent button, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
-    padding: 16px 40px;
+  .main .homeTextBlock button, .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .littleBaner .littleBanerTextContent .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+    padding: 16px 40px !important;
     width: 271px;
+    font-size: 14px;
   }
 
   .main .homeTextBlock button {
@@ -292,5 +527,21 @@ button {
 
   .main .littleBaner {
     padding: 40px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .carousel {
+    height: 360px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .shoping_choice {
+    height: 560px;
+  }
+
+  .carousel {
+    height: 310px !important;
   }
 }
