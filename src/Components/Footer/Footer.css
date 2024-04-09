@@ -59,7 +59,7 @@
 .footer_contacts:hover {
   cursor: pointer;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1250px) {
   .footer {
     margin-left: -2%;
   }

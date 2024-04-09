@@ -4,6 +4,12 @@
   color: #ffffff;
   transition: 0.2s linear;
 }
+.nav_p2{
+  margin-top: 40px;
+}
+.nav_p{
+  margin-left: 22px;
+}
 a:hover{
   color: #ffffff;
   transform: scale(1.1);
@@ -112,7 +118,7 @@ a:hover{
   .nav_1 {
     padding-left: 10%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
   }
   .nav_2 {
