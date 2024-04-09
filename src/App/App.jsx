@@ -17,12 +17,19 @@ function App() {
 
   const [likeCount, setLikeCount] = useState(0)
   const [cartCounter, setCartCounter] = useState([]);
+  const [favCounter, setFavCounter] = useState([])
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('cartCounter')) || [];
     setCartCounter(data);
+    console.log(JSON.parse(localStorage.cartCounter));
+    const favData = JSON.parse(localStorage.getItem('favCounter')) || [];
+    setFavCounter(favData);
+
+    setCartCounter(JSON.parse(localStorage.cartCounter));
+
   }, []);
-  
+
 
   return (
     <div>
@@ -32,16 +39,16 @@ function App() {
 
         <Header
           likeCount={likeCount}
-          cartCounter = {cartCounter}
+          cartCounter={cartCounter}
 
         />
 
-        
+
 
         <Routes>
           <Route path='' element={
             <Home />
-          }/>
+          } />
 
           <Route path="/Catalog" element={
             <Catalog
@@ -49,29 +56,31 @@ function App() {
               likeCount={likeCount}
               cartCounter={cartCounter}
               setCartCounter={setCartCounter}
+              favCounter={favCounter}
+              setFavCounter={setFavCounter}
 
             />} />
 
-            <Route path="/cart" element = {
-              <Cart
-              cartCounter = {cartCounter}
-              setCartCounter = {setCartCounter}
-              
+          <Route path="/cart" element={
+            <Cart
+              cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+
             />} />
-            <Route path="/cabinet" element = {
-              <Cabinet
-              cartCounter = {cartCounter}
-              setCartCounter = {setCartCounter}
-              
+          <Route path="/cabinet" element={
+            <Cabinet
+              cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+
             />} />
 
-            <Route path='/aboutus' element ={
-              <AboutUs/>
-            }/>
+          <Route path='/aboutus' element={
+            <AboutUs />
+          } />
 
         </Routes>
       </Router>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
