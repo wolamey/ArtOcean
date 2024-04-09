@@ -4,14 +4,6 @@ import App2 from "./addImage/App.jsx";
 export default function Cabinet() {
   return (
     <div>
-      <div className="save">
-        <img className="no_save_img" src="/cabinet/save.svg" alt="" />
-        <p className="save_p">Данные сохраненны</p>
-      </div>
-      <div className="no_save">
-        <img className="no_save_img" src="/cabinet/noSave.svg" alt="" />
-        <p className="no_save_p">Данные не сохраненны</p>
-      </div>
       <div className="All">
         <p className="p_big">ЛИЧНЫЙ КАБИНЕТ</p>
         <div className="All_but">
