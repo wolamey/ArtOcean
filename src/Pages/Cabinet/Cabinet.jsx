@@ -29,7 +29,7 @@ export default function Cabinet(likeCount, cartCounter) {
             <div className="All2">
               <App2 />
             </div>
-            <p>Добрый день</p>
+            <p className="p_margin_0">Добрый день</p>
             <p className="big_text_cabinet">Иван Иванов</p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function Cabinet(likeCount, cartCounter) {
           <div>
             <input placeholder="Пароль" className="input_db" type="password" />
             <div className="button_all  button_all_1">
-              <p>Сменить пароль</p>
+              <p className="p_margin_0">Сменить пароль</p>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Cabinet(likeCount, cartCounter) {
           </div>
         </div>
         <div className="button_all button_all_2">
-          <p>Сохранить</p>
+          <p className="p_margin_0">Сохранить</p>
         </div>
       </div>
     </div>

@@ -85,7 +85,6 @@ img#round{
 
 #clear-button:hover{
     cursor: pointer;
-    border: 1px solid #eee;
     border-radius: 5px;
 }
 

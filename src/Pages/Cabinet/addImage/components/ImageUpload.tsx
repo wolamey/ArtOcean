@@ -17,7 +17,7 @@ interface IMGProps {
 const ImageUpload = (props: IMGProps) => {
   const [fileInput, setFileInput] = useState<any>();
   const [hasInput, setHasInput] = useState(false);
-  const [croppedImage, setCroppedImage] = useState<any>();
+  const [croppedImage, setCroppedImage] = useState<any>("/cabinet/first_ava.png");
   const [fileName, setFileName] = useState<string>("");
   const [statusMessage, setStatusMessage] = useState("");
 

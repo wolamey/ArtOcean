@@ -1,13 +1,14 @@
-p {
-  margin-bottom: 0;
-}
 .input_db {
   padding: 15px;
   border: #a1a1a1 1px solid;
 }
 .big_text_cabinet {
+  margin-bottom: 0 !important;
   font-weight: 900;
   font-size: 22px;
+}
+.p_margin_0{
+  margin-bottom: 0 !important;
 }
 .All {
   padding-left: 15%;

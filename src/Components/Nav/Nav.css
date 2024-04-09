@@ -1,4 +1,4 @@
-a{
+.nav_p, .nav_p2{
   text-decoration: none;
   display: block;
   color: #ffffff;
@@ -9,8 +9,13 @@ a:hover{
   transform: scale(1.1);
 }
 .img_logo {
+  transition: 0.2s linear;
   height: 43.75px;
   width: 175px;
+  cursor: pointer;
+}
+.img_logo:hover{
+  transform: scale(1.1);
 }
 .nav {
   position: relative;
@@ -70,6 +75,7 @@ a:hover{
   height: 100px;
   width: 50px;
   background: #ffffff;
+  transition: 0.2s linear;
 }
 .nav_img {
   display: block;
@@ -97,7 +103,7 @@ a:hover{
     margin-left: 20px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .nav {
     flex-direction: column-reverse;
     padding-top: 220px;
