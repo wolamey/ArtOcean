@@ -87,12 +87,9 @@ function App() {
 
         </Routes>
         <Footer />
-      </Router>
-      {/* <<<<<<< HEAD */}
-      {/* <Footer /> */}
-      {/* ======= */}
 
-      {/* >>>>>>> 34fcc509d7f41c6544f4545edd250d89dd644183 */}
+      </Router>
+
     </div>
   )
 }

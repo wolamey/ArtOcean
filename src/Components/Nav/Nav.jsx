@@ -24,6 +24,7 @@ console.log(count);
     <div className="nav">
       <div onClick={() => setMenu(menu + 1)} className="menu_open">
       <NavLink className="nav_p2" to="/">
+
           Главная
         </NavLink>
         <NavLink className="nav_p2" to="catalog">
@@ -39,6 +40,7 @@ console.log(count);
 
       <div className="nav_1">
         <NavLink to="/">
+        <NavLink to="home">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
         <NavLink to="catalog" className="nav_p">
