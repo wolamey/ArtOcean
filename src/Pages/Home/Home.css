@@ -51,12 +51,12 @@ button {
 
 .shoping_choice .ourProducts_textBlock p {
   font-size: 18px;
-  background: linear-gradient(0deg, rgba(7, 44, 38, .7), transparent);
+  background: linear-gradient(0deg, rgba(208, 155,123, .7), transparent);
   padding: 96px 0 10px 0;
 }
 
 .shoping_choice .ourProducts_textBlock p:hover {
-  background: linear-gradient(0deg, rgba(208, 155,123, .7), transparent);
+  background: linear-gradient(0deg, rgba(7, 44, 38, .7), transparent);
 }
 
 .main .ourProducts h1 {
