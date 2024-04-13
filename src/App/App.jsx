@@ -19,16 +19,23 @@ function App() {
   const [cartCounter, setCartCounter] = useState([]);
   const [favCounter, setFavCounter] = useState([])
 
+
   useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('cartCounter')) || [];
-    setCartCounter(data);
-    console.log(JSON.parse(localStorage.cartCounter));
-    const favData = JSON.parse(localStorage.getItem('favCounter')) || [];
-    setFavCounter(favData);
+    const cartData = localStorage.getItem('cartCounter');
+    if(cartData) {
+      const parsedCartData = JSON.parse(cartData);
+      setCartCounter(parsedCartData);
+      console.log(parsedCartData);
+    }
 
-    setCartCounter(JSON.parse(localStorage.cartCounter));
+    const favData = localStorage.getItem('favCounter');
+    if(favData) {
+      const parsedFavData = JSON.parse(favData);
+      setFavCounter(parsedFavData);
+    }
 
-  }, []);
+}, []);
+
 
 
   return (
@@ -46,7 +53,7 @@ function App() {
 
 
         <Routes>
-          <Route path='' element={
+          <Route path='/' element={
             <Home />
           } />
 
@@ -79,8 +86,13 @@ function App() {
           } />
 
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
+      {/* <<<<<<< HEAD */}
+      {/* <Footer /> */}
+      {/* ======= */}
+
+      {/* >>>>>>> 34fcc509d7f41c6544f4545edd250d89dd644183 */}
     </div>
   )
 }
