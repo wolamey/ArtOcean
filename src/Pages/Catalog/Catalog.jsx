@@ -10,7 +10,7 @@ import CopperDishes from './Components/CopperDishes/CopperDishes'
 const popArr = [];
 
 
-export default function Catalog({likeCount, setLikeCount,cartCounter, setCartCounter}) {
+export default function Catalog({likeCount, setLikeCount,cartCounter, setCartCounter, setFavCounter, favCounter}) {
 
   const [catalogPart, setCatalogPart] = useState(data.copperDishesForCatalog)
   const [popup, setPopup] = useState(popArr);
@@ -45,6 +45,9 @@ export default function Catalog({likeCount, setLikeCount,cartCounter, setCartCou
 
           setCartCounter =  {setCartCounter}
           cartCounter = {cartCounter}
+
+          favCounter = {favCounter}
+          setFavCounter = {setFavCounter}
 
         />
     </div>
