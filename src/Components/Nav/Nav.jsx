@@ -39,7 +39,7 @@ console.log(count);
       </div>
 
       <div className="nav_1">
-        <NavLink to="/">
+        <NavLink to="/"/>
         <NavLink to="home">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
