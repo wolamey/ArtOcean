@@ -129,6 +129,10 @@ const ImageUpload = (props: IMGProps) => {
     dialogRef.current?.close();
   };
 
+
+  // const menu_blok = document.querySelector(".save");
+  // menu_blok.classList.add("save_on");
+  // menu_open.classList.remove("save_off");
   return (
     <div>
       <div className="save save_off">

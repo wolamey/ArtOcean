@@ -64,9 +64,9 @@ export default function Footer() {
         </div>
         <div className="footer_div">
           <p className="footer_p_top">Контакты</p>
-          <p className="footer_p">Бажана 8-Б, Киев, 02132 Украина</p>
-          <p className="footer_p">+38 (096) 990 67 56</p>
-          <p className="footer_p">a.alambik@gmail.com</p>
+          <p className="footer_p_alt">Бажана 8-Б, Киев, 02132 Украина</p>
+          <p className="footer_p_alt">+38 (096) 990 67 56</p>
+          <p className="footer_p_alt">a.alambik@gmail.com</p>
           <div className="footer_div_alt">
             <img
               className="footer_contacts"

@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 export default function Nav(likeCount, cartCounter) {
   const [menu, setMenu] = useState(0);
 let count = likeCount.cartCounter.length
-console.log(count);
   useEffect(() => {
     const menu_blok = document.querySelector(".nav_menu");
     const menu_open = document.querySelector(".menu_open");
@@ -23,6 +22,7 @@ console.log(count);
   return (
     <div className="nav">
       <div onClick={() => setMenu(menu + 1)} className="menu_open">
+        <img className="close_nav_menu" src="/cabinet/noSave.svg" alt="" />
       <NavLink className="nav_p2" to="home">
           Главная
         </NavLink>

@@ -136,11 +136,30 @@ button:focus, button:focus-visible {
     align-items: center;
     justify-content: center;
 }
+#crop-button {
+    background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+    transition-duration: 0.2s;
+    color: #ffffff;
+    border: none;
+  }
+#crop-button:hover {
+    background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+    transform: scale(1.015);
+  }
 .downloud_photo_p{
     margin-left: 10px;
 }
-@media (max-width: 600px) {
+#editor{
+    width: 540px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+@media (max-width: 570px) {
     #editor{
         width: 100%;
+        padding: 0;
+        padding-bottom: 10px;
     }
 }
