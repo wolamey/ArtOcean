@@ -70,3 +70,4 @@ export default function Cabinet(likeCount, cartCounter) {
     </div>
   );
 }
+//
