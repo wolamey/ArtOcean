@@ -1,9 +1,23 @@
 // import './styles/App.css'
 import './AboutUs.css'
 
+import image_ourValues from "../../../public/image_ourValues.jpg";
+import operativity from "../../../public/operativity.svg";
+import quality from "../../../public/quality.svg";
+import flexibility from "../../../public/flexibility.svg";
+
+import authenticity from "../../../public/authenticity.jpg"
+import sophistication from "../../../public/sophistication.jpg"
+import fairPayment from "../../../public/fairPayment.jpg"
+import bigAsortiment from "../../../public/bigAsortiment.jpg"
+import deliviryAllOverTheWorld from "../../../public/deliviryAllOverTheWorld.jpg"
+import qualityAssurance from "../../../public/qualityAssurance.jpg"
+import comfortToUse from "../../../public/comfortToUse.jpg"
+import carryAboutNature from "../../../public/carryAboutNature.jpg"
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import BlockMaker from '../../Components/BlockMaker/BlockMaker';
+import BlockMaker from './Components/BlockMaker/BlockMaker';
 
 function App() {
 
@@ -42,26 +56,29 @@ function App() {
         </div>
         <div className="container">
           <div className="ourValues">
+            <img className='mainImg' src={image_ourValues} />
+            <div className="textBlock">
             <h1>Наши ценности</h1>
-            <ul>
-              <li> <img src="#"/> Оперативность</li>
-              <li> <img src="#"/> Качественный товар и сервис</li>
-              <li> <img src="#"/> Гибкость</li>
-            </ul>
+              <ul>
+                <li> <img src={operativity}/> Оперативность</li>
+                <li className='second' > <img src={quality}/> Качественный товар и сервис</li>
+                <li className='third' > <img src={flexibility}/> Гибкость</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="whyPeopleChooseUs">
           <div className="container">
             <h1>Почему выбирают нас</h1>
             <div className="blocks">
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
-              <BlockMaker/>
+              <BlockMaker i={authenticity}/>
+              <BlockMaker i={sophistication}/>
+              <BlockMaker i={fairPayment}/>
+              <BlockMaker i={bigAsortiment}/>
+              <BlockMaker i={deliviryAllOverTheWorld}/>
+              <BlockMaker i={qualityAssurance}/>
+              <BlockMaker i={comfortToUse}/>
+              <BlockMaker i={carryAboutNature}/>
             </div>
           </div>
         </div>
