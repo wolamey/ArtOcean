@@ -2,7 +2,7 @@ import './Carousel.css'
 
 import {Carousel} from 'react-bootstrap';
 
-import CardInCarousel from '../CardInCarousel/CardInCarousel';
+import CardInCarousel from './Components/CardInCarousel/CardInCarousel';
 
 export default function DarkCarousel() {
   return (

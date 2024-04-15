@@ -27,10 +27,12 @@ p {
     .cart_main {
         display: flex;
         justify-content: space-between;
+        align-items: start;
 
         .cart_left {
             max-width: 1000px;
             width: 100%;
+            margin: 0 50px 0 0;
 
             table {
                 width: 100%;
@@ -40,6 +42,11 @@ p {
                     font-size: 16px;
                     border: none;
                     padding: 27px 0 14px 0;
+
+                    .quantity,
+                    .price {
+                        text-align: center;
+                    }
 
                     p {
                         padding: 20px 0;
@@ -83,6 +90,12 @@ p {
                         display: block;
 
                     }
+
+                }
+
+                .cart_item_count,
+                .cart_item_price {
+                    text-align: center;
                 }
 
                 button {
@@ -90,7 +103,7 @@ p {
                     border: none;
                     outline: none;
                     padding: 0;
-                    margin: 0;
+                    margin: auto;
                 }
             }
 
@@ -168,4 +181,73 @@ p {
             }
         }
     }
+}
+
+@media(max-width:900px) {
+    .cart_container {
+        .cart_main {
+            flex-direction: column;
+
+            .cart_right {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width:500px) {
+
+    .cart_container {
+        .page_path {
+            font-size: 14px;
+        }
+
+        .page_name {
+            font-size: 30px;
+        }
+
+        .cart_main .cart_left table .table_title {
+            font-size: 14px;
+        }
+
+        .cart_main .cart_left table .title_n_pic .name_prod {
+            font-size: 14px;
+        }
+
+        .cart_main .cart_left table tr td {
+            margin: 0;
+        }
+
+        .cart_main .cart_left table .title_n_pic {
+            padding: 5px 0;
+            max-width: 200px;
+        }
+
+        .cart_main .cart_right .total_price .total_price_title {
+            font-size: 24px;
+        }
+
+        .cart_main .cart_right .total_price .total_price_count {
+            font-size: 31px;
+        }
+
+        .cart_main .cart_right .place_order .delivery_part p {
+            font-size: 14px;
+        }
+
+        .cart_main .cart_right .place_order button {
+            font-size: 14px;
+            height: auto;
+        }
+         .cart_main .cart_right{
+            padding: 0;
+        }
+         .cart_main .cart_left table .cart_item_count,  .cart_main .cart_left table .cart_item_price{
+            font-size: 12px;
+         }
+          .cart_main .cart_left table .title_n_pic .position_picture{
+            max-width: 50px;
+          }
+    }
+
 }

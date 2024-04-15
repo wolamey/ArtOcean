@@ -5,9 +5,10 @@ import likeImg from "../../../../../public/noLike.svg";
 import CatalogPopup from '../CatalogPopup/CatalogPopup';
 
 
-export default function CatalogElement({ componentData, setLikeCount, setPopup, openPopup, closePopup, popup, cartCounter, setCartCounter }) {
+export default function CatalogElement({ componentData, setLikeCount, setPopup, openPopup, closePopup, popup, cartCounter, setCartCounter , favCounter, setFavCounter}) {
   const [likedItems, setLikedItems] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
+  const [alreadyExist, setAlreadyExist] = useState (false)
 
   const generateUniqueIdentifier = (item) => `${item.id}-${item.text}`;
 
@@ -26,19 +27,64 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
     setLikeCount(likedItems.length);
   }, [likedItems, setLikeCount]);
 
+  useEffect(() => {
+    setLikeCount(likedItems.length);
+  }, [likedItems, setLikeCount]);
+
+  const itemCounts = favCounter.reduce((acc, item) => {
+    acc[item.id] = (acc[item.id] || 0) + 1;
+    return acc;
+}, {});
+
+
 
   const showNotificationMessage = () => {
     setShowNotification(true);
+    console.log(cartCounter);
     setTimeout(() => {
       setShowNotification(false);
     }, 3000);
   }
+
+  const showAlreadyExist = () => {
+    setAlreadyExist(true);
+    setTimeout(() => {
+      setAlreadyExist(false);
+    }, 3000);
+  }
+
+
+  function addToFav(item) {
+    if(cartCounter.includes(item)){
+      console.log(cartCounter.includes(item))
+    alert('this prod already exist')
+    }else{
+
+    
+    let updatedFav = [...favCounter];
+
+    
+    updatedFav.push(item);
+  
+    setFavCounter(updatedFav);
+    localStorage.setItem('favCounter', JSON.stringify(updatedFav));
+
+    setLikeCount(updatedFav.length);
+
+    for(let i = 0; i < favCounter.length; i++){
+      console.log(favCounter[i])
+      
+    }
+  }
+  }
+  
 
   let a = 0;
 
   return (
     <div>
       {showNotification && <div className="notification">Product added to cart</div>}
+      {alreadyExist && <div className="notification">Already exist</div>}
 
       <div className='catalog_list'>
         {componentData.map((item) => (
@@ -52,6 +98,7 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
             </div>
             <button onClick={(event) => { event.stopPropagation() }} className="set_like" >
               <img onClick={() => handleLikeClick(item)} src={likedItems.includes(generateUniqueIdentifier(item)) ? like : likeImg} alt="" />
+              {/* <img src={favCounter.includes(item)? like:likeImg} onClick={() => addToFav(item) } alt="" /> */}
             </button>
           </div>
         ))}
@@ -68,6 +115,9 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
             showNotificationMessage={showNotificationMessage}
             cartCounter={cartCounter}
             setCartCounter={setCartCounter}
+            alreadyExist = {alreadyExist}
+            setAlreadyExist = {setAlreadyExist}
+            showAlreadyExist={showAlreadyExist}
 
           />
         </div>

@@ -14,7 +14,7 @@ export default function Cart({ cartCounter, setCartCounter }) {
     const getTotalPrice = () => {
         let totalPrice = 0;
         cartCounter.forEach(item => {
-            totalPrice += item.price ;
+            totalPrice += item.price;
         });
         return totalPrice;
     };
@@ -22,7 +22,7 @@ export default function Cart({ cartCounter, setCartCounter }) {
     const handleDeleteItem = (itemId) => {
         setCartCounter(prevCartCounter => {
             const updatedCart = prevCartCounter.filter(item => item.id !== itemId);
-            localStorage.setItem('cartCounter', JSON.stringify(updatedCart)); 
+            localStorage.setItem('cartCounter', JSON.stringify(updatedCart));
             return updatedCart;
         });
     };
@@ -41,10 +41,10 @@ export default function Cart({ cartCounter, setCartCounter }) {
                                 <td>
                                     <p>Product</p>
                                 </td>
-                                <td>
+                                <td className='quantity'>
                                     <p>Quantity</p>
                                 </td>
-                                <td>
+                                <td className='price'>
                                     <p>Price</p>
                                 </td>
                             </tr>
@@ -80,8 +80,8 @@ export default function Cart({ cartCounter, setCartCounter }) {
                 <div className="cart_right">
                     <img className='cart_pic' src={cartPic} alt="" />
                     <div className="total_price"><p className="total_price_title">
-                            Total
-                        </p>
+                        Total
+                    </p>
                         <p className="total_price_count">{getTotalPrice()}</p>
                     </div>
 
