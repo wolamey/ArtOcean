@@ -148,7 +148,7 @@
 .input_card_num{
   padding-right: 40px;
 }
-.error_div{
+.error_div, .error_div2{
   font-weight: 600;
   color: #920202;
   font-size: 30px;
@@ -173,6 +173,13 @@ width: 100%;
 }
 .card_date{
   margin-right: 50px;
+}
+@media (min-width: 1900px) {
+  .All{
+    padding: 0;
+    margin: auto;
+    max-width: 1150px;
+  }
 }
 @media (max-width: 1440px) {
   .p_big {
@@ -209,6 +216,12 @@ width: 100%;
   .All_akk {
     margin-top: 300px;
     width: 100%;
+  }
+  .div_but{
+    margin-left: 0;
+  }
+  .p_big{
+    margin-left: 0;
   }
 }
 @media (max-width: 765px) {

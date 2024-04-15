@@ -3,6 +3,7 @@ import App2 from "./addImage/App.jsx";
 import { useEffect, useState } from "react";
 
 export default function Cabinet() {
+  const [help2, setHelp2] = useState(0);
   const [help, setHelp] = useState(0);
   const [type, setType] = useState("true");
 
@@ -71,6 +72,42 @@ export default function Cabinet() {
       conteiner_error.append(error);
     }, 4000);
   }, [help]);
+  useEffect(() => {
+    const telephone = document.querySelector(".telephone");
+    const e_mail = document.querySelector(".e-mail");
+    const country = document.querySelector(".country");
+    const street = document.querySelector(".street");
+    const city = document.querySelector(".city");
+    const conteiner_error = document.querySelector(".conteiner_error_div2");
+    const error = document.querySelector(".error_div2");
+    if (
+      telephone.value !== "" &&
+      e_mail.value !== "" &&
+      country.value !== "" &&
+      street.value !== "" &&
+      city.value !== ""
+    ) {
+      const onjectNewUser = {
+        telephone: telephone.value,
+        e_mail: e_mail.value,
+        country: country.value,
+        street: street.value,
+        city: city.value,
+      };
+      console.log(onjectNewUser);
+    } else {
+      const template = `
+      <p>Введите все данные</p>
+      `;
+      error.innerHTML = template;
+      conteiner_error.append(error);
+    }
+    setTimeout(function () {
+      const template = ``;
+      error.innerHTML = template;
+      conteiner_error.append(error);
+    }, 4000);
+  }, [help2]);
   return (
     <div>
       <div className="All">
@@ -105,14 +142,35 @@ export default function Cabinet() {
           </div>
           <div>
             <input
-              className="input_db"
+              className="input_db telephone"
               placeholder="Номер телефона"
               type="text"
             />
-            <input className="input_db" placeholder="e-mail" type="text" />
-            <input className="input_db" placeholder="Страна" type="text" />
-            <input className="input_db" placeholder="Город" type="text" />
-            <input className="input_db" placeholder="Улица" type="text" />
+            <input
+              className="input_db e-mail"
+              placeholder="e-mail"
+              type="text"
+            />
+            <input
+              className="input_db country"
+              placeholder="Страна"
+              type="text"
+            />
+            <input className="input_db city" placeholder="Город" type="text" />
+            <input
+              className="input_db street"
+              placeholder="Улица"
+              type="text"
+            />
+            <div
+              onClick={() => setHelp2(help2 + 1)}
+              className="button_all button_all_2"
+            >
+              <p className="p_margin_0">Сохранить</p>
+            </div>
+            <div className="conteiner_error_div2">
+              <div className="error_div2"></div>
+            </div>
           </div>
           <div>
             <p className="big_text_cabinet">Пароль</p>
