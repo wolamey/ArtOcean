@@ -109,6 +109,17 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.input_img_1, .input_img_2{
+  position: absolute;
+  margin-left: -80px;
+}
+.input_img_1{
+  margin-top: 21px;
+  cursor: pointer;
+}
+.input_img_2{
+  margin-top: 17px;
+}
 .button_all {
   padding: 4.5px;
   margin-top: 10px;
@@ -133,6 +144,42 @@
 }
 .p_big {
   font-family: "Playfair Display", serif;
+}
+.input_card_num{
+  padding-right: 40px;
+}
+.error_div, .error_div2{
+  font-weight: 600;
+  color: #920202;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.error_div_p_successful{
+  color: #029281 !important;
+}
+.card_cab{
+  background-color: rgb(75, 90, 39);
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+  width: 300px;
+  height: 100px;
+}
+.card_num{
+width: 100%;
+}
+.card_date, .card_cvv{
+  display: inline-block;
+}
+.card_date{
+  margin-right: 50px;
+}
+@media (min-width: 1900px) {
+  .All{
+    padding: 0;
+    margin: auto;
+    max-width: 1150px;
+  }
 }
 @media (max-width: 1440px) {
   .p_big {
@@ -170,6 +217,12 @@
     margin-top: 300px;
     width: 100%;
   }
+  .div_but{
+    margin-left: 0;
+  }
+  .p_big{
+    margin-left: 0;
+  }
 }
 @media (max-width: 765px) {
   .all_main {
@@ -179,6 +232,12 @@
   .input_db {
     width: 96%;
     margin-right: 0;
+  }
+  .input_img_1, .input_img_2{
+    margin-left: -30px;
+  }
+  .input_img_1{
+    margin-top: 20px;
   }
   .button_all {
     width: 96%;

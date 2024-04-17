@@ -41,13 +41,15 @@
 .footer_p_top {
   font-size: 18px;
 }
-.footer_p {
+.footer_p, .footer_p_alt {
   color: #adbab6;
-  cursor: pointer;
   margin-top: 10px;
   margin-right: 29%;
   font-size: 14px;
   display: inline-block;
+}
+.footer_p{
+  cursor: pointer;
 }
 .footer_p:hover {
   cursor: pointer;

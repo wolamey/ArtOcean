@@ -97,6 +97,11 @@ a:hover{
 .nav_p {
   margin-top: 10px;
 }
+.close_nav_menu{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 @media (max-width: 1440px) {
   .nav {
     padding: 0;

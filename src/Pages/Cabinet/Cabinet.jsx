@@ -1,7 +1,113 @@
 import "./Cabinet.css";
 import App2 from "./addImage/App.jsx";
+import { useEffect, useState } from "react";
 
 export default function Cabinet() {
+  const [help2, setHelp2] = useState(0);
+  const [help, setHelp] = useState(0);
+  const [type, setType] = useState("true");
+
+  useEffect(() => {
+    const card_num = document.querySelector(".input_card_num");
+    const card_date = document.querySelector(".input_card_date");
+    const card_cvv = document.querySelector(".input_card_cvv");
+    const conteiner_error = document.querySelector(".conteiner_error_div");
+    const error = document.querySelector(".error_div");
+    const all_cards = document.querySelector(".All_cards");
+    if (
+      card_num.value !== "" &&
+      card_date.value !== "" &&
+      card_cvv.value !== ""
+    ) {
+      if (card_num.value.length == 16) {
+        if (card_date.value.length == 5) {
+          if (card_cvv.value.length == 3) {
+            const template = `
+            <p class="error_div_p_successful">Данные сохранены успешно</p>
+            `;
+            error.innerHTML = template;
+            conteiner_error.append(error);
+
+            const card = document.createElement("div");
+            const template2 = `
+              <div class="card_cab">
+              <p class="card_num">1234567812345678</p>
+              <p class="card_date">дата:23/23</p>
+              <p class="card_cvv">CVV:231</p>
+            </div>
+            `;
+            card.innerHTML = template2;
+            all_cards.append(card);
+          } else {
+            const template = `
+          <p>Неправильный CVV</p>
+          `;
+            error.innerHTML = template;
+            conteiner_error.append(error);
+          }
+        } else {
+          const template = `
+        <p>Неправильная дата</p>
+        `;
+          error.innerHTML = template;
+          conteiner_error.append(error);
+        }
+      } else {
+        const template = `
+      <p>Неправильный номер карты</p>
+      `;
+        error.innerHTML = template;
+        conteiner_error.append(error);
+      }
+    } else {
+      const template = `
+      <p>Введите все данные</p>
+      `;
+      error.innerHTML = template;
+      conteiner_error.append(error);
+    }
+    setTimeout(function () {
+      const template = ``;
+      error.innerHTML = template;
+      conteiner_error.append(error);
+    }, 4000);
+  }, [help]);
+  useEffect(() => {
+    const telephone = document.querySelector(".telephone");
+    const e_mail = document.querySelector(".e-mail");
+    const country = document.querySelector(".country");
+    const street = document.querySelector(".street");
+    const city = document.querySelector(".city");
+    const conteiner_error = document.querySelector(".conteiner_error_div2");
+    const error = document.querySelector(".error_div2");
+    if (
+      telephone.value !== "" &&
+      e_mail.value !== "" &&
+      country.value !== "" &&
+      street.value !== "" &&
+      city.value !== ""
+    ) {
+      const onjectNewUser = {
+        telephone: telephone.value,
+        e_mail: e_mail.value,
+        country: country.value,
+        street: street.value,
+        city: city.value,
+      };
+      console.log(onjectNewUser);
+    } else {
+      const template = `
+      <p>Введите все данные</p>
+      `;
+      error.innerHTML = template;
+      conteiner_error.append(error);
+    }
+    setTimeout(function () {
+      const template = ``;
+      error.innerHTML = template;
+      conteiner_error.append(error);
+    }, 4000);
+  }, [help2]);
   return (
     <div>
       <div className="All">
@@ -36,14 +142,35 @@ export default function Cabinet() {
           </div>
           <div>
             <input
-              className="input_db"
+              className="input_db telephone"
               placeholder="Номер телефона"
               type="text"
             />
-            <input className="input_db" placeholder="e-mail" type="text" />
-            <input className="input_db" placeholder="Страна" type="text" />
-            <input className="input_db" placeholder="Город" type="text" />
-            <input className="input_db" placeholder="Улица" type="text" />
+            <input
+              className="input_db e-mail"
+              placeholder="e-mail"
+              type="text"
+            />
+            <input
+              className="input_db country"
+              placeholder="Страна"
+              type="text"
+            />
+            <input className="input_db city" placeholder="Город" type="text" />
+            <input
+              className="input_db street"
+              placeholder="Улица"
+              type="text"
+            />
+            <div
+              onClick={() => setHelp2(help2 + 1)}
+              className="button_all button_all_2"
+            >
+              <p className="p_margin_0">Сохранить</p>
+            </div>
+            <div className="conteiner_error_div2">
+              <div className="error_div2"></div>
+            </div>
           </div>
           <div>
             <p className="big_text_cabinet">Пароль</p>
@@ -51,7 +178,13 @@ export default function Cabinet() {
               <input
                 placeholder="Пароль"
                 className="input_db"
-                type="password"
+                type={type ? "password" : "text"}
+              />
+              <img
+                onClick={() => setType(!type)}
+                className="input_img_1"
+                src="/cabinet/Eye.svg"
+                alt=""
               />
               <div className="button_all  button_all_1">
                 <p className="p_margin_0">Сменить пароль</p>
@@ -61,16 +194,40 @@ export default function Cabinet() {
           <div>
             <p className="big_text_cabinet">Платежная система</p>
             <div>
-              <input placeholder="Номер карты" className="input_db" />
+              <input
+                placeholder="Номер карты"
+                className="input_db input_card_num"
+                type="number"
+              />
+              <img
+                className="input_img_2"
+                src="/cabinet/creditСard.svg"
+                alt=""
+              />
               <div>
-                <input placeholder="Дата" className="input_db" />
-                <input placeholder="CVV" className="input_db" />
+                <input
+                  placeholder="Дата"
+                  className="input_db input_card_date"
+                  type="text"
+                />
+                <input
+                  placeholder="CVV"
+                  className="input_db input_card_cvv"
+                  type="number"
+                />
               </div>
             </div>
           </div>
-          <div className="button_all button_all_2">
+          <div className="conteiner_error_div">
+            <div className="error_div"></div>
+          </div>
+          <div
+            onClick={() => setHelp(help + 1)}
+            className="button_all button_all_2"
+          >
             <p className="p_margin_0">Сохранить</p>
           </div>
+          <div className="All_cards"></div>
         </div>
       </div>
     </div>
