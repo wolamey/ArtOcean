@@ -20,14 +20,59 @@
 
 
 
-.nav_p {
+/* .nav_p {
   margin-left: 22px;
+} */
+
+.a:hover {
+  color: #ffffff;
+  /* transform: scale(1.1); */
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  /* font-size: 24px; */
+}
+.a::after{
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: .3s;
+  left: 50%;
+  transform: translate(-50%);
+}
+.a:hover:after {
+  width: 100%;
+}
+.a.top:after {
+  left: 0;
+  width: 100%;
+  bottom: 5px;
+  opacity: 0;
 }
 
-a:hover {
-  color: #ffffff;
-  transform: scale(1.1);
+.a.top:hover:after {
+  opacity: 1;
+  bottom: 0
 }
+
+/* ----- bottom -----  */
+/* a.bottom:after {
+  left: 0;
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+
+a.bottom:hover:after {
+  opacity: 1;
+  bottom: 0
+} */
+
+
 
 .img_logo {
   transition: 0.2s linear;
