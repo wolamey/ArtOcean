@@ -65,13 +65,13 @@ export default function Nav(likeCount, cartCounter) {
         <NavLink className='logo__link' to="/">
           <img className="img_logo img_logo__header" src="/cabinet/logo.png" alt="" />
         </NavLink>
-        <NavLink to="catalog" className="nav_p">
+        <NavLink to="catalog" className="nav_p a">
           Каталог
         </NavLink>
-        <NavLink to="aboutus" className="nav_p">
+        <NavLink to="aboutus" className="nav_p a">
           О нас
         </NavLink>
-        <NavLink to="#" className="nav_p">
+        <NavLink to="#" className="nav_p a">
           Продажа
         </NavLink>
         {/* <div
@@ -119,16 +119,16 @@ export default function Nav(likeCount, cartCounter) {
 
 
         <img className="close_nav_menu" src="/cabinet/noSave.svg" alt="" />
-      <NavLink className="nav_p2" to="/">
+      <NavLink className="nav_p2 a" to="/">
           Главная
         </NavLink>
-        <NavLink className="nav_p2" to="catalog">
+        <NavLink className="nav_p2 a" to="catalog">
           Каталог
         </NavLink>
-        <NavLink className="nav_p2" to="aboutus">
+        <NavLink className="nav_p2 a" to="aboutus">
           О нас
         </NavLink>
-        <NavLink className="nav_p2" to="aboutus">
+        <NavLink className="nav_p2 a" to="aboutus">
           Продажа
         </NavLink>
       </div>
@@ -158,13 +158,13 @@ export default function Nav(likeCount, cartCounter) {
         </div>
 
         <div className="nav_1 nav1_links">
-        <NavLink to="catalog" className="nav_p">
+        <NavLink to="catalog" className="nav_p a">
           Каталог
         </NavLink>
-        <NavLink to="aboutus" className="nav_p">
+        <NavLink to="aboutus" className="nav_p a">
           О нас
         </NavLink>
-        <NavLink to="#" className="nav_p">
+        <NavLink to="#" className="nav_p a">
           Продажа
         </NavLink>
         </div>
