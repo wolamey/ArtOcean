@@ -38,7 +38,9 @@ let count = likeCount.cartCounter.length
       </div>
 
       <div className="nav_1">
-        <NavLink to="/"/>
+      <NavLink className="nav_p2" to="register">
+          Регистрация(кастыль)
+        </NavLink>
         <NavLink to="home">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
