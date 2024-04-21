@@ -1,0 +1,38 @@
+.All_register {
+  width: 90%;
+  max-width: 1600px;
+  margin: auto;
+}
+.register{
+    border: 1px solid #a1a1a100;
+    background-color: #FFFFFF;
+    width: 40%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.03);
+    margin-top: 20px;
+}
+.register_inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.register_p{
+    text-align: center;
+    font-size: 40px;
+}
+.login_link{
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+.login_div{
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.register_inputs{
+    padding: 2%;
+}
+.login_div_p{
+    color: #FFFFFF;
+}

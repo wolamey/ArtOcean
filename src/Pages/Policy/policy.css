@@ -1,0 +1,23 @@
+.All_policy{
+    margin: 50px;
+}
+.policy_head{
+    margin-top: 50px;
+    font-size: 70px;
+    font-weight: 600;
+}
+.big_p_policy{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+.p_policy{
+    font-size: 20px;
+    margin-top: 10px;
+}
+@media (min-width: 1700px) {
+    .All_policy{
+        max-width: 1600px;
+        margin: auto;
+    }
+}
