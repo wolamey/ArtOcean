@@ -25,7 +25,7 @@ export default function Footer() {
         <p className="footer_up_p">ВВЕРХ</p>
       </div>
       <div className="footer_div">
-        <NavLink to="home">
+        <NavLink to="/">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
         <NavLink to="policy">

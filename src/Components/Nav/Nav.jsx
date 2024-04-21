@@ -23,7 +23,7 @@ let count = likeCount.cartCounter.length
     <div className="nav">
       <div onClick={() => setMenu(menu + 1)} className="menu_open">
         <img className="close_nav_menu" src="/cabinet/noSave.svg" alt="" />
-      <NavLink className="nav_p2" to="home">
+      <NavLink className="nav_p2" to="/">
           Главная
         </NavLink>
         <NavLink className="nav_p2" to="catalog">
@@ -41,7 +41,7 @@ let count = likeCount.cartCounter.length
       <NavLink className="nav_p2" to="register">
           Регистрация(кастыль)
         </NavLink>
-        <NavLink to="home">
+        <NavLink to="/">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
         <NavLink to="catalog" className="nav_p">
