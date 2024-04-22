@@ -1,6 +1,8 @@
 import "./Cabinet.css";
 import App2 from "./addImage/App.jsx";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function Cabinet() {
   const [help2, setHelp2] = useState(0);
@@ -108,6 +110,22 @@ export default function Cabinet() {
       conteiner_error.append(error);
     }, 4000);
   }, [help2]);
+
+
+  const [user, setUser] = useState();
+  const auth = getAuth();
+  const navigate = useNavigate();
+  function signOutUser() {
+    signOut(auth).then(() => {
+      setUser({
+        email: null,
+        displayName: null,
+      });
+    });
+  }
+  // if (!user) {
+  //   return <h1>Загрузка...</h1>;
+  // }
   return (
     <div>
       <div className="All">
@@ -115,7 +133,9 @@ export default function Cabinet() {
         <div className="All_but">
           <div className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
-            <p className="p_but">Детали профиля</p>
+            <p  
+            // onClick={signOutUser}
+             className="p_but">Выйти из аккаунта</p>
           </div>
           <div className="div_but_2 div_but">
             <img className="img_but" src="/cabinet/busket.svg" alt="" />

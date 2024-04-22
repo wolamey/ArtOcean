@@ -41,6 +41,11 @@
 .register_div_p {
   color: #ffffff;
 }
+.error_login{
+  text-align: center;
+  color: red;
+  font-size: 26px;
+}
 @media (max-width: 1250px) {
     .login {
         width: 60%;
