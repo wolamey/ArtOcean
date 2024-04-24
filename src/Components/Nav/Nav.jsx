@@ -65,7 +65,7 @@ export default function Nav(likeCount, cartCounter) {
       <NavLink className="nav_p2" to="register">
           Регистрация(кастыль)
         </NavLink>
-        <NavLink to="home">
+        <NavLink to="/">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
         <NavLink to="catalog" className="nav_p a">
@@ -86,7 +86,7 @@ export default function Nav(likeCount, cartCounter) {
         </div> */}
       </div>
       <div className="nav_2">
-        <NavLink to="#" className="nav_div">
+        <NavLink to="favourites" className="nav_div">
           <img className="nav_img" src="/cabinet/heart_nav.svg" alt="" />
         </NavLink>
         <NavLink to="cabinet" className="nav_div">

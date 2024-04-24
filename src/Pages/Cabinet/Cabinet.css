@@ -27,7 +27,7 @@
 .no_save {
   background-color: #920202;
 }
-.save_off{
+.save_off {
   left: 100%;
 }
 .save_on {
@@ -109,15 +109,16 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.input_img_1, .input_img_2{
+.input_img_1,
+.input_img_2 {
   position: absolute;
   margin-left: -80px;
 }
-.input_img_1{
+.input_img_1 {
   margin-top: 21px;
   cursor: pointer;
 }
-.input_img_2{
+.input_img_2 {
   margin-top: 17px;
 }
 .button_all {
@@ -145,37 +146,61 @@
 .p_big {
   font-family: "Playfair Display", serif;
 }
-.input_card_num{
+.input_card_num {
   padding-right: 40px;
 }
-.error_div, .error_div2{
+.error_div,
+.error_div2 {
   font-weight: 600;
   color: #920202;
   font-size: 30px;
   margin-top: 10px;
 }
-.error_div_p_successful{
+.error_div_p_successful {
   color: #029281 !important;
 }
-.card_cab{
-  background-color: rgb(75, 90, 39);
-  color: #ffffff;
+.card_cab {
+  border: 1px #000000 solid;
   font-size: 20px;
   padding: 10px;
+  width: 96%;
+  height: 160px;
+  margin-bottom: 10px;
+}
+.card_cab_div {
+  display: flex;
+}
+.card_date,
+.card_cvv,
+.card_num {
+  border: #a1a1a1 1px solid;
   width: 300px;
-  height: 100px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 135px;
+  background-color: #ffffff;
 }
-.card_num{
-width: 100%;
-}
-.card_date, .card_cvv{
+.card_date,
+.card_cvv {
   display: inline-block;
+  padding-right: 190px;
 }
-.card_date{
+.card_date {
   margin-right: 50px;
 }
+.card_button {
+  display: inline-block;
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 30%;
+  width: 40%;
+}
 @media (min-width: 1900px) {
-  .All{
+  .All {
     padding: 0;
     margin: auto;
     max-width: 1150px;
@@ -217,10 +242,10 @@ width: 100%;
     margin-top: 300px;
     width: 100%;
   }
-  .div_but{
+  .div_but {
     margin-left: 0;
   }
-  .p_big{
+  .p_big {
     margin-left: 0;
   }
 }
@@ -233,10 +258,11 @@ width: 100%;
     width: 96%;
     margin-right: 0;
   }
-  .input_img_1, .input_img_2{
+  .input_img_1,
+  .input_img_2 {
     margin-left: -30px;
   }
-  .input_img_1{
+  .input_img_1 {
     margin-top: 20px;
   }
   .button_all {

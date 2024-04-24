@@ -1,6 +1,8 @@
 import "./Cabinet.css";
 import App2 from "./addImage/App.jsx";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function Cabinet() {
   const [help2, setHelp2] = useState(0);
@@ -31,9 +33,12 @@ export default function Cabinet() {
             const card = document.createElement("div");
             const template2 = `
               <div class="card_cab">
-              <p class="card_num">1234567812345678</p>
-              <p class="card_date">дата:23/23</p>
-              <p class="card_cvv">CVV:231</p>
+                <input type="submit" value="1234567812345678" class="card_num">
+                <div class="card_cab_div">
+                  <input type="submit" value="дата: 23/23" class="card_date">
+                  <input type="submit" value="CVV: 231" class="card_cvv">
+                </div>
+                <buttton class="card_button">Отвязать</buttton>
             </div>
             `;
             card.innerHTML = template2;
@@ -108,6 +113,25 @@ export default function Cabinet() {
       conteiner_error.append(error);
     }, 4000);
   }, [help2]);
+
+
+  const [user, setUser] = useState();
+  const auth = getAuth();
+  function signOutUser() {
+    signOut(auth).then(() => {
+      setUser({
+        email: null,
+        displayName: null,
+      });
+    });
+  }
+  function sliceUserInitial(string) {
+    return string
+      ?.trim()
+      .split(' ')
+      .map(word => word[0])
+      .join("");
+  }
   return (
     <div>
       <div className="All">
@@ -115,7 +139,12 @@ export default function Cabinet() {
         <div className="All_but">
           <div className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
-            <p className="p_but">Детали профиля</p>
+            <p
+              // onClick={signOutUser}
+              className="p_but"
+            >
+                      {/* Смотреть котиков не от имени {user.displayName}?({sliceUserInitial(user.displayName)}) */}
+            </p>
           </div>
           <div className="div_but_2 div_but">
             <img className="img_but" src="/cabinet/busket.svg" alt="" />

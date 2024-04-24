@@ -22,16 +22,11 @@
 
 /* .nav_p {
   margin-left: 22px;
-} */
-
-.a:hover {
-  color: #ffffff;
-  /* transform: scale(1.1); */
-  position: relative;
-  text-decoration: none;
+}
+a:hover{
   color: #ffffff;
   /* font-size: 24px; */
-}
+/* } */
 .a::after{
   position: absolute;
   content: '';
@@ -117,7 +112,10 @@ a.bottom:hover:after {
   align-items: center;
   width: 100%;
 }
-
+.nav_p:hover{
+  color: #ffffff;
+  transform: scale(1.1);
+}
 .nav_2 {
   display: flex;
   justify-content: space-between;
@@ -236,11 +234,6 @@ right: 60px;
 }
 
 @media (max-width: 765px) {
-  input {
-    width: 96%;
-    margin-right: 0;
-  }
-
   .button_all {
     width: 96%;
   }

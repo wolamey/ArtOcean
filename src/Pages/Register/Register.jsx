@@ -45,10 +45,14 @@ export default function Register() {
   }
   return (
     <div className="All_register">
+            <div className="nav_login">
+      <img className="img_logo_login" src="/cabinet/logo.png" alt="" />
+      </div>
       <div className="register">
         <p className="register_p">РЕГИСТРАЦИЯ</p>
         <form className="register_inputs" onSubmit={getRegisterData}>
           <input
+            className="input_register"
             required
             value={firstName}
             type="text"
@@ -56,6 +60,7 @@ export default function Register() {
             onChange={(e) => setFirstName(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={lastName}
             placeholder="Фамилия"
@@ -63,6 +68,7 @@ export default function Register() {
             onChange={(e) => setLastName(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={telephone}
             placeholder="Номер телефона"
@@ -70,6 +76,7 @@ export default function Register() {
             onChange={(e) => setTelephone(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={email}
             placeholder="e-mail"
@@ -77,6 +84,7 @@ export default function Register() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={country}
             placeholder="Страна"
@@ -84,6 +92,7 @@ export default function Register() {
             onChange={(e) => setСountry(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={city}
             placeholder="Город"
@@ -91,6 +100,7 @@ export default function Register() {
             onChange={(e) => setСity(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={street}
             placeholder="Улица"
@@ -98,6 +108,7 @@ export default function Register() {
             onChange={(e) => setStreet(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={pasvord}
             placeholder="Пароль"
@@ -105,19 +116,26 @@ export default function Register() {
             onChange={(e) => setPasvord(e.target.value)}
           />
           <input
+            className="input_register"
             required
             value={resPasvord}
             placeholder="Павторите пароль"
             type="password"
             onChange={(e) => setResPasvord(e.target.value)}
           />
-          <input type="submit" value="Регистрация"/>
+          <input className="input_register" type="submit" value="Регистрация" />
         </form>
         {error && <p>Пароли не совпадают</p>}
         <div className="login_div">
           <p className="login_div_p">Есть аккаунт?</p>
-          <NavLink className="login_link" to="/login">войти</NavLink>
+          <NavLink className="login_link" to="/login">
+            войти
+          </NavLink>
         </div>
+      </div>
+      <div className="footer_login">
+      <img className="img_logo_login" src="/cabinet/logo.png" alt="" />
+      <p className="footer_login_p">© 2021 “Copper Pro” Все права защищенны</p>
       </div>
     </div>
   );
