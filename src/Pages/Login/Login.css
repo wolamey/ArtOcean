@@ -9,7 +9,7 @@
   width: 40%;
   margin: auto;
   box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.03);
-  margin-top: 20px;
+  margin-top: 120px;
 }
 .login_p {
   text-align: center;
@@ -46,26 +46,85 @@
   color: red;
   font-size: 26px;
 }
+.nav_login{
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+  height: 140px;
+  z-index: 100;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+.img_logo_login{
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 15px;
+}
+.footer_login{
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+  height: 460px;
+  z-index: 100;
+  background-color: black;
+  position: absolute;
+  bottom: -20vh;
+  color: #ffffff;
+  width: 100%;
+  left: 0;
+}
+.footer_login_p{
+  text-align: center;
+  margin-top: 10px;
+}
 @media (max-width: 1250px) {
     .login {
         width: 60%;
       }
 }
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
+  .nav_login{
+    height: 240px;
+  }
+  .img_logo_login{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 35px;
+  }
+  .footer_login{
+    bottom: -30vh;
+  }
+}
+@media (max-width: 900px) {
     .login {
         width: 80%;
+      }
+      .footer_login{
+        bottom: -45vh;
+        height: 560px;
       }
 }
 @media (max-width: 650px) {
     .login {
         width: 100%;
       }
+      .footer_login{
+        bottom: -55vh;
+        height: 660px;
+      }
 }
-@media (max-width: 650px) {
+@media (max-width: 600px) {
       .login_p{
         font-size: 34px;
       }
       .register_div{
         flex-direction: column;
+      }
+      .nav_login{
+        height: 200px;
+      }
+      .img_logo_login{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 35px;
       }
 }

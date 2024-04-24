@@ -62,7 +62,7 @@ let count = likeCount.cartCounter.length
         </div>
       </div>
       <div className="nav_2">
-        <NavLink to="#" className="nav_div">
+        <NavLink to="favourites" className="nav_div">
           <img className="nav_img" src="/cabinet/heart_nav.svg" alt="" />
         </NavLink>
         <NavLink to="cabinet" className="nav_div">

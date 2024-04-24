@@ -33,9 +33,12 @@ export default function Cabinet() {
             const card = document.createElement("div");
             const template2 = `
               <div class="card_cab">
-              <p class="card_num">1234567812345678</p>
-              <p class="card_date">дата:23/23</p>
-              <p class="card_cvv">CVV:231</p>
+                <input type="submit" value="1234567812345678" class="card_num">
+                <div class="card_cab_div">
+                  <input type="submit" value="дата: 23/23" class="card_date">
+                  <input type="submit" value="CVV: 231" class="card_cvv">
+                </div>
+                <buttton class="card_button">Отвязать</buttton>
             </div>
             `;
             card.innerHTML = template2;
@@ -114,7 +117,6 @@ export default function Cabinet() {
 
   const [user, setUser] = useState();
   const auth = getAuth();
-  const navigate = useNavigate();
   function signOutUser() {
     signOut(auth).then(() => {
       setUser({
@@ -123,9 +125,13 @@ export default function Cabinet() {
       });
     });
   }
-  // if (!user) {
-  //   return <h1>Загрузка...</h1>;
-  // }
+  function sliceUserInitial(string) {
+    return string
+      ?.trim()
+      .split(' ')
+      .map(word => word[0])
+      .join("");
+  }
   return (
     <div>
       <div className="All">
@@ -133,9 +139,12 @@ export default function Cabinet() {
         <div className="All_but">
           <div className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
-            <p  
-            // onClick={signOutUser}
-             className="p_but">Выйти из аккаунта</p>
+            <p
+              // onClick={signOutUser}
+              className="p_but"
+            >
+                      {/* Смотреть котиков не от имени {user.displayName}?({sliceUserInitial(user.displayName)}) */}
+            </p>
           </div>
           <div className="div_but_2 div_but">
             <img className="img_but" src="/cabinet/busket.svg" alt="" />
