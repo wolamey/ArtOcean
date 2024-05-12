@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Catalog.scss'
+import './Catalog.css'
 import CatalogTopPart from './Components/CatalogTopPart/CatalogTopPart'
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
 import data from "../../data/data.json"
