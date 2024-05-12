@@ -17,13 +17,10 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import Policy from "../Pages/Policy/Policy";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
-import Favourites from "../Pages/Favourites/Favourites";
 import Header from "../Components/Header/Header";
 
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-
 function App() {
+
   // для firebase
 
   const [user, setUser] = useState();
@@ -52,6 +49,7 @@ function App() {
   // }
 
   // для firebase
+
   const [likeCount, setLikeCount] = useState(0);
   const [cartCounter, setCartCounter] = useState([]);
   const [favCounter, setFavCounter] = useState([]);
@@ -73,75 +71,76 @@ function App() {
 
   return (
     <div>
-      <Nav likeCount={likeCount} cartCounter={cartCounter} />
+      <Router>
+        <Nav likeCount={likeCount} cartCounter={cartCounter} />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route
-          path="/Catalog"
-          element={
-            <Catalog
-              setLikeCount={setLikeCount}
-              likeCount={likeCount}
-              cartCounter={cartCounter}
-              setCartCounter={setCartCounter}
-              favCounter={favCounter}
-              setFavCounter={setFavCounter}
-            />
-          }
-        />
+          <Route
+            path="/Catalog"
+            element={
+              <Catalog
+                setLikeCount={setLikeCount}
+                likeCount={likeCount}
+                cartCounter={cartCounter}
+                setCartCounter={setCartCounter}
+                favCounter={favCounter}
+                setFavCounter={setFavCounter}
+              />
+            }
+          />
 
-        <Route
-          path="/cart"
-          element={
-            <Cart cartCounter={cartCounter} setCartCounter={setCartCounter} />
-          }
-        />
-        <Route
-          path="/cabinet"
-          element={
-            <Cabinet
-              cartCounter={cartCounter}
-              setCartCounter={setCartCounter}
-            />
-          }
-        />
+          <Route
+            path="/cart"
+            element={
+              <Cart cartCounter={cartCounter} setCartCounter={setCartCounter} />
+            }
+          />
+          <Route
+            path="/cabinet"
+            element={
+              <Cabinet
+                cartCounter={cartCounter}
+                setCartCounter={setCartCounter}
+              />
+            }
+          />
 
-        <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
 
-        <Route
-          path="/policy"
-          element={
-            <Policy cartCounter={cartCounter} setCartCounter={setCartCounter} />
-          }
-        />
+          <Route
+            path="/policy"
+            element={
+              <Policy
+                cartCounter={cartCounter}
+                setCartCounter={setCartCounter}
+              />
+            }
+          />
 
-        <Route
-          path="/register"
-          element={
-            <Register
-              cartCounter={cartCounter}
-              setCartCounter={setCartCounter}
-            />
-          }
-        />
+          <Route
+            path="/register"
+            element={
+              <Register
+                cartCounter={cartCounter}
+                setCartCounter={setCartCounter}
+              />
+            }
+          />
 
-        <Route
-          path="/login"
-          element={
-            <Login cartCounter={cartCounter} setCartCounter={setCartCounter} />
-          }
-        />
-
-        <Route
-          path="/favourites"
-          element={
-            <Favourites/>
-          }
-        />
-      </Routes>
-      <Footer />
+          <Route
+            path="/login"
+            element={
+              <Login
+                cartCounter={cartCounter}
+                setCartCounter={setCartCounter}
+              />
+            }
+          />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
