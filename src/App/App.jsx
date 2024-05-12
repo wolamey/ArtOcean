@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 
-import "./App.scss";
 import Home from "../Pages/Home/Home";
 import Catalog from "../Pages/Catalog/Catalog";
 import Nav from "../Components/Nav/Nav";
@@ -21,6 +20,36 @@ import Login from "../Pages/Login/Login";
 import Header from "../Components/Header/Header";
 
 function App() {
+
+  // для firebase
+
+  const [user, setUser] = useState();
+  const auth = getAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      if (!currentUser) {
+        navigate("/login");
+        setUser({
+          email: null,
+          displayName: null,
+        });
+        return;
+      }
+      setUser({
+        displayName: currentUser.displayName,
+        email: currentUser.email,
+      });
+    });
+  }, []);
+
+  // if (!user) {
+  //   return <h1>Загрузка...</h1>;
+  // }
+
+  // для firebase
+
   const [likeCount, setLikeCount] = useState(0);
   const [cartCounter, setCartCounter] = useState([]);
   const [favCounter, setFavCounter] = useState([]);

@@ -10,7 +10,7 @@ import {
 } from "firebase/auth";
 
 export default function Register() {
-  const [city, setСity] = useState();
+  const [city, setСity] = useState("");
   const [country, setСountry] = useState("");
   const [street, setStreet] = useState("");
   const [telephone, setTelephone] = useState("");

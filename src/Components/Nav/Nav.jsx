@@ -62,9 +62,6 @@ export default function Nav(likeCount, cartCounter) {
       </div> */}
 
       <div className="nav_1">
-      <NavLink className="nav_p2" to="register">
-          Регистрация(кастыль)
-        </NavLink>
         <NavLink to="/">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
