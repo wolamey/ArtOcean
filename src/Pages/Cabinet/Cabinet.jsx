@@ -119,6 +119,7 @@ export default function Cabinet() {
   const auth = getAuth();
   function signOutUser() {
     signOut(auth).then(() => {
+      console.log(user);
       setUser({
         email: null,
         displayName: null,
@@ -137,13 +138,12 @@ export default function Cabinet() {
       <div className="All">
         <p className="p_big">ЛИЧНЫЙ КАБИНЕТ</p>
         <div className="All_but">
-          <div className="div_but_1 div_but">
+          <div               onClick={signOutUser} className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
             <p
-              // onClick={signOutUser}
               className="p_but"
             >
-                      {/* Смотреть котиков не от имени {user.displayName}?({sliceUserInitial(user.displayName)}) */}
+                      Выйти из аккаунта
             </p>
           </div>
           <div className="div_but_2 div_but">
@@ -154,7 +154,7 @@ export default function Cabinet() {
             <img className="img_but" src="/cabinet/heart.svg" alt="" />
             <p className="p_but">Список желаемого</p>
           </div>
-          <div className="div_but_4">
+          <div onClick={signOutUser} className="div_but_4">
             <img className="img_but" src="/cabinet/exit.svg" alt="" />
             <p className="p_but_4">Выйти</p>
           </div>

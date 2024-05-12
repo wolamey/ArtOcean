@@ -34,27 +34,19 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
-        // navigate("/login");
+        navigate("/login");
         setUser({
           email: null,
           displayName: null,
         });
         return;
       }
-      // setUser({
-      //   displayName: currentUser.displayName,
-      //   email: currentUser.email,
-      // });
+      setUser({
+        displayName: currentUser.displayName,
+        email: currentUser.email,
+      });
     });
   }, []);
-
-  // function sliceUserInitial(string) {
-  //   return string
-  //     ?.trim()
-  //     .split(' ')
-  //     .map(word => word[0])
-  //     .join("");
-  // }
 
   // if (!user) {
   //   return <h1>Загрузка...</h1>;
