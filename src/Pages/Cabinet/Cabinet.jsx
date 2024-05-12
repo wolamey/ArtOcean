@@ -138,7 +138,7 @@ export default function Cabinet() {
       <div className="All">
         <p className="p_big">ЛИЧНЫЙ КАБИНЕТ</p>
         <div className="All_but">
-          <div               onClick={signOutUser} className="div_but_1 div_but">
+          <div onClick={signOutUser} className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
             <p
               className="p_but"

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./CopperDishes.scss"
+import "./CopperDishes.css"
 import CatalogElement from '../../Components/CatalogElement/CatalogElement'
 export default function CopperDishes({componentData, setLikeCount, setPopup, openPopup, closePopup, popup,cartCounter, setCartCounter, favCounter, setFavCounter}) {
   return (
