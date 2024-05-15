@@ -23,9 +23,7 @@ export default function Login() {
   }
   return (
     <div className="All_login">
-      <div className="nav_login">
-      <img className="img_logo_login" src="/cabinet/logo.png" alt="" />
-      </div>
+
       <div className="login">
         <p className="login_p">ВХОД</p>
         <form className="login_inputs" onSubmit={getLoginData}>
@@ -54,10 +52,6 @@ export default function Login() {
             зарегистрироваться
           </NavLink>
         </div>
-      </div>
-      <div className="footer_login">
-      <img className="img_logo_login" src="/cabinet/logo.png" alt="" />
-      <p className="footer_login_p">© 2021 “Copper Pro” Все права защищенны</p>
       </div>
     </div>
   );

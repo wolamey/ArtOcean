@@ -2,6 +2,7 @@ import "./Register.css";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { getDatabase, ref, set } from "firebase/database";
 
 import {
   getAuth,
@@ -21,6 +22,31 @@ export default function Register() {
   const [error, setError] = useState(false);
   const [pasvord, setPasvord] = useState("");
   const navigate = useNavigate();
+
+  // {
+  //   "users": {
+  //     "alovelace": {
+  //       "name": "Ada Lovelace",
+  //       "contacts": { "ghopper": true },
+  //     },
+  //     "ghopper": { ... },
+  //     "eclarke": { ... }
+  //   }
+  // }
+
+
+function writeUserData(userId, email, telephone) {
+  const db = getDatabase();
+  console.log(db);
+  console.log(12);
+  set(ref(db, 'users/' + userId), {
+    // username: firstName,
+    // userlastname: lastName,
+    number: telephone,
+    email: email,
+  });
+}
+
   function getRegisterData(event) {
     console.log(12);
     event.preventDefault();
@@ -45,9 +71,6 @@ export default function Register() {
   }
   return (
     <div className="All_register">
-            <div className="nav_login">
-      <img className="img_logo_login" src="/cabinet/logo.png" alt="" />
-      </div>
       <div className="register">
         <p className="register_p">РЕГИСТРАЦИЯ</p>
         <form className="register_inputs" onSubmit={getRegisterData}>
@@ -132,10 +155,6 @@ export default function Register() {
             войти
           </NavLink>
         </div>
-      </div>
-      <div className="footer_login">
-      <img className="img_logo_login" src="/cabinet/logo.png" alt="" />
-      <p className="footer_login_p">© 2021 “Copper Pro” Все права защищенны</p>
       </div>
     </div>
   );

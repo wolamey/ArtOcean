@@ -12,6 +12,8 @@ import Home from "../Pages/Home/Home";
 import Catalog from "../Pages/Catalog/Catalog";
 import Nav from "../Components/Nav/Nav";
 import Footer from "../Components/Footer/Footer";
+import NavAlt from "../Components/Alt/Nav/Nav";
+import FooterAlt from "../Components/Alt/Footer/Footer";
 import Cabinet from "../Pages/Cabinet/Cabinet";
 import Cart from "../Pages/Cart/Cart";
 import AboutUs from "../Pages/AboutUs/AboutUs";
@@ -24,22 +26,32 @@ import Header from "../Components/Header/Header";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+import { getDatabase } from "firebase/database";
+
 function App() {
   // для firebase
 
+  const database = getDatabase();
+
+  // console.log(database);
+
   const [user, setUser] = useState();
+  const [showNavFooter, setShowNavFooter] = useState(false);
   const auth = getAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
+        setShowNavFooter(false)
         navigate("/login");
         setUser({
           email: null,
           displayName: null,
         });
         return;
+      } else {
+        setShowNavFooter(true)
       }
       setUser({
         displayName: currentUser.displayName,
@@ -74,7 +86,9 @@ function App() {
 
   return (
     <div>
-      <Nav likeCount={likeCount} cartCounter={cartCounter} />
+      {(showNavFooter && (
+        <Nav likeCount={likeCount} cartCounter={cartCounter} />
+      )) || <NavAlt />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -135,14 +149,11 @@ function App() {
           }
         />
 
-        <Route
-          path="/favourites"
-          element={
-            <Favourites/>
-          }
-        />
+        <Route path="/favourites" element={<Favourites />} />
       </Routes>
+      {(showNavFooter && (
       <Footer />
+      )) || <FooterAlt />}
     </div>
   );
 }

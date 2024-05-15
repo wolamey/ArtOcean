@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
+
 export default function Cabinet() {
   const [help2, setHelp2] = useState(0);
   const [help, setHelp] = useState(0);
@@ -138,7 +139,7 @@ export default function Cabinet() {
       <div className="All">
         <p className="p_big">ЛИЧНЫЙ КАБИНЕТ</p>
         <div className="All_but">
-          <div               onClick={signOutUser} className="div_but_1 div_but">
+          <div onClick={signOutUser} className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
             <p
               className="p_but"
