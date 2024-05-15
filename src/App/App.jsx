@@ -11,31 +11,46 @@ import Home from "../Pages/Home/Home";
 import Catalog from "../Pages/Catalog/Catalog";
 import Nav from "../Components/Nav/Nav";
 import Footer from "../Components/Footer/Footer";
+import NavAlt from "../Components/Alt/Nav/Nav";
+import FooterAlt from "../Components/Alt/Footer/Footer";
 import Cabinet from "../Pages/Cabinet/Cabinet";
 import Cart from "../Pages/Cart/Cart";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import Policy from "../Pages/Policy/Policy";
 import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
+import Favourites from "../Pages/Favourites/Favourites";
 import Header from "../Components/Header/Header";
 
-function App() {
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
+import { getDatabase } from "firebase/database";
+
+function App() {
   // для firebase
 
+  const database = getDatabase();
+
+  // console.log(database);
+
   const [user, setUser] = useState();
+  const [showNavFooter, setShowNavFooter] = useState(false);
   const auth = getAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
+        setShowNavFooter(false)
         navigate("/login");
         setUser({
           email: null,
           displayName: null,
         });
         return;
+      } else {
+        setShowNavFooter(true)
       }
       setUser({
         displayName: currentUser.displayName,
@@ -49,7 +64,6 @@ function App() {
   // }
 
   // для firebase
-
   const [likeCount, setLikeCount] = useState(0);
   const [cartCounter, setCartCounter] = useState([]);
   const [favCounter, setFavCounter] = useState([]);
@@ -71,76 +85,74 @@ function App() {
 
   return (
     <div>
-      <Router>
+      {(showNavFooter && (
         <Nav likeCount={likeCount} cartCounter={cartCounter} />
+      )) || <NavAlt />}
 
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-          <Route
-            path="/Catalog"
-            element={
-              <Catalog
-                setLikeCount={setLikeCount}
-                likeCount={likeCount}
-                cartCounter={cartCounter}
-                setCartCounter={setCartCounter}
-                favCounter={favCounter}
-                setFavCounter={setFavCounter}
-              />
-            }
-          />
+        <Route
+          path="/Catalog"
+          element={
+            <Catalog
+              setLikeCount={setLikeCount}
+              likeCount={likeCount}
+              cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+              favCounter={favCounter}
+              setFavCounter={setFavCounter}
+            />
+          }
+        />
 
-          <Route
-            path="/cart"
-            element={
-              <Cart cartCounter={cartCounter} setCartCounter={setCartCounter} />
-            }
-          />
-          <Route
-            path="/cabinet"
-            element={
-              <Cabinet
-                cartCounter={cartCounter}
-                setCartCounter={setCartCounter}
-              />
-            }
-          />
+        <Route
+          path="/cart"
+          element={
+            <Cart cartCounter={cartCounter} setCartCounter={setCartCounter} />
+          }
+        />
+        <Route
+          path="/cabinet"
+          element={
+            <Cabinet
+              cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+            />
+          }
+        />
 
-          <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/aboutus" element={<AboutUs />} />
 
-          <Route
-            path="/policy"
-            element={
-              <Policy
-                cartCounter={cartCounter}
-                setCartCounter={setCartCounter}
-              />
-            }
-          />
+        <Route
+          path="/policy"
+          element={
+            <Policy cartCounter={cartCounter} setCartCounter={setCartCounter} />
+          }
+        />
 
-          <Route
-            path="/register"
-            element={
-              <Register
-                cartCounter={cartCounter}
-                setCartCounter={setCartCounter}
-              />
-            }
-          />
+        <Route
+          path="/register"
+          element={
+            <Register
+              cartCounter={cartCounter}
+              setCartCounter={setCartCounter}
+            />
+          }
+        />
 
-          <Route
-            path="/login"
-            element={
-              <Login
-                cartCounter={cartCounter}
-                setCartCounter={setCartCounter}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </Router>
+        <Route
+          path="/login"
+          element={
+            <Login cartCounter={cartCounter} setCartCounter={setCartCounter} />
+          }
+        />
+
+        <Route path="/favourites" element={<Favourites />} />
+      </Routes>
+      {(showNavFooter && (
+      <Footer />
+      )) || <FooterAlt />}
     </div>
   );
 }
