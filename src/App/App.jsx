@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { useEffect } from "react";
 
-import "./App.scss";
 import Home from "../Pages/Home/Home";
 import Catalog from "../Pages/Catalog/Catalog";
 import Nav from "../Components/Nav/Nav";
