@@ -9,6 +9,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyC-88fyErRTtLKtg-sCYpVbDspuCowuDtU",
   authDomain: "artocean-8eee9.firebaseapp.com",
+  databaseURL: "https://artocean-8eee9-default-rtdb.firebaseio.com",
   projectId: "artocean-8eee9",
   storageBucket: "artocean-8eee9.appspot.com",
   messagingSenderId: "315408492011",
