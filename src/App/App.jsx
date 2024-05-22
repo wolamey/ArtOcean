@@ -21,18 +21,26 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Favourites from "../Pages/Favourites/Favourites";
 import Header from "../Components/Header/Header";
-
+import { getDatabase, ref, set, onValue } from "firebase/database";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-import { getDatabase } from "firebase/database";
 
 function App() {
-  // для firebase
 
   const database = getDatabase();
 
-  // console.log(database);
+let data = null;
+
+  const starCountRef = ref(database );
+  onValue(starCountRef, (snapshot) => {
+     data = snapshot.val();
+    console.log(data)
+
+  });
+
+
+
 
   const [user, setUser] = useState();
   const [showNavFooter, setShowNavFooter] = useState(false);
@@ -102,6 +110,7 @@ function App() {
               setCartCounter={setCartCounter}
               favCounter={favCounter}
               setFavCounter={setFavCounter}
+              data = {data}
             />
           }
         />

@@ -1,11 +1,20 @@
-import React from 'react'
+
+import React, { useState } from 'react';
 import "./Cart.scss"
 import { useEffect } from 'react';
 import deleteIcon from '../../../public/trash_icon.png'
 import cartPic from '../../../public/back_cart_pic.png'
 import deliveryPic from '../../../public/delivery_icon.png'
+import closeImg from "../../../public/cross.png";
 
 export default function Cart({ cartCounter, setCartCounter }) {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handlePlaceOrderClick = () => {
+        setIsModalOpen(true);
+    };
+
     const itemCounts = cartCounter.reduce((acc, item) => {
         acc[item.id] = (acc[item.id] || 0) + 1;
         return acc;
@@ -29,6 +38,45 @@ export default function Cart({ cartCounter, setCartCounter }) {
 
     return (
         <div className='cart_container'>
+
+
+            {isModalOpen && (
+                <div className="modal" onClick={() => setIsModalOpen(false)}>
+                    <div className="modal__container" onClick={(event) => { event.stopPropagation() }}>
+                        <h2>Order Summary</h2>
+                        <div className="modal__body">
+                            <div className="cart__wrappper">
+                                {cartCounter.length > 0 && cartCounter.map((item, index) => (
+                                    <tr key={index}>
+                                        {index === 0 || item.id !== cartCounter[index - 1].id ? (
+                                            <>
+                                                <td className='title_n_pic'>
+                                                    <img className='position_picture' src={item.pic} alt="" />
+                                                    <p className="name_prod">{item.text}</p>
+                                                </td>
+                                                <td>
+                                                    <p className='cart_item_count'>{itemCounts[item.id]}</p>
+                                                </td>
+                                                <td>
+                                                    <p className="cart_item_price">{item.price * itemCounts[item.id]}</p>
+                                                </td>
+                                                <td>
+                                                    <button onClick={() => handleDeleteItem(item.id)}>
+                                                        <img src={deleteIcon} alt="" />
+                                                    </button>
+                                                </td>
+                                            </>
+                                        ) : null}
+                                    </tr>
+                                ))}</div>
+
+                            <button className='order__button'>Order</button></div>
+                        <button onClick={() => setIsModalOpen(false)}><img className='closeimg' src={closeImg} alt="" /></button>
+                    </div>
+                </div>
+            )}
+
+
             <p className="page_path">
                 Main /  <b>Cart</b>
             </p>
@@ -90,7 +138,7 @@ export default function Cart({ cartCounter, setCartCounter }) {
                             <img src={deliveryPic} alt="" />
                             <p>You have free shipping!</p>
                         </div>
-                        <button>Place an order</button>
+                        <button onClick={handlePlaceOrderClick}>Place an order</button>
                     </div>
 
                 </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Catalog.css'
 import CatalogTopPart from './Components/CatalogTopPart/CatalogTopPart'
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
@@ -12,7 +12,10 @@ const popArr = [];
 
 export default function Catalog({likeCount, setLikeCount,cartCounter, setCartCounter, setFavCounter, favCounter}) {
 
+
+
   const [catalogPart, setCatalogPart] = useState(data.copperDishesForCatalog)
+
   const [popup, setPopup] = useState(popArr);
 
   function openPopup(item) {
