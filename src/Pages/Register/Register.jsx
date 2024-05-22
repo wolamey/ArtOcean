@@ -4,6 +4,13 @@ import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { getDatabase, ref, set } from "firebase/database";
 
+import firebase from "firebase/compat/app";
+// import firebaseConfig from "firebase/compat/app";
+import firebaseConfig from "../../firebaseConfig.js";
+// import firebaseConfig from "../../../firebaseConfig.js";
+import "firebase/compat/database";
+// import { useQuery, useMutation, useQueryClient } from "react-query";
+
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -34,18 +41,57 @@ export default function Register() {
   //   }
   // }
 
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
+  const db = firebaseApp.database();
 
-function writeUserData(userId, email, telephone) {
-  const db = getDatabase();
-  console.log(db);
-  console.log(12);
-  set(ref(db, 'users/' + userId), {
-    // username: firstName,
-    // userlastname: lastName,
-    number: telephone,
-    email: email,
-  });
-}
+  async function addUser(userData) {
+    const ref = db.ref("users").push();
+    const newKey = ref.key;
+    const dataWithKey = {
+      ...userData,
+      key: newKey,
+      country: country,
+      name: firstName,
+      email: email,
+      lastName: lastName,
+      nnumber: telephone,
+      password: pasvord,
+      street: street,
+      city: city,
+    };
+    await ref.set(dataWithKey);
+    console.log(newKey);
+    userDB(newKey)
+  }
+
+  // function writeUserData(userId, email, telephone) {
+  //   const db = getDatabase();
+  //   console.log(db);
+  //   console.log(12);
+  //   set(ref(db, "users/" + userId), {
+  //     // username: firstName,
+  //     // userlastname: lastName,
+  //     number: telephone,
+  //     email: email,
+  //   });
+  // }
+
+  async function userDB(newKey){
+    console.log(21);
+    const onjectUser = {
+      key: newKey,
+      email: email
+    };
+    let json = JSON.stringify(onjectUser);
+    console.log(json)
+    const responce = await fetch("http://localhost:5173/comments", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(onjectUser),
+    });
+  }
+  
+  
 
   function getRegisterData(event) {
     console.log(12);
@@ -68,12 +114,21 @@ function writeUserData(userId, email, telephone) {
         })
         .catch((e) => console.log(e));
     }
+    addUser()
   }
   return (
     <div className="All_register">
       <div className="register">
         <p className="register_p">РЕГИСТРАЦИЯ</p>
-        <form className="register_inputs" onSubmit={getRegisterData}>
+        <form
+          className="register_inputs"
+          onSubmit={
+            // () => {
+            // addUser();
+            getRegisterData
+          // ;}
+        }
+        >
           <input
             className="input_register"
             required
