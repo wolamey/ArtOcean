@@ -2,15 +2,50 @@ import "./Cabinet.css";
 import App2 from "./addImage/App.jsx";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getDatabase, ref, set, onValue, get, child } from "firebase/database";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
-
-export default function Cabinet() {
+export default function Cabinet(item) {
+  const database = getDatabase();
   const [help2, setHelp2] = useState(0);
   const [help, setHelp] = useState(0);
   const [type, setType] = useState("true");
 
+  let data = null;
+
+  const starCountRef = ref(database);
+  onValue(starCountRef, (snapshot) => {
+    data = snapshot.val();
+  });
+
+  const [iEmail, setIEmail] = useState();
+  const [iNumber, setINumber] = useState();
+  const [iCountry, setICountry] = useState();
+  const [iCity, setICity] = useState();
+  const [iStreet, setIStreet] = useState();
+  const [iLastName, setILastName] = useState();
+  const [iName, setIName] = useState();
+  const [iPassword, setIPassword] = useState();
   useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      onValue(starCountRef, (snapshot) => {
+        data = snapshot.val();
+        const dataArr = Object.values(data.users);
+        dataArr.forEach(function (item) {
+          const dataEmail = item.email;
+          if (currentUser.email == dataEmail) {
+            setIEmail(item.email);
+            setINumber(item.nnumber);
+            setICountry(item.country);
+            setICity(item.city);
+            setIStreet(item.street);
+            setILastName(item.lastName);
+            setIName(item.name);
+            setIPassword(item.password);
+          }
+        });
+      });
+    });
     const card_num = document.querySelector(".input_card_num");
     const card_date = document.querySelector(".input_card_date");
     const card_cvv = document.querySelector(".input_card_cvv");
@@ -115,7 +150,6 @@ export default function Cabinet() {
     }, 4000);
   }, [help2]);
 
-
   const [user, setUser] = useState();
   const auth = getAuth();
   function signOutUser() {
@@ -130,8 +164,8 @@ export default function Cabinet() {
   function sliceUserInitial(string) {
     return string
       ?.trim()
-      .split(' ')
-      .map(word => word[0])
+      .split(" ")
+      .map((word) => word[0])
       .join("");
   }
   return (
@@ -141,11 +175,7 @@ export default function Cabinet() {
         <div className="All_but">
           <div onClick={signOutUser} className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
-            <p
-              className="p_but"
-            >
-                      Выйти из аккаунта
-            </p>
+            <p className="p_but">Выйти из аккаунта</p>
           </div>
           <div className="div_but_2 div_but">
             <img className="img_but" src="/cabinet/busket.svg" alt="" />
@@ -167,39 +197,50 @@ export default function Cabinet() {
                 <App2 />
               </div>
               <p className="p_margin_0">Добрый день</p>
-              <p className="big_text_cabinet">Иван Иванов</p>
+              <p className="big_text_cabinet">{iLastName} {iName}</p>
             </div>
           </div>
-          <div>
-            <input
-              className="input_db telephone"
-              placeholder="Номер телефона"
-              type="text"
-            />
-            <input
-              className="input_db e-mail"
-              placeholder="e-mail"
-              type="text"
-            />
-            <input
-              className="input_db country"
-              placeholder="Страна"
-              type="text"
-            />
-            <input className="input_db city" placeholder="Город" type="text" />
-            <input
-              className="input_db street"
-              placeholder="Улица"
-              type="text"
-            />
-            <div
-              onClick={() => setHelp2(help2 + 1)}
-              className="button_all button_all_2"
-            >
-              <p className="p_margin_0">Сохранить</p>
-            </div>
-            <div className="conteiner_error_div2">
-              <div className="error_div2"></div>
+          <div className="conteiner_form">
+            <div className="form">
+              <input
+                className="input_db telephone"
+                placeholder="Номер телефона"
+                defaultValue={iNumber}
+                type="text"
+              />
+              <input
+                className="input_db e-mail"
+                placeholder="e-mail"
+                defaultValue={iEmail}
+                type="text"
+              />
+              <input
+                className="input_db country"
+                placeholder="Страна"
+                defaultValue={iCountry}
+                type="text"
+              />
+              <input
+                className="input_db city"
+                placeholder="Город"
+                defaultValue={iCity}
+                type="text"
+              />
+              <input
+                className="input_db street"
+                placeholder="Улица"
+                defaultValue={iStreet}
+                type="text"
+              />
+              <div
+                onClick={() => setHelp2(help2 + 1)}
+                className="button_all button_all_2"
+              >
+                <p className="p_margin_0">Сохранить</p>
+              </div>
+              <div className="conteiner_error_div2">
+                <div className="error_div2"></div>
+              </div>
             </div>
           </div>
           <div>
@@ -208,6 +249,7 @@ export default function Cabinet() {
               <input
                 placeholder="Пароль"
                 className="input_db"
+                defaultValue={iPassword}
                 type={type ? "password" : "text"}
               />
               <img
