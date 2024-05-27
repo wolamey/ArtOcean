@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="footer_alt">
           <div className="footer_div">
             <p className="footer_p_top a">Навигация</p>
-            <NavLink to="home">
+            <NavLink to="">
               <p className="footer_p a">Главная</p>
             </NavLink>
             <NavLink to="catalog">
