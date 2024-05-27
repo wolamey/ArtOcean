@@ -2,23 +2,23 @@
     "HeaderTopPart": [
         {
             "id": 1,
-            "pic": "./choice1.png",
-            "choice_name": "Рукоделие"
+            "pic": "./choice1.jpg",
+            "choice_name": "Handiwork"
         },
         {
             "id": 2,
-            "pic": "./choice2.png",
-            "choice_name": "Ювелирные изделия"
+            "pic": "./choice2.jpg",
+            "choice_name": "Jewelry"
         },
         {
             "id": 3,
-            "pic": "./choice3.png",
-            "choice_name": "Одежда и аксессуары"
+            "pic": "./choice3.jpg",
+            "choice_name": "Clothing and accessories"
         },
         {
             "id": 4,
-            "pic": "./choice4.png",
-            "choice_name": "Искусство"
+            "pic": "./choice4.jpg",
+            "choice_name": "Art"
         }
     ],
     "copperDishesForCatalog": [
@@ -136,8 +136,8 @@
     "copperDishesForCatalog3": [
         {
             "id": 1,
-            "pic": "./catalog1.png",
-            "text": "accesoiries",
+            "pic": "./clothe1.jpg",
+            "text": "\"Summer Breeze\" crocheted bag",
             "price": 1953
         },
         {

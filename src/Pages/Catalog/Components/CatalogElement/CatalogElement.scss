@@ -11,8 +11,14 @@
         position: relative;
         transition: 0.3s;
         cursor: pointer;
-
-        &:hover{
+        height: 100%;
+img{
+    max-width: 100%;
+    max-height: 350px;
+    height: 100%;
+    object-fit: cover;
+}
+        &:hover {
             box-shadow: rgba(0, 0, 0, 0.179) 0px 0px 30px;
             scale: 1.02;
         }
@@ -46,7 +52,8 @@
             top: 10px;
             right: 10px;
             transition: 0.3s;
-            &:hover{
+
+            &:hover {
                 scale: 1.1;
 
             }
@@ -64,7 +71,8 @@ img {
 
 .notification {
     position: fixed;
-    bottom: 20px; /* Позиционируем уведомление внизу страницы */
+    bottom: 20px;
+    /* Позиционируем уведомление внизу страницы */
     left: 50%;
     transform: translateX(-50%);
     background-color: #f5f5f5;
@@ -72,24 +80,31 @@ img {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    animation: slide-up 0.5s, fade-out 1s 2s; /* Анимация выезда и исчезновения */
+    animation: slide-up 0.5s, fade-out 1s 2s;
+    /* Анимация выезда и исчезновения */
     z-index: 4;
 }
 
 @keyframes slide-up {
     from {
-        transform: translate(-50%, 100%); /* Начальное положение - выезд из-под экрана */
+        transform: translate(-50%, 100%);
+        /* Начальное положение - выезд из-под экрана */
     }
+
     to {
-        transform: translate(-50%, 0); /* Конечное положение - появление на экране */
+        transform: translate(-50%, 0);
+        /* Конечное положение - появление на экране */
     }
 }
 
 @keyframes fade-out {
     from {
-        opacity: 1; /* Начальная прозрачность */
+        opacity: 1;
+        /* Начальная прозрачность */
     }
+
     to {
-        opacity: 0; /* Конечная прозрачность - исчезновение */
+        opacity: 0;
+        /* Конечная прозрачность - исчезновение */
     }
 }

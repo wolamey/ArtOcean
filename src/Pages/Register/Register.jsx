@@ -23,32 +23,18 @@ export default function Register() {
   const [pasvord, setPasvord] = useState("");
   const navigate = useNavigate();
 
-  // {
-  //   "users": {
-  //     "alovelace": {
-  //       "name": "Ada Lovelace",
-  //       "contacts": { "ghopper": true },
-  //     },
-  //     "ghopper": { ... },
-  //     "eclarke": { ... }
-  //   }
-  // }
-
-
 function writeUserData(userId, email, telephone) {
   const db = getDatabase();
   console.log(db);
   console.log(12);
   set(ref(db, 'users/' + userId), {
-    // username: firstName,
-    // userlastname: lastName,
+ 
     number: telephone,
     email: email,
   });
 }
 
   function getRegisterData(event) {
-    console.log(12);
     event.preventDefault();
     if (resPasvord !== pasvord) {
       setError(true);
