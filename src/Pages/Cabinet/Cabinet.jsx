@@ -8,6 +8,7 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 export default function Cabinet(item) {
   const database = getDatabase();
   const [help2, setHelp2] = useState(0);
+  const [help3, setHelp3] = useState(0);
   const [help, setHelp] = useState(0);
   const [type, setType] = useState("true");
 
@@ -52,6 +53,9 @@ export default function Cabinet(item) {
     const conteiner_error = document.querySelector(".conteiner_error_div");
     const error = document.querySelector(".error_div");
     const all_cards = document.querySelector(".All_cards");
+    if (help3 == 0) {
+      setHelp3(10);
+    } else {
     if (
       card_num.value !== "" &&
       card_date.value !== "" &&
@@ -112,42 +116,40 @@ export default function Cabinet(item) {
       error.innerHTML = template;
       conteiner_error.append(error);
     }, 4000);
+  }
   }, [help]);
   useEffect(() => {
-    const telephone = document.querySelector(".telephone");
-    const e_mail = document.querySelector(".e-mail");
-    const country = document.querySelector(".country");
-    const street = document.querySelector(".street");
-    const city = document.querySelector(".city");
-    const conteiner_error = document.querySelector(".conteiner_error_div2");
-    const error = document.querySelector(".error_div2");
-    if (
-      telephone.value !== "" &&
-      e_mail.value !== "" &&
-      country.value !== "" &&
-      street.value !== "" &&
-      city.value !== ""
-    ) {
-      const onjectNewUser = {
-        telephone: telephone.value,
-        e_mail: e_mail.value,
-        country: country.value,
-        street: street.value,
-        city: city.value,
-      };
-      console.log(onjectNewUser);
+    if (help3 == 0) {
+      setHelp3(10);
     } else {
-      const template = `
+      const telephone = document.querySelector(".telephone");
+      const e_mail = document.querySelector(".e-mail");
+      const country = document.querySelector(".country");
+      const street = document.querySelector(".street");
+      const city = document.querySelector(".city");
+      const conteiner_error = document.querySelector(".conteiner_error_div2");
+      const error = document.querySelector(".error_div2");
+      if (
+        telephone.value !== "" &&
+        e_mail.value !== "" &&
+        country.value !== "" &&
+        street.value !== "" &&
+        city.value !== ""
+      ) {
+        //
+      } else {
+        const template = `
       <p>Введите все данные</p>
       `;
-      error.innerHTML = template;
-      conteiner_error.append(error);
+        error.innerHTML = template;
+        conteiner_error.append(error);
+      }
+      setTimeout(function () {
+        const template = ``;
+        error.innerHTML = template;
+        conteiner_error.append(error);
+      }, 4000);
     }
-    setTimeout(function () {
-      const template = ``;
-      error.innerHTML = template;
-      conteiner_error.append(error);
-    }, 4000);
   }, [help2]);
 
   const [user, setUser] = useState();
@@ -197,7 +199,9 @@ export default function Cabinet(item) {
                 <App2 />
               </div>
               <p className="p_margin_0">Добрый день</p>
-              <p className="big_text_cabinet">{iLastName} {iName}</p>
+              <p className="big_text_cabinet">
+                {iLastName} {iName}
+              </p>
             </div>
           </div>
           <div className="conteiner_form">
