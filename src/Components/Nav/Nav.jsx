@@ -66,13 +66,13 @@ export default function Nav(likeCount, cartCounter) {
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
         <NavLink to="catalog" className="nav_p a">
-          Каталог
+          Catalog
         </NavLink>
         <NavLink to="aboutus" className="nav_p a">
-          О нас
+          About us
         </NavLink>
         <NavLink to="#" className="nav_p a">
-          Продажа
+          Sell
         </NavLink>
         {/* <div
           onClick={() => setMenu(menu + 1)}
