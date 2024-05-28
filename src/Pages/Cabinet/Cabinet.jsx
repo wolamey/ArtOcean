@@ -15,9 +15,13 @@ import {
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function Cabinet(item) {
+  const navigate = useNavigate();
+
+
   const database = getDatabase();
   const [help2, setHelp2] = useState(0);
   const [help3, setHelp3] = useState(0);
+  const [help4, setHelp4] = useState(10);
   const [help, setHelp] = useState(0);
   const [type, setType] = useState("true");
 
@@ -43,35 +47,40 @@ export default function Cabinet(item) {
   const [payCVV, setPayCVV] = useState();
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
-      onValue(starCountRef, (snapshot) => {
-        data = snapshot.val();
-        const dataArr = Object.values(data.users);
-        dataArr.forEach(function (item) {
-          const dataEmail = item.email;
-          if (currentUser.email == dataEmail) {
-            setIEmail(item.email);
-            setIKey(item.key);
-            setINumber(item.nnumber);
-            setICountry(item.country);
-            setICity(item.city);
-            setIStreet(item.street);
-            setILastName(item.lastName);
-            setIName(item.name);
-            setIPassword(item.password);
+    if (help4 == 0) {
+      //
+    } else {
+      setHelp4(0)
+      const all_cards = document.querySelector(".All_cards");
+      onAuthStateChanged(auth, (currentUser) => {
+        onValue(starCountRef, (snapshot) => {
+          data = snapshot.val();
+          const dataArr = Object.values(data.users);
+          dataArr.forEach(function (item) {
+            const dataEmail = item.email;
+            if (currentUser.email == dataEmail) {
+              setIEmail(item.email);
+              setIKey(item.key);
+              setINumber(item.nnumber);
+              setICountry(item.country);
+              setICity(item.city);
+              setIStreet(item.street);
+              setILastName(item.lastName);
+              setIName(item.name);
+              setIPassword(item.password);
 
-            const itemArr = Object.values(item);
-            itemArr.forEach(function (item) {
-              const dataCVV = item.CVV
-              if (dataCVV !== undefined) {
-                // setPayCart(item.payCart);
-                // setPayDate(item.payDate);
-                // setPayCVV(item.CVV);
-                // console.log(item.CVV);
-                // console.log(payCVV);
+              const itemArr = Object.values(item);
+              itemArr.forEach(function (item) {
+                const dataCVV = item.CVV;
+                if (dataCVV !== undefined) {
+                  // setPayCart(item.payCart);
+                  // setPayDate(item.payDate);
+                  // setPayCVV(item.CVV);
+                  // console.log(item.CVV);
+                  // console.log(payCVV);
 
-                const card = document.createElement("div");
-                const template2 = `
+                  const card = document.createElement("div");
+                  const template2 = `
                 <div class="card_cab">
                   <input type="submit" value="${item.payCart}" class="card_num">
                   <div class="card_cab_div">
@@ -81,20 +90,23 @@ export default function Cabinet(item) {
                   <buttton class="card_button">Отвязать</buttton>
               </div>
               `;
-                card.innerHTML = template2;
-                all_cards.append(card);
-              }
-            })
-          }
+                  card.innerHTML = template2;
+                  all_cards.append(card);
+                }
+              });
+            }
+          });
         });
       });
-    });
+    }
+  }, []);
+
+  useEffect(() => {
     const card_num = document.querySelector(".input_card_num");
     const card_date = document.querySelector(".input_card_date");
     const card_cvv = document.querySelector(".input_card_cvv");
     const conteiner_error = document.querySelector(".conteiner_error_div");
     const error = document.querySelector(".error_div");
-    const all_cards = document.querySelector(".All_cards");
     if (help3 == 0) {
       setHelp3(10);
     } else {
@@ -111,42 +123,7 @@ export default function Cabinet(item) {
             `;
               error.innerHTML = template;
               conteiner_error.append(error);
-
-            //   const card = document.createElement("div");
-            //   const template2 = `
-            //   <div class="card_cab">
-            //     <input type="submit" value="1234567812345678" class="card_num">
-            //     <div class="card_cab_div">
-            //       <input type="submit" value="дата: 23/23" class="card_date">
-            //       <input type="submit" value="CVV: 231" class="card_cvv">
-            //     </div>
-            //     <buttton class="card_button">Отвязать</buttton>
-            // </div>
-            // `;
-            //   card.innerHTML = template2;
-            //   all_cards.append(card);
-
-              const db = getDatabase();
-
-              // Get a key for a new Post.
-              const newPostKey = push(child(ref(db), "posts")).key;
-
-              console.log(newPostKey);
-
-              // A post entry.
-              const postData = {
-                payCart: payCart,
-                payDate: payDate,
-                CVV: payCVV,
-                key: newPostKey
-              };
-
-              // Write the new post's data simultaneously in the posts list and the user's post list.
-              const updates = {};
-              console.log(iKey);
-              updates["/users/" + iKey + "/" + newPostKey] = postData;
-
-              return update(ref(db), updates);
+              editDataBasePay();
             } else {
               const template = `
           <p>Неправильный CVV</p>
@@ -262,6 +239,26 @@ export default function Cabinet(item) {
     updates["/users/" + newPostKey] = postData;
     updates["/users/" + iKey] = null;
 
+    return update(ref(db), updates);
+  }
+
+  function editDataBasePay(uid) {
+    const db = getDatabase();
+    // Get a key for a new Post.
+    const newPostKey = push(child(ref(db), "posts")).key;
+    console.log(newPostKey);
+    // A post entry.
+    const postData = {
+      payCart: payCart,
+      payDate: payDate,
+      CVV: payCVV,
+      key: newPostKey,
+    };
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    const updates = {};
+    console.log(iKey);
+    updates["/users/" + iKey + "/" + newPostKey] = postData;
+    window.location.reload()
     return update(ref(db), updates);
   }
   return (
