@@ -37,6 +37,11 @@ export default function Cabinet(item) {
   const [iLastName, setILastName] = useState();
   const [iName, setIName] = useState();
   const [iPassword, setIPassword] = useState();
+
+  const [payCart, setPayCart] = useState();
+  const [payDate, setPayDate] = useState();
+  const [payCVV, setPayCVV] = useState();
+
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       onValue(starCountRef, (snapshot) => {
@@ -54,6 +59,32 @@ export default function Cabinet(item) {
             setILastName(item.lastName);
             setIName(item.name);
             setIPassword(item.password);
+
+            const itemArr = Object.values(item);
+            itemArr.forEach(function (item) {
+              const dataCVV = item.CVV
+              if (dataCVV !== undefined) {
+                // setPayCart(item.payCart);
+                // setPayDate(item.payDate);
+                // setPayCVV(item.CVV);
+                // console.log(item.CVV);
+                // console.log(payCVV);
+
+                const card = document.createElement("div");
+                const template2 = `
+                <div class="card_cab">
+                  <input type="submit" value="${item.payCart}" class="card_num">
+                  <div class="card_cab_div">
+                    <input type="submit" value="дата: ${item.payDate}" class="card_date">
+                    <input type="submit" value="CVV: ${item.CVV}" class="card_cvv">
+                  </div>
+                  <buttton class="card_button">Отвязать</buttton>
+              </div>
+              `;
+                card.innerHTML = template2;
+                all_cards.append(card);
+              }
+            })
           }
         });
       });
@@ -81,19 +112,41 @@ export default function Cabinet(item) {
               error.innerHTML = template;
               conteiner_error.append(error);
 
-              const card = document.createElement("div");
-              const template2 = `
-              <div class="card_cab">
-                <input type="submit" value="1234567812345678" class="card_num">
-                <div class="card_cab_div">
-                  <input type="submit" value="дата: 23/23" class="card_date">
-                  <input type="submit" value="CVV: 231" class="card_cvv">
-                </div>
-                <buttton class="card_button">Отвязать</buttton>
-            </div>
-            `;
-              card.innerHTML = template2;
-              all_cards.append(card);
+            //   const card = document.createElement("div");
+            //   const template2 = `
+            //   <div class="card_cab">
+            //     <input type="submit" value="1234567812345678" class="card_num">
+            //     <div class="card_cab_div">
+            //       <input type="submit" value="дата: 23/23" class="card_date">
+            //       <input type="submit" value="CVV: 231" class="card_cvv">
+            //     </div>
+            //     <buttton class="card_button">Отвязать</buttton>
+            // </div>
+            // `;
+            //   card.innerHTML = template2;
+            //   all_cards.append(card);
+
+              const db = getDatabase();
+
+              // Get a key for a new Post.
+              const newPostKey = push(child(ref(db), "posts")).key;
+
+              console.log(newPostKey);
+
+              // A post entry.
+              const postData = {
+                payCart: payCart,
+                payDate: payDate,
+                CVV: payCVV,
+                key: newPostKey
+              };
+
+              // Write the new post's data simultaneously in the posts list and the user's post list.
+              const updates = {};
+              console.log(iKey);
+              updates["/users/" + iKey + "/" + newPostKey] = postData;
+
+              return update(ref(db), updates);
             } else {
               const template = `
           <p>Неправильный CVV</p>
@@ -292,7 +345,7 @@ export default function Cabinet(item) {
           <div>
             <p className="big_text_cabinet">Пароль</p>
             <div>
-            <input
+              <input
                 className="input_db e-mail"
                 placeholder="e-mail"
                 defaultValue={iEmail}
@@ -321,6 +374,7 @@ export default function Cabinet(item) {
               <input
                 placeholder="Номер карты"
                 className="input_db input_card_num"
+                onChange={(event) => setPayCart(event.target.value)}
                 type="number"
               />
               <img
@@ -332,11 +386,13 @@ export default function Cabinet(item) {
                 <input
                   placeholder="Дата"
                   className="input_db input_card_date"
+                  onChange={(event) => setPayDate(event.target.value)}
                   type="text"
                 />
                 <input
                   placeholder="CVV"
                   className="input_db input_card_cvv"
+                  onChange={(event) => setPayCVV(event.target.value)}
                   type="number"
                 />
               </div>
