@@ -2,7 +2,16 @@ import "./Cabinet.css";
 import App2 from "./addImage/App.jsx";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getDatabase, ref, set, onValue, get, child } from "firebase/database";
+import {
+  getDatabase,
+  ref,
+  set,
+  onValue,
+  get,
+  child,
+  update,
+  push,
+} from "firebase/database";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function Cabinet(item) {
@@ -20,6 +29,7 @@ export default function Cabinet(item) {
   });
 
   const [iEmail, setIEmail] = useState();
+  const [iKey, setIKey] = useState();
   const [iNumber, setINumber] = useState();
   const [iCountry, setICountry] = useState();
   const [iCity, setICity] = useState();
@@ -36,6 +46,7 @@ export default function Cabinet(item) {
           const dataEmail = item.email;
           if (currentUser.email == dataEmail) {
             setIEmail(item.email);
+            setIKey(item.key);
             setINumber(item.nnumber);
             setICountry(item.country);
             setICity(item.city);
@@ -56,22 +67,22 @@ export default function Cabinet(item) {
     if (help3 == 0) {
       setHelp3(10);
     } else {
-    if (
-      card_num.value !== "" &&
-      card_date.value !== "" &&
-      card_cvv.value !== ""
-    ) {
-      if (card_num.value.length == 16) {
-        if (card_date.value.length == 5) {
-          if (card_cvv.value.length == 3) {
-            const template = `
+      if (
+        card_num.value !== "" &&
+        card_date.value !== "" &&
+        card_cvv.value !== ""
+      ) {
+        if (card_num.value.length == 16) {
+          if (card_date.value.length == 5) {
+            if (card_cvv.value.length == 3) {
+              const template = `
             <p class="error_div_p_successful">Данные сохранены успешно</p>
             `;
-            error.innerHTML = template;
-            conteiner_error.append(error);
+              error.innerHTML = template;
+              conteiner_error.append(error);
 
-            const card = document.createElement("div");
-            const template2 = `
+              const card = document.createElement("div");
+              const template2 = `
               <div class="card_cab">
                 <input type="submit" value="1234567812345678" class="card_num">
                 <div class="card_cab_div">
@@ -81,42 +92,42 @@ export default function Cabinet(item) {
                 <buttton class="card_button">Отвязать</buttton>
             </div>
             `;
-            card.innerHTML = template2;
-            all_cards.append(card);
-          } else {
-            const template = `
+              card.innerHTML = template2;
+              all_cards.append(card);
+            } else {
+              const template = `
           <p>Неправильный CVV</p>
           `;
+              error.innerHTML = template;
+              conteiner_error.append(error);
+            }
+          } else {
+            const template = `
+        <p>Неправильная дата</p>
+        `;
             error.innerHTML = template;
             conteiner_error.append(error);
           }
         } else {
           const template = `
-        <p>Неправильная дата</p>
-        `;
+      <p>Неправильный номер карты</p>
+      `;
           error.innerHTML = template;
           conteiner_error.append(error);
         }
       } else {
         const template = `
-      <p>Неправильный номер карты</p>
+      <p>Введите все данные</p>
       `;
         error.innerHTML = template;
         conteiner_error.append(error);
       }
-    } else {
-      const template = `
-      <p>Введите все данные</p>
-      `;
-      error.innerHTML = template;
-      conteiner_error.append(error);
+      setTimeout(function () {
+        const template = ``;
+        error.innerHTML = template;
+        conteiner_error.append(error);
+      }, 4000);
     }
-    setTimeout(function () {
-      const template = ``;
-      error.innerHTML = template;
-      conteiner_error.append(error);
-    }, 4000);
-  }
   }, [help]);
   useEffect(() => {
     if (help3 == 0) {
@@ -170,6 +181,36 @@ export default function Cabinet(item) {
       .map((word) => word[0])
       .join("");
   }
+
+  function editDataBase(uid) {
+    const db = getDatabase();
+
+    // Get a key for a new Post.
+    const newPostKey = push(child(ref(db), "posts")).key;
+
+    // A post entry.
+    const postData = {
+      country: iCountry,
+      email: iEmail,
+      nnumber: iNumber,
+      street: iStreet,
+      city: iCity,
+      key: newPostKey,
+      password: iPassword,
+      lastName: iLastName,
+      name: iName,
+    };
+
+    console.log(newPostKey);
+    console.log(postData);
+
+    // Write the new post's data simultaneously in the posts list and the user's post list.
+    const updates = {};
+    updates["/users/" + newPostKey] = postData;
+    updates["/users/" + iKey] = null;
+
+    return update(ref(db), updates);
+  }
   return (
     <div>
       <div className="All">
@@ -210,34 +251,35 @@ export default function Cabinet(item) {
                 className="input_db telephone"
                 placeholder="Номер телефона"
                 defaultValue={iNumber}
-                type="text"
-              />
-              <input
-                className="input_db e-mail"
-                placeholder="e-mail"
-                defaultValue={iEmail}
+                onChange={(event) => setINumber(event.target.value)}
                 type="text"
               />
               <input
                 className="input_db country"
                 placeholder="Страна"
                 defaultValue={iCountry}
+                onChange={(event) => setICountry(event.target.value)}
                 type="text"
               />
               <input
                 className="input_db city"
                 placeholder="Город"
                 defaultValue={iCity}
+                onChange={(event) => setICity(event.target.value)}
                 type="text"
               />
               <input
                 className="input_db street"
                 placeholder="Улица"
                 defaultValue={iStreet}
+                onChange={(event) => setIStreet(event.target.value)}
                 type="text"
               />
               <div
-                onClick={() => setHelp2(help2 + 1)}
+                onClick={() =>
+                  // setHelp2(help2 + 1),
+                  editDataBase()
+                }
                 className="button_all button_all_2"
               >
                 <p className="p_margin_0">Сохранить</p>
@@ -250,6 +292,12 @@ export default function Cabinet(item) {
           <div>
             <p className="big_text_cabinet">Пароль</p>
             <div>
+            <input
+                className="input_db e-mail"
+                placeholder="e-mail"
+                defaultValue={iEmail}
+                type="text"
+              />
               <input
                 placeholder="Пароль"
                 className="input_db"
