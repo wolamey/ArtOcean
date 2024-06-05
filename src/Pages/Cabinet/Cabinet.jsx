@@ -15,9 +15,17 @@ import {
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 export default function Cabinet(item) {
+  const navigate = useNavigate();
+
+  function delitePay() {
+//
+  }
+
   const database = getDatabase();
   const [help2, setHelp2] = useState(0);
   const [help3, setHelp3] = useState(0);
+  const [help4, setHelp4] = useState(10);
+  const [help5, setHelp5] = useState(0);
   const [help, setHelp] = useState(0);
   const [type, setType] = useState("true");
 
@@ -37,33 +45,86 @@ export default function Cabinet(item) {
   const [iLastName, setILastName] = useState();
   const [iName, setIName] = useState();
   const [iPassword, setIPassword] = useState();
+  const [oldArr, setOldArr] = useState();
+  const [croppedImage, setCroppedImage] = useState("/cabinet/first_ava.png");
+  const [i, setI] = useState(0);
+
+  const [payCart, setPayCart] = useState();
+  const [payDate, setPayDate] = useState();
+  const [payCVV, setPayCVV] = useState();
+
+  const [payICart, setIPayCart] = useState(111);
+  const [payIDate, setIPayDate] = useState(111);
+  const [payICVV, setIPayCVV] = useState(111);
+
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
-      onValue(starCountRef, (snapshot) => {
-        data = snapshot.val();
-        const dataArr = Object.values(data.users);
-        dataArr.forEach(function (item) {
-          const dataEmail = item.email;
-          if (currentUser.email == dataEmail) {
-            setIEmail(item.email);
-            setIKey(item.key);
-            setINumber(item.nnumber);
-            setICountry(item.country);
-            setICity(item.city);
-            setIStreet(item.street);
-            setILastName(item.lastName);
-            setIName(item.name);
-            setIPassword(item.password);
-          }
+    if (help4 == 0) {
+      //
+    } else {
+      setHelp4(0);
+      const all_cards = document.querySelector(".All_cards");
+      onAuthStateChanged(auth, (currentUser) => {
+        onValue(starCountRef, (snapshot) => {
+          data = snapshot.val();
+          const dataArr = Object.values(data.users);
+          dataArr.forEach(function (item) {
+            const dataEmail = item.email;
+            if (currentUser.email == dataEmail) {
+              setIEmail(item.email);
+              setIKey(item.key);
+              setINumber(item.nnumber);
+              setICountry(item.country);
+              setICity(item.city);
+              setIStreet(item.street);
+              setILastName(item.lastName);
+              setIName(item.name);
+              setIPassword(item.password);
+              setCroppedImage(item.image);
+              const itemArr = Object.values(item);
+              itemArr.forEach(function (item, i) {
+                const dataCVV = item.CVV;
+                i = i + 1;
+                if (dataCVV !== undefined) {
+                  const card = document.createElement("div");
+                  const template2 = `
+                <div class="card_cab">
+                <input type="submit" value="${item.key}" class="key key${i}">
+                  <input type="submit" value="${item.payCart}" class="card_num">
+                  <div class="card_cab_div">
+                    <input type="submit" value="дата: ${
+                      item.payDate
+                    }" class="card_date">
+                    <input type="submit" value="CVV: ${
+                      item.CVV
+                    }" class="card_cvv">
+                  </div>
+
+              </div>
+              `;
+                  card.innerHTML = template2;
+                  all_cards.append(card);
+                }
+              });
+            }
+          });
         });
       });
-    });
+    }
+  }, []);
+
+  function deletPayCart() {
+    // const keyPay = document.querySelector(".key" + 1);
+    // for (let i = 0; i < 1; i++) {
+    //   const element = keyPay[i];
+    // }
+  }
+
+  useEffect(() => {
     const card_num = document.querySelector(".input_card_num");
     const card_date = document.querySelector(".input_card_date");
     const card_cvv = document.querySelector(".input_card_cvv");
     const conteiner_error = document.querySelector(".conteiner_error_div");
     const error = document.querySelector(".error_div");
-    const all_cards = document.querySelector(".All_cards");
     if (help3 == 0) {
       setHelp3(10);
     } else {
@@ -80,20 +141,7 @@ export default function Cabinet(item) {
             `;
               error.innerHTML = template;
               conteiner_error.append(error);
-
-              const card = document.createElement("div");
-              const template2 = `
-              <div class="card_cab">
-                <input type="submit" value="1234567812345678" class="card_num">
-                <div class="card_cab_div">
-                  <input type="submit" value="дата: 23/23" class="card_date">
-                  <input type="submit" value="CVV: 231" class="card_cvv">
-                </div>
-                <buttton class="card_button">Отвязать</buttton>
-            </div>
-            `;
-              card.innerHTML = template2;
-              all_cards.append(card);
+              editDataBasePay();
             } else {
               const template = `
           <p>Неправильный CVV</p>
@@ -167,7 +215,6 @@ export default function Cabinet(item) {
   const auth = getAuth();
   function signOutUser() {
     signOut(auth).then(() => {
-      console.log(user);
       setUser({
         email: null,
         displayName: null,
@@ -185,32 +232,100 @@ export default function Cabinet(item) {
   function editDataBase(uid) {
     const db = getDatabase();
 
+    onAuthStateChanged(auth, (currentUser) => {
+      onValue(starCountRef, (snapshot) => {
+        data = snapshot.val();
+        const dataArr = Object.values(data.users);
+        dataArr.forEach(function (item) {
+          const dataEmail = item.email;
+          if (currentUser.email == dataEmail) {
+            const dataArr = Object.values(item);
+            dataArr.forEach(function (item) {
+              const dataArr = Object.values(item);
+              if (dataArr[0].length == 3 
+                // && oldArr !== dataArr[2]
+                ) {
+                // setOldArr(dataArr[2])
+                const a = dataArr[0] 
+                const b = dataArr[2] 
+                const c = dataArr[3] 
+                if (help5 !== 10) {
+                setIPayCart(dataArr[2]);
+                setIPayDate(dataArr[3]);
+                setIPayCVV(dataArr[0]);
+                setTimeout(function () {
+                editIDataBasePay(a, b, c);
+                setHelp5(10)
+              }, 2000);
+              }}
+            });
+          }
+        });
+      });
+    });
+    setTimeout(function () {
+      // Get a key for a new Post.
+      const newPostKey = push(child(ref(db), "posts")).key;
+
+      const updates = {};
+      updates["/users/" + iKey] = null;
+
+      // A post entry.
+      const postData = {
+        country: iCountry,
+        email: iEmail,
+        nnumber: iNumber,
+        street: iStreet,
+        city: iCity,
+        key: iKey,
+        password: iPassword,
+        lastName: iLastName,
+        name: iName,
+        // image: croppedImage,
+      };
+
+
+      // Write the new post's data simultaneously in the posts list and the user's post list.
+      // setIKey(newPostKey)
+      updates["/users/" + iKey] = postData;
+      return update(ref(db), updates);
+    }, 1000);
+  }
+
+  function editDataBasePay(uid) {
+    const db = getDatabase();
     // Get a key for a new Post.
     const newPostKey = push(child(ref(db), "posts")).key;
-
     // A post entry.
     const postData = {
-      country: iCountry,
-      email: iEmail,
-      nnumber: iNumber,
-      street: iStreet,
-      city: iCity,
+      payCart: payCart,
+      payDate: payDate,
+      CVV: payCVV,
       key: newPostKey,
-      password: iPassword,
-      lastName: iLastName,
-      name: iName,
     };
-
-    console.log(newPostKey);
-    console.log(postData);
-
     // Write the new post's data simultaneously in the posts list and the user's post list.
     const updates = {};
-    updates["/users/" + newPostKey] = postData;
-    updates["/users/" + iKey] = null;
-
+    updates["/users/" + iKey + "/" + newPostKey] = postData;
+    window.location.reload();
     return update(ref(db), updates);
   }
+  function editIDataBasePay(a, b, c) {
+  const db = getDatabase();
+  // Get a key for a new Post.
+  const newPostKey = push(child(ref(db), "posts")).key;
+  // A post entry.
+  const postData = {
+    payCart: b,
+    payDate: c,
+    CVV: a,
+    key: newPostKey,
+  };
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  const updates = {};
+  updates["/users/" + iKey + "/" + newPostKey] = postData;
+  window.location.reload();
+  return update(ref(db), updates);
+}
   return (
     <div>
       <div className="All">
@@ -237,7 +352,7 @@ export default function Cabinet(item) {
           <div className="all_main">
             <div>
               <div className="All2">
-                <App2 />
+                <App2 croppedImage={croppedImage} setCroppedImage={setCroppedImage}/>
               </div>
               <p className="p_margin_0">Добрый день</p>
               <p className="big_text_cabinet">
@@ -290,18 +405,18 @@ export default function Cabinet(item) {
             </div>
           </div>
           <div>
-            <p className="big_text_cabinet">Пароль</p>
+            <p className="big_text_cabinet">Учётная запись</p>
             <div>
-            <input
+              <input
                 className="input_db e-mail"
                 placeholder="e-mail"
-                defaultValue={iEmail}
+                value={iEmail}
                 type="text"
               />
               <input
                 placeholder="Пароль"
                 className="input_db"
-                defaultValue={iPassword}
+                value={iPassword}
                 type={type ? "password" : "text"}
               />
               <img
@@ -310,9 +425,6 @@ export default function Cabinet(item) {
                 src="/cabinet/Eye.svg"
                 alt=""
               />
-              <div className="button_all  button_all_1">
-                <p className="p_margin_0">Сменить пароль</p>
-              </div>
             </div>
           </div>
           <div>
@@ -321,6 +433,7 @@ export default function Cabinet(item) {
               <input
                 placeholder="Номер карты"
                 className="input_db input_card_num"
+                onChange={(event) => setPayCart(event.target.value)}
                 type="number"
               />
               <img
@@ -332,11 +445,13 @@ export default function Cabinet(item) {
                 <input
                   placeholder="Дата"
                   className="input_db input_card_date"
+                  onChange={(event) => setPayDate(event.target.value)}
                   type="text"
                 />
                 <input
                   placeholder="CVV"
                   className="input_db input_card_cvv"
+                  onChange={(event) => setPayCVV(event.target.value)}
                   type="number"
                 />
               </div>

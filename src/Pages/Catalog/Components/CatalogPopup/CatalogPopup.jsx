@@ -18,7 +18,6 @@ export default function CatalogPopup({ item, text, pic, positionName, price, clo
 
     function addToCart(item) {
         if(!cartCounter.includes(item)){
-console.log(cartCounter);
         let updatedCart = [...cartCounter];
 
         
