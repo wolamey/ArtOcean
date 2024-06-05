@@ -14,12 +14,16 @@ interface IMGProps {
   sizeLimit?: number;
 }
 
-const ImageUpload = (props: IMGProps) => {
+const ImageUpload = (props: IMGProps
+  // , iImg, setIImg
+  // , croppedImage, setCroppedImage
+  ) => {
   const [fileInput, setFileInput] = useState<any>();
   const [hasInput, setHasInput] = useState(false);
   const [croppedImage, setCroppedImage] = useState<any>(
     "/cabinet/first_ava.png"
   );
+  
   const [fileName, setFileName] = useState<string>("");
   const [statusMessage, setStatusMessage] = useState("");
 
@@ -61,6 +65,8 @@ const ImageUpload = (props: IMGProps) => {
   const saveImage = () => {
     props.setCroppedImage(croppedImage);
     props.setOriginalImage(fileInput);
+    
+    
     setStatusMessage("Картинка сохранена успешно");
   };
 
