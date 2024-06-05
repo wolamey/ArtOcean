@@ -25,6 +25,7 @@ export default function Cabinet(item) {
   const [help2, setHelp2] = useState(0);
   const [help3, setHelp3] = useState(0);
   const [help4, setHelp4] = useState(10);
+  const [help5, setHelp5] = useState(0);
   const [help, setHelp] = useState(0);
   const [type, setType] = useState("true");
 
@@ -51,6 +52,10 @@ export default function Cabinet(item) {
   const [payCart, setPayCart] = useState();
   const [payDate, setPayDate] = useState();
   const [payCVV, setPayCVV] = useState();
+
+  const [payICart, setIPayCart] = useState(111);
+  const [payIDate, setIPayDate] = useState(111);
+  const [payICVV, setIPayCVV] = useState(111);
 
   useEffect(() => {
     if (help4 == 0) {
@@ -227,10 +232,6 @@ export default function Cabinet(item) {
   }
 
   function editDataBase(uid) {
-    const updates = {};
-    updates["/users/" + iKey] = null;
-
-
     const db = getDatabase();
 
     onAuthStateChanged(auth, (currentUser) => {
@@ -245,26 +246,38 @@ export default function Cabinet(item) {
             console.log(dataArr);
             dataArr.forEach(function (item) {
               const dataArr = Object.values(item);
+              console.log(dataArr);
               if (dataArr[0].length == 3 
                 // && oldArr !== dataArr[2]
                 ) {
-                setOldArr(dataArr[2])
-                console.log(dataArr[2]);
-                setPayCart(dataArr[2]);
-                setPayDate(dataArr[3]);
-                setPayCVV(dataArr[0]);
+                // setOldArr(dataArr[2])
+                const a = dataArr[0] 
+                const b = dataArr[2] 
+                const c = dataArr[3] 
+                console.log(b);
+                if (help5 !== 10) {
+                setIPayCart(dataArr[2]);
+                setIPayDate(dataArr[3]);
+                setIPayCVV(dataArr[0]);
+                console.log(payICart);
                 setTimeout(function () {
-                editDataBasePay();
-              }, 1000);
+                  console.log("456645654546466544564543434535434535433543454");
+                editIDataBasePay(a, b, c);
+                setHelp5(10)
+              }, 2000);
                 console.log(data);
-              }
+              }}
             });
           }
         });
       });
     });
+    setTimeout(function () {
       // Get a key for a new Post.
       const newPostKey = push(child(ref(db), "posts")).key;
+
+      const updates = {};
+      updates["/users/" + iKey] = null;
 
       // A post entry.
       const postData = {
@@ -277,7 +290,7 @@ export default function Cabinet(item) {
         password: iPassword,
         lastName: iLastName,
         name: iName,
-        image: croppedImage,
+        // image: croppedImage,
       };
 
 
@@ -287,6 +300,7 @@ export default function Cabinet(item) {
       updates["/users/" + iKey] = postData;
       console.log(iKey);
       return update(ref(db), updates);
+    }, 1000);
   }
 
   function editDataBasePay(uid) {
@@ -307,9 +321,31 @@ export default function Cabinet(item) {
     console.log(postData);
     console.log(iKey);
     updates["/users/" + iKey + "/" + newPostKey] = postData;
-    // window.location.reload();
+    window.location.reload();
     return update(ref(db), updates);
   }
+  function editIDataBasePay(a, b, c) {
+    console.log(a, b, c);
+    console.log(iKey);
+  const db = getDatabase();
+  // Get a key for a new Post.
+  const newPostKey = push(child(ref(db), "posts")).key;
+  console.log(newPostKey);
+  // A post entry.
+  const postData = {
+    payCart: b,
+    payDate: c,
+    CVV: a,
+    key: newPostKey,
+  };
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  const updates = {};
+  console.log(postData);
+  console.log(iKey);
+  updates["/users/" + iKey + "/" + newPostKey] = postData;
+  window.location.reload();
+  return update(ref(db), updates);
+}
   return (
     <div>
       <div className="All">
