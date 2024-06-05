@@ -46,7 +46,6 @@ export default function Cabinet(item) {
   const [iName, setIName] = useState();
   const [iPassword, setIPassword] = useState();
   const [oldArr, setOldArr] = useState();
-  const [croppedImage, setCroppedImage] = useState("/cabinet/first_ava.png");
   const [i, setI] = useState(0);
 
   const [payCart, setPayCart] = useState();
@@ -98,7 +97,7 @@ export default function Cabinet(item) {
                       item.CVV
                     }" class="card_cvv">
                   </div>
-
+                  <buttton class="card_button ${i}" onClick=${deletPayCart()}>Отвязать</buttton>
               </div>
               `;
                   card.innerHTML = template2;
@@ -113,6 +112,7 @@ export default function Cabinet(item) {
   }, []);
 
   function deletPayCart() {
+    console.log(12);
     // const keyPay = document.querySelector(".key" + 1);
     // for (let i = 0; i < 1; i++) {
     //   const element = keyPay[i];
@@ -326,6 +326,14 @@ export default function Cabinet(item) {
   window.location.reload();
   return update(ref(db), updates);
 }
+
+
+const [croppedImage, setCroppedImage] = useState("/cabinet/first_ava.png");
+const handleNameChange = (croppedImage) => {
+  setCroppedImage(croppedImage)
+  console.log(croppedImage);
+  console.log(1223);
+}
   return (
     <div>
       <div className="All">
@@ -352,7 +360,7 @@ export default function Cabinet(item) {
           <div className="all_main">
             <div>
               <div className="All2">
-                <App2 croppedImage={croppedImage} setCroppedImage={setCroppedImage}/>
+                <App2 onChange={handleNameChange} croppedImage={croppedImage} setCroppedImage={setCroppedImage}/>
               </div>
               <p className="p_margin_0">Добрый день</p>
               <p className="big_text_cabinet">
