@@ -91,7 +91,7 @@ function App() {
       if (snapshot.exists()) {
         //
       } else {
-        console.log("No data available");
+        //
       }
     })
     .catch((error) => {

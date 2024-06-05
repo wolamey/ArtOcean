@@ -18,7 +18,7 @@ export default function Cabinet(item) {
   const navigate = useNavigate();
 
   function delitePay() {
-    console.log(12);
+//
   }
 
   const database = getDatabase();
@@ -116,7 +116,6 @@ export default function Cabinet(item) {
     // const keyPay = document.querySelector(".key" + 1);
     // for (let i = 0; i < 1; i++) {
     //   const element = keyPay[i];
-    //   console.log(element);
     // }
   }
 
@@ -216,7 +215,6 @@ export default function Cabinet(item) {
   const auth = getAuth();
   function signOutUser() {
     signOut(auth).then(() => {
-      console.log(user);
       setUser({
         email: null,
         displayName: null,
@@ -238,15 +236,12 @@ export default function Cabinet(item) {
       onValue(starCountRef, (snapshot) => {
         data = snapshot.val();
         const dataArr = Object.values(data.users);
-        console.log(dataArr);
         dataArr.forEach(function (item) {
           const dataEmail = item.email;
           if (currentUser.email == dataEmail) {
             const dataArr = Object.values(item);
-            console.log(dataArr);
             dataArr.forEach(function (item) {
               const dataArr = Object.values(item);
-              console.log(dataArr);
               if (dataArr[0].length == 3 
                 // && oldArr !== dataArr[2]
                 ) {
@@ -254,18 +249,14 @@ export default function Cabinet(item) {
                 const a = dataArr[0] 
                 const b = dataArr[2] 
                 const c = dataArr[3] 
-                console.log(b);
                 if (help5 !== 10) {
                 setIPayCart(dataArr[2]);
                 setIPayDate(dataArr[3]);
                 setIPayCVV(dataArr[0]);
-                console.log(payICart);
                 setTimeout(function () {
-                  console.log("456645654546466544564543434535434535433543454");
                 editIDataBasePay(a, b, c);
                 setHelp5(10)
               }, 2000);
-                console.log(data);
               }}
             });
           }
@@ -296,19 +287,15 @@ export default function Cabinet(item) {
 
       // Write the new post's data simultaneously in the posts list and the user's post list.
       // setIKey(newPostKey)
-      console.log(iKey);
       updates["/users/" + iKey] = postData;
-      console.log(iKey);
       return update(ref(db), updates);
     }, 1000);
   }
 
   function editDataBasePay(uid) {
-      console.log(iKey);
     const db = getDatabase();
     // Get a key for a new Post.
     const newPostKey = push(child(ref(db), "posts")).key;
-    console.log(newPostKey);
     // A post entry.
     const postData = {
       payCart: payCart,
@@ -318,19 +305,14 @@ export default function Cabinet(item) {
     };
     // Write the new post's data simultaneously in the posts list and the user's post list.
     const updates = {};
-    console.log(postData);
-    console.log(iKey);
     updates["/users/" + iKey + "/" + newPostKey] = postData;
     window.location.reload();
     return update(ref(db), updates);
   }
   function editIDataBasePay(a, b, c) {
-    console.log(a, b, c);
-    console.log(iKey);
   const db = getDatabase();
   // Get a key for a new Post.
   const newPostKey = push(child(ref(db), "posts")).key;
-  console.log(newPostKey);
   // A post entry.
   const postData = {
     payCart: b,
@@ -340,8 +322,6 @@ export default function Cabinet(item) {
   };
   // Write the new post's data simultaneously in the posts list and the user's post list.
   const updates = {};
-  console.log(postData);
-  console.log(iKey);
   updates["/users/" + iKey + "/" + newPostKey] = postData;
   window.location.reload();
   return update(ref(db), updates);

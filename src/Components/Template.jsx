@@ -1,5 +1,4 @@
 export default function Template(item, i) {
-  console.log(item);
   return (
     <div class="card_cab">
       <input type="submit" value="${item.payCart}" class="card_num" />

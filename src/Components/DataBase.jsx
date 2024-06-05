@@ -6,7 +6,7 @@ import { useQuery, useMutation, useQueryClient } from "react-query";
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.database()
 
-console.log(12);
+
 
 
 // export async function addUser(userData){
@@ -14,7 +14,6 @@ console.log(12);
 //     const newKey = ref.key;
 //     const dataWithKey = { ...userData, key: newKey };
 //     await ref.set(dataWithKey);
-//     console.log(newKey);
 // }
 
 export async function getAllUsers(){

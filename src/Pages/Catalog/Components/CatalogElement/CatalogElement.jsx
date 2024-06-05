@@ -40,7 +40,6 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
 
   const showNotificationMessage = () => {
     setShowNotification(true);
-    console.log(cartCounter);
     setTimeout(() => {
       setShowNotification(false);
     }, 3000);
@@ -56,7 +55,6 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
 
   function addToFav(item) {
     if(cartCounter.includes(item)){
-      console.log(cartCounter.includes(item))
     alert('this prod already exist')
     }else{
 
@@ -72,7 +70,7 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
     setLikeCount(updatedFav.length);
 
     for(let i = 0; i < favCounter.length; i++){
-      console.log(favCounter[i])
+      //
       
     }
   }

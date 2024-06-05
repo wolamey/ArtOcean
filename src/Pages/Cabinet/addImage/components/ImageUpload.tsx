@@ -34,7 +34,6 @@ const ImageUpload = (props: IMGProps
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-      console.log(reader.result);
       setFileInput(reader.result);
     };
     reader.onerror = function (error) {
@@ -49,7 +48,6 @@ const ImageUpload = (props: IMGProps
     if (props.sizeLimit && file.size > props.sizeLimit) {
       setStatusMessage("Файл слишком большой.");
     } else {
-      console.log(file);
       setFileName(file.name);
       getBase64(file);
     }
@@ -71,7 +69,6 @@ const ImageUpload = (props: IMGProps
   };
 
   const dropHandler = (ev: any) => {
-    console.log("File(s) dropped");
 
     // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
@@ -90,7 +87,6 @@ const ImageUpload = (props: IMGProps
           if (props.sizeLimit && file.size > props.sizeLimit) {
             setStatusMessage("Файл слишком большой.");
           } else {
-            console.log(`… file[${i}].name = ${file.name}`);
             setFileName(file.name);
             getBase64(file);
           }
@@ -101,13 +97,11 @@ const ImageUpload = (props: IMGProps
     } else {
       // Use DataTransfer interface to access the file(s)
       [...ev.dataTransfer.files].forEach((file, i) => {
-        console.log(`… file[${i}].name = ${file.name}`);
       });
     }
   };
 
   const dragOverHandler = (ev: any) => {
-    console.log("File(s) in drop zone");
 
     // Prevent default behavior (Prevent file from being opened)
     ev.preventDefault();
@@ -115,7 +109,6 @@ const ImageUpload = (props: IMGProps
 
   useEffect(() => {
     setHasInput(fileInput !== null);
-    console.log(fileInput);
     showEditor();
   }, [fileInput]);
 
@@ -131,7 +124,6 @@ const ImageUpload = (props: IMGProps
 
   const onCrop = () => {
     const cropper = cropperRef.current?.cropper;
-    console.log(cropper.getCroppedCanvas().toDataURL());
     setCroppedImage(cropper.getCroppedCanvas().toDataURL());
     dialogRef.current?.close();
   };

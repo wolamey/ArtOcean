@@ -60,14 +60,11 @@ export default function Register() {
       city: city,
     };
     await ref.set(dataWithKey);
-    console.log(newKey);
     userDB(newKey)
   }
 
   // function writeUserData(userId, email, telephone) {
   //   const db = getDatabase();
-  //   console.log(db);
-  //   console.log(12);
   //   set(ref(db, "users/" + userId), {
   //     // username: firstName,
   //     // userlastname: lastName,
@@ -77,13 +74,11 @@ export default function Register() {
   // }
 
   async function userDB(newKey){
-    console.log(21);
     const onjectUser = {
       key: newKey,
       email: email
     };
     let json = JSON.stringify(onjectUser);
-    console.log(json)
     const responce = await fetch("http://localhost:5173/comments", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -94,11 +89,9 @@ export default function Register() {
   
 
   function getRegisterData(event) {
-    console.log(12);
     event.preventDefault();
     if (resPasvord !== pasvord) {
       setError(true);
-      console.log(12);
       return;
     } else {
       const auth = getAuth();
