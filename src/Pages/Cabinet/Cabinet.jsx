@@ -98,7 +98,7 @@ export default function Cabinet(item) {
                       item.CVV
                     }" class="card_cvv">
                   </div>
-                  <buttton class="card_button ${i}" onClick=${deletPayCart()}>Отвязать</buttton>
+
               </div>
               `;
                   card.innerHTML = template2;
