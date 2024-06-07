@@ -148,8 +148,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
               onClick={() => {
                 clearFileInput();
               }}
-            >
-            </div>
+            ></div>
             <img
               id={props.round ? "round" : ""}
               width={props.width || 250 + "px"}
