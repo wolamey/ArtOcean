@@ -24,7 +24,7 @@ export default function CardInCarousel(someClass, numClass) {
 
   return (
     <>
-        <Card className={someClass}>
+        <Card className="allCard">
             <Card.Img className='cardImg' variant="top" src={img} />
             <Card.Body className='cardBody'>
                 <Card.Title className='cardTitle'>{text}</Card.Title>
