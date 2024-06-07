@@ -5,33 +5,6 @@ import { NavLink } from "react-router-dom";
 export default function Nav(likeCount, cartCounter) {
   const [menu, setMenu] = useState(0);
   let count = likeCount.cartCounter.length;
-  // useEffect(() => {
-  //   const menu_blok = document.querySelector(".nav_menu");
-  //   const menu_open = document.querySelector(".menu_open");
-  //   if (menu_blok.id == "nav_menu_id") {
-
-
-  //     menu_blok.classList.remove("none");
-  //     menu_open.classList.add("none");
-  //     menu_blok.id = "nav_menu_id";
-  //   } else {
-  //     menu_blok.classList.add("none");
-  //     menu_open.classList.remove("none");
-  //     menu_blok.id = "nav_menu";
-  //   }
-  // }, [menu]);
-
-  // useEffect(()=>{
-  //   const burgerMenu = document.querySelector(".menu_open");
-  //   if(menu === 1){
-  //     burgerMenu.style.display = "block"
-  //   }
-  //   else{
-  //     burgerMenu.style.display = "none"
-
-  //   }
-  // })
-
   useEffect(()=>{
     const burgerMenu = document.querySelector(".menu_open");
     if(menu === 1){
@@ -45,22 +18,6 @@ export default function Nav(likeCount, cartCounter) {
   return (
     <div className="nav">
       <div className="nav__container nav__container__desctop">
-      {/* <div onClick={() => setMenu(menu + 1)} className="menu_open">
-        <img className="close_nav_menu" src="/cabinet/noSave.svg" alt="" />
-      <NavLink className="nav_p2" to="/">
-          Главная
-        </NavLink>
-        <NavLink className="nav_p2" to="catalog">
-          Каталог
-        </NavLink>
-        <NavLink className="nav_p2" to="aboutus">
-          О нас
-        </NavLink>
-        <NavLink className="nav_p2" to="aboutus">
-          Продажа
-        </NavLink>
-      </div> */}
-
       <div className="nav_1">
         <NavLink to="/">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
@@ -74,13 +31,6 @@ export default function Nav(likeCount, cartCounter) {
         <NavLink to="#" className="nav_p a">
           Продажа
         </NavLink>
-        {/* <div
-          onClick={() => setMenu(menu + 1)}
-          id="nav_menu_id"
-          className="nav_menu"
-        >
-          <img src="/cabinet/menu.svg" alt="" />
-        </div> */}
       </div>
       <div className="nav_2">
         <NavLink to="favourites" className="nav_div">

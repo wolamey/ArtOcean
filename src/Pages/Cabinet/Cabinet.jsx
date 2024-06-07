@@ -18,7 +18,7 @@ export default function Cabinet(item) {
   const navigate = useNavigate();
 
   function delitePay() {
-//
+    //
   }
 
   const database = getDatabase();
@@ -97,7 +97,6 @@ export default function Cabinet(item) {
                       item.CVV
                     }" class="card_cvv">
                   </div>
-                  <buttton class="card_button ${i}" onClick=${deletPayCart()}>Отвязать</buttton>
               </div>
               `;
                   card.innerHTML = template2;
@@ -242,35 +241,31 @@ export default function Cabinet(item) {
             const dataArr = Object.values(item);
             dataArr.forEach(function (item) {
               const dataArr = Object.values(item);
-              if (dataArr[0].length == 3 
-                // && oldArr !== dataArr[2]
-                ) {
-                // setOldArr(dataArr[2])
-                const a = dataArr[0] 
-                const b = dataArr[2] 
-                const c = dataArr[3] 
+              if (dataArr[0].length == 3) {
+                const a = dataArr[0];
+                const b = dataArr[2];
+                const c = dataArr[3];
                 if (help5 !== 10) {
-                setIPayCart(dataArr[2]);
-                setIPayDate(dataArr[3]);
-                setIPayCVV(dataArr[0]);
-                setTimeout(function () {
-                editIDataBasePay(a, b, c);
-                setHelp5(10)
-              }, 2000);
-              }}
+                  setIPayCart(dataArr[2]);
+                  setIPayDate(dataArr[3]);
+                  setIPayCVV(dataArr[0]);
+                  setTimeout(function () {
+                    editIDataBasePay(a, b, c);
+                    setHelp5(10);
+                  }, 2000);
+                }
+              }
             });
           }
         });
       });
     });
     setTimeout(function () {
-      // Get a key for a new Post.
       const newPostKey = push(child(ref(db), "posts")).key;
 
       const updates = {};
       updates["/users/" + iKey] = null;
 
-      // A post entry.
       const postData = {
         country: iCountry,
         email: iEmail,
@@ -284,9 +279,6 @@ export default function Cabinet(item) {
         // image: croppedImage,
       };
 
-
-      // Write the new post's data simultaneously in the posts list and the user's post list.
-      // setIKey(newPostKey)
       updates["/users/" + iKey] = postData;
       return update(ref(db), updates);
     }, 1000);
@@ -294,46 +286,45 @@ export default function Cabinet(item) {
 
   function editDataBasePay(uid) {
     const db = getDatabase();
-    // Get a key for a new Post.
+
     const newPostKey = push(child(ref(db), "posts")).key;
-    // A post entry.
+
     const postData = {
       payCart: payCart,
       payDate: payDate,
       CVV: payCVV,
       key: newPostKey,
     };
-    // Write the new post's data simultaneously in the posts list and the user's post list.
+
     const updates = {};
     updates["/users/" + iKey + "/" + newPostKey] = postData;
     window.location.reload();
     return update(ref(db), updates);
   }
   function editIDataBasePay(a, b, c) {
-  const db = getDatabase();
-  // Get a key for a new Post.
-  const newPostKey = push(child(ref(db), "posts")).key;
-  // A post entry.
-  const postData = {
-    payCart: b,
-    payDate: c,
-    CVV: a,
-    key: newPostKey,
+    const db = getDatabase();
+
+    const newPostKey = push(child(ref(db), "posts")).key;
+
+    const postData = {
+      payCart: b,
+      payDate: c,
+      CVV: a,
+      key: newPostKey,
+    };
+
+    const updates = {};
+    updates["/users/" + iKey + "/" + newPostKey] = postData;
+    window.location.reload();
+    return update(ref(db), updates);
+  }
+
+  const [croppedImage, setCroppedImage] = useState("/cabinet/first_ava.png");
+  const handleNameChange = (croppedImage) => {
+    setCroppedImage(croppedImage);
+    console.log(croppedImage);
+    console.log(1223);
   };
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  const updates = {};
-  updates["/users/" + iKey + "/" + newPostKey] = postData;
-  window.location.reload();
-  return update(ref(db), updates);
-}
-
-
-const [croppedImage, setCroppedImage] = useState("/cabinet/first_ava.png");
-const handleNameChange = (croppedImage) => {
-  setCroppedImage(croppedImage)
-  console.log(croppedImage);
-  console.log(1223);
-}
   return (
     <div>
       <div className="All">
@@ -360,7 +351,11 @@ const handleNameChange = (croppedImage) => {
           <div className="all_main">
             <div>
               <div className="All2">
-                <App2 onChange={handleNameChange} croppedImage={croppedImage} setCroppedImage={setCroppedImage}/>
+                <App2
+                  onChange={handleNameChange}
+                  croppedImage={croppedImage}
+                  setCroppedImage={setCroppedImage}
+                />
               </div>
               <p className="p_margin_0">Добрый день</p>
               <p className="big_text_cabinet">

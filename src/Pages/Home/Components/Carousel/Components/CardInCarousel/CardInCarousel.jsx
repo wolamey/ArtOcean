@@ -2,7 +2,7 @@ import './CardInCarousel.css'
 
 import {Card} from 'react-bootstrap';
 
-import image from '../../../../../../../public/image 12.jpg';
+import image from '/image 12.jpg';
 
 export default function CardInCarousel(someClass) {
   return (
