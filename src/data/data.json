@@ -1,248 +1,368 @@
 {
-    "HeaderTopPart": [
-        {
-            "id": 1,
-            "pic": "./choice1.png",
-            "choice_name": "Рукоделие"
-        },
-        {
-            "id": 2,
-            "pic": "./choice2.png",
-            "choice_name": "Ювелирные изделия"
-        },
-        {
-            "id": 3,
-            "pic": "./choice3.png",
-            "choice_name": "Одежда и аксессуары"
-        },
-        {
-            "id": 4,
-            "pic": "./choice4.png",
-            "choice_name": "Искусство"
-        }
-    ],
-    "copperDishesForCatalog": [
-        {
-            "id": 1,
-            "pic": "./catalog1.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 2,
-            "pic": "./catalog2.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 3,
-            "pic": "./catalog3.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 4,
-            "pic": "./catalog1.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 5,
-            "pic": "./catalog2.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 6,
-            "pic": "./catalog3.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 7,
-            "pic": "./catalog1.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 8,
-            "pic": "./catalog2.png",
-            "text": "Рукоделие",
-            "price": 1953
-        },
-        {
-            "id": 9,
-            "pic": "./catalog3.png",
-            "text": "Рукоделие",
-            "price": 1953
-        }
-    ],
-    "copperDishesForCatalog2": [
-        {
-            "id": 1,
-            "pic": "./catalog1.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 2,
-            "pic": "./catalog2.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 3,
-            "pic": "./catalog3.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 4,
-            "pic": "./catalog1.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 5,
-            "pic": "./catalog2.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 6,
-            "pic": "./catalog3.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 7,
-            "pic": "./catalog1.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 8,
-            "pic": "./catalog2.png",
-            "text": "jewerly",
-            "price": 1953
-        },
-        {
-            "id": 9,
-            "pic": "./catalog3.png",
-            "text": "jewerly",
-            "price": 1953
-        }
-    ],
-    "copperDishesForCatalog3": [
-        {
-            "id": 1,
-            "pic": "./catalog1.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 2,
-            "pic": "./catalog2.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 3,
-            "pic": "./catalog3.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 4,
-            "pic": "./catalog1.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 5,
-            "pic": "./catalog2.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 6,
-            "pic": "./catalog3.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 7,
-            "pic": "./catalog1.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 8,
-            "pic": "./catalog2.png",
-            "text": "accesoiries",
-            "price": 1953
-        },
-        {
-            "id": 9,
-            "pic": "./catalog3.png",
-            "text": "accesoiries",
-            "price": 1953
-        }
-    ],
-    "copperDishesForCatalog4": [
-        {
-            "id": 1,
-            "pic": "./catalog1.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 2,
-            "pic": "./catalog2.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 3,
-            "pic": "./catalog3.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 4,
-            "pic": "./catalog1.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 5,
-            "pic": "./catalog2.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 6,
-            "pic": "./catalog3.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 7,
-            "pic": "./catalog1.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 8,
-            "pic": "./catalog2.png",
-            "text": "art",
-            "price": 1953
-        },
-        {
-            "id": 9,
-            "pic": "./catalog3.png",
-            "text": "art",
-            "price": 1953
-        }
-    ]
+  "HeaderTopPart": [
+    {
+      "id": 1,
+      "pic": "./choice1.jpg",
+      "choice_name": "Handiwork"
+    },
+    {
+      "id": 2,
+      "pic": "./choice2.jpg",
+      "choice_name": "Jewelry"
+    },
+    {
+      "id": 3,
+      "pic": "./choice3.jpg",
+      "choice_name": "Clothing and accessories"
+    },
+    {
+      "id": 4,
+      "pic": "./choice4.jpg",
+      "choice_name": "Art"
+    }
+  ],
+  "copperDishesForCatalog": [
+    {
+      "id": 1,
+      "pic": "./catalog11.jpg",
+      "text": " Embroidered picture “Sunset on the Lake”",
+      "price": 180,
+      "description": " This is a unique embroidered painting created by an experienced needlewoman Elena Ivanova. Each stitch on this picture reflects the beauty of the sunset over a quiet lake, filling the room with coziness and tranquility"
+    },
+    {
+      "id": 2,
+      "pic": "./catalog12.jpg",
+      "text": "Lace tablecloth “Spring Flowers”",
+      "price": 120,
+      "description": "   This lace tablecloth inspired by nature and created by the skillful hands of Anna Petrova will give your table a unique charm and elegance. Its exquisite pattern reminds of spring flowers blooming in the garden."
+    },
+    {
+      "id": 3,
+      "pic": "./catalog13.jpg",
+      "text": "Knitted hat “Autumn Leaffall”",
+      "price": 40,
+      "description": "This cozy knitted hat, made with love and warmth by Natalia Sidorova, will be a great accessory for cold autumn days. Its pattern reminds of the leaves falling from the trees in the golden fall season."
+    },
+    {
+      "id": 4,
+      "pic": "./catalog14.jpg",
+      "text": "Macramé panel “Summer Gamma”",
+      "price": 250,
+      "description": "This colorful macramé panel, created by the experienced hands of Alexei Kozlov, fills your home with summer mood and bright colors. Its exquisite pattern reminds you of bright colors and sun rays of a summer day"
+    },
+    {
+      "id": 5,
+      "pic": "./catalog15.jpg",
+      "text": "Embroidered Bag “Field Flowers” ",
+      "price": 90,
+      "description": " This stylish embroidered bag created by talented needlewoman Olga Nikolaeva will become an indispensable accessory for walking and traveling. Its patterns remind of bright field flowers, pleasing to the eye in spring"
+    },
+    {
+      "id": 6,
+      "pic": "./catalog16.jpg",
+      "text": " Quilling card “Holiday Greetings”",
+      "price": 15,
+      "description": "   This beautiful quilling card, handmade by Marina Semenova, will be a wonderful gift for any holiday. Its exquisite patterns and bright colors fill the heart with joy and delight"
+    },
+    {
+      "id": 7,
+      "pic": "./catalog17.jpg",
+      "text": " Ceramic Vase “Seaside”",
+      "price": 200,
+      "description": "This elegant ceramic vase, created by experienced master Pavel Ivanov, will give your interior a note of sea freshness and harmony. Its shape and patterns remind of the smoothness of the sea wave."
+    },
+    {
+      "id": 8,
+      "pic": "./catalog18.webp",
+      "text": "Macramé weave “Evening Tranquility”",
+      "price": 150,
+      "description": " This cozy macramé wicker, created by the skillful hands of Ekaterina Vasilieva, will be a wonderful addition to your interior, bringing an atmosphere of calm and coziness into the house. Its patterns remind you of how the world freezes in the evening silence"
+    },
+    {
+      "id": 9,
+      "pic": "./catalog19.webp",
+      "text": "Embroidered shawl “Oriental motifs”",
+      "price": 70,
+      "description": "This exquisite embroidered shawl, created by experienced needlewoman Maria Sokolova, will become an exquisite accessory for your image, giving it mystery and elegance. Its patterns remind of oriental motifs and ornaments."
+    },
+    {
+      "id": 10,
+      "pic": "./catalog110.webp",
+      "text": "Quilling Jewelry “Flowering Branches”",
+      "price": 35,
+      "description": "    This delicate quilling ornament, created by the skillful hands of Anastasia Mikhailova, will give your image refinement and uniqueness. Its patterns remind of blossoming spring branches, filling your heart with joy and inspiration"
+    },
+    {
+      "id": 11,
+      "pic": "./catalog111.webp",
+      "text": "Embroidered apron “Home Cozy”",
+      "price": 50,
+      "description": "    This cozy embroidered apron, created with love and warmth by Julia Kovaleva, will be an indispensable assistant in the kitchen, bringing the atmosphere of coziness and home warmth into the house. Its patterns are reminiscent of rustic idyll and flowering gardens."
+    },
+    {
+      "id": 12,
+      "pic": "./catalog112.webp",
+      "text": "macramé mirror “Sunbeams”",
+      "price": 300,
+      "description": "    This delightful macramé mirror, created by the experienced hands of Daria Novikova, will become a bright accent in your interior, bringing sunny warmth and joy to your home. Its patterns remind of the play of sun rays on the surface of water. "
+    }
+  ],
+  "copperDishesForCatalog2": [
+    {
+      "id": 1,
+      "pic": "./catalog21.jpg",
+      "text": " Necklace “Moonrise”",
+      "price": 350,
+      "description": " This magnificent necklace, created by the exquisite hands of Maria Anderson, is imbued with the mystical charm of the night sky. Its lines and shapes remind us of the mysterious moonrise, when the night envelops the world with its magic. Each element of this necklace is calibrated to the smallest detail, reflecting the beauty and mystery of moonlight."
+    },
+    {
+      "id": 2,
+      "pic": "./catalog22.webp",
+      "text": "Bracelet “Swirls of Passion”",
+      "price": 280,
+      "description": "   The “Whirlwinds of Passion” bracelet, created by the talented designer Alexander Levin, carries a storm of emotions and passions. Its graceful curves and the play of colors resemble fiery whirlwinds that ignite inside us when we embark on something exciting and passionate. This bracelet will become a bright accent of your image, emphasizing your strength and passion"
+    },
+    {
+      "id": 3,
+      "pic": "./catalog23.webp",
+      "text": "Orchid “Luxury Earrings”",
+      "price": 180,
+      "description": "These exquisite earrings, created by talented craftswoman Larissa Petrova, delight with their elegance and beauty. They are like orchids in full bloom, radiating their unique grace and charm. These earrings will become an integral part of your image, giving it a unique charm and elegance"
+    },
+    {
+      "id": 4,
+      "pic": "./catalog24.webp",
+      "text": "Pendant “Star Shine” ",
+      "price": 210,
+      "description": "The pendant “Starry Glow”, created by the talented designer Irina Smirnova, takes us to the world of infinite space and majesty of stars. Its graceful lines and shine remind us how every star in the night sky is a symbol of hope and dreams. This pendant will become a unique piece of jewelry for you, reminding you of your most cherished wishes"
+    },
+    {
+      "id": 5,
+      "pic": "./catalog26.webp",
+      "text": "Ring “Magic Forest” ",
+      "price": 320,
+      "description": "  This magic ring, created by the master of jewelry art Dmitry Ivanov, as if opens the gate to the world of mysterious forest. Its unique design and exquisite patterns remind of mysterious creatures hiding in dense thickets. To wear this ring means to gain the power and wisdom of ancient forest spirits. "
+    },
+    {
+      "id": 6,
+      "pic": "./catalog27.jpeg",
+      "text": "Brooch “Dawn Aura”",
+      "price": 150,
+      "description": " Brooch “Dawn Aura”, created by talented designer Elena Sokolova, gives your image brightness and freshness like the first rays of the morning sun. Its exquisite design and play of colors remind you of the dawn, when the world is wrapped in a light haze of hope and possibilities. To wear this brooch means to open the door to new horizons and meet your day with confidence and optimism"
+    },
+    {
+      "id": 7,
+      "pic": "./catalog28.webp",
+      "text": "Earrings “Evening Diamond” ",
+      "price": 260,
+      "description": "These elegant earrings created by designer Anna Kozlova will give your look a unique chic and sophistication. Their brilliance and grace remind of the evening glow of stars in the night sky, when the world is shrouded in mysterious darkness. To wear these earrings is to feel like a real star in any environment."
+    },
+    {
+      "id": 8,
+      "pic": "./catalog29.webp",
+      "text": "Pendant “Ice Harmony” ",
+      "price": 190,
+      "description": "Pendant “Ice Harmony”, created by master of jewelry art Pavel Sidorov, gives your image coolness and freshness of icy expanses. Its cold shades and elegant patterns remind you of the shimmering light of a winter evening, when the world is enveloped in silence and tranquility. To wear this pendant is to find inner harmony and peace."
+    },
+    {
+      "id": 9,
+      "pic": "./catalog25.webp",
+      "text": "Necklace “Sunset Shades” ",
+      "price": 300,
+      "description": "This necklace, created by the talented jeweler Tatiana Morozova, seems to be permeated with warm shades of sunset and shimmering colors. Its exquisite design and the play of colors remind of the beauty of nature in the moments of the most delicate light. To wear this necklace is to feel the power and beauty of nature in its most delicate manifestations"
+    },
+    {
+      "id": 10,
+      "pic": "./catalog210.webp",
+      "text": "Bracelet “Sea Wave” ",
+      "price": 230,
+      "description": " The “Sea Wave” bracelet created by the talented designer Ivan Petrov is designed to remind of the power and beauty of the ocean. Its graceful lines and the play of colors remind us of the endless movement of the sea waves, enveloping us with their forces and secrets. To wear this bracelet is to find strength and inspiration to meet any of life's challenges."
+    },
+    {
+      "id": 11,
+      "pic": "./catalog211.jpg",
+      "text": "Earrings “Blooming Garden” ",
+      "price": 270,
+      "description": " These exquisite earrings, created by jeweler Irina Kuznetsova, delight with their delicate shapes and colorful shades. They seem to invite us into the world of a blooming garden, where every flower fills the air with fragrance and beauty. To wear these earrings means to plunge into the atmosphere of spring awakening and joy. "
+    },
+    {
+      "id": 12,
+      "pic": "./catalog212.webp",
+      "text": "Pendant “Golden Sunset”  ",
+      "price": 220,
+      "description": " The pendant “Golden Sunset”, created by the talented designer Victoria Semenova, fills our image with warmth and coziness of the evening sun. Its golden shades and shine remind us of how the setting sun envelops the world with its warmth and light. To wear this pendant means to feel cozy and comfortable in any environment."
+    }
+  ],
+  "copperDishesForCatalog3": [
+    {
+      "id": 1,
+      "pic": "./catalog31.webp",
+      "text": "Scarf “Winter Waltz” ",
+      "price": 120,
+      "description": "Creator: Alexandra Ivanova This scarf is inspired by the first snow and quiet winter nights. Alexandra Ivanova, known for her unique knits, created this accessory to add warmth and style to cold days. Using only natural wool, she hand-knits each scarf, making it truly one of a kind."
+    },
+    {
+      "id": 2,
+      "pic": "./catalog32.jpg",
+      "text": "Dress “Moon Inspiration” ",
+      "price": 150,
+      "description": "  This dress is created from high-quality cotton with linen added, which makes it especially light and pleasant to the touch. Designer Anna Ivanova was inspired by the night sky and moon phases, which is reflected in the exquisite pattern on the fabric. The dress is perfect for both everyday wear and special events, adding a touch of mystery and elegance to the look."
+    },
+    {
+      "id": 3,
+      "pic": "./catalog33.jpg",
+      "text": " Dress “Spring Dawn” ",
+      "price": 180,
+      "description": "Creator: Ekaterina Vasilyevna Romanova Inspired by the first rays of spring sunshine, this dress reflects new beginnings and hope. Ekaterina Vasilyevna Romanova, known for her elegant and feminine designs, used light and airy fabrics to create a dress that is perfect for the spring season."
+    },
+    {
+      "id": 4,
+      "pic": "./catalog34.jpg",
+      "text": "Bag “Sea Depths” ",
+      "price": 200,
+      "description": " This unique bag by Alexey Sidorov is created from genuine leather and decorated with nautical motifs and shells, giving it a special nautical charm. This bag is suitable for both everyday use and special occasions, giving the image of mystery and sophistication. "
+    },
+    {
+      "id": 5,
+      "pic": "./catalog35.webp",
+      "text": "Cardigan “Autumn Leaf”  ",
+      "price": 130,
+      "description": " Creator: Olga Nikolaevna Kuznetsova Olga Nikolaevna Kuznetsova created this cardigan to reflect the beauty of an autumn forest. Using a variety of shades of brown and orange, she embodied the coziness and warmth of autumn days in this piece."
+    },
+    {
+      "id": 6,
+      "pic": "./catalog36.jpg",
+      "text": "Bag “City Symphony”",
+      "price": 210,
+      "description": " Creator: Anton Vladimirovich Lebedev Anton Vladimirovich Lebedev, known for his innovative ideas in handbag design, created “City Symphony” for those who appreciate style and functionality. The bag is made of high quality leather and decorated with unique metal elements. "
+    },
+    {
+      "id": 7,
+      "pic": "./catalog37.webp",
+      "text": "Gloves “Warm Touch”",
+      "price": 110,
+      "description": "Creator: Vera Pavlovna Morozova Vera Pavlovna Morozova, a master leather craftswoman, created these gloves to combine elegance and practicality. Made of soft leather and insulated with natural fur, they will become an indispensable accessory in the cold season."
+    },
+    {
+      "id": 8,
+      "pic": "./catalog38.webp",
+      "text": "Beret “Paris Dream” ",
+      "price": 75,
+      "description": " Creator: Irina Alexandrovna Zaitseva Irina Alexandrovna Zaitseva, inspired by the romance of Paris, created this beret for those who dream of traveling. Made of soft wool and decorated with a graceful bow, the beret will add sophistication to any look."
+    },
+    {
+      "id": 9,
+      "pic": "./catalog39.webp",
+      "text": "Jacket “Urban Explorer” ",
+      "price": 200,
+      "description": "Creator: Nikolai Igorevich Smirnov Nikolai Igorevich Smirnov designed this jacket for active city dwellers. Combining style and functionality, the Urban Explorer jacket is ideal for daily use in an urban environment."
+    },
+    {
+      "id": 10,
+      "pic": "./catalog310.jpg",
+      "text": "Glasses “Sunny Sunset” ",
+      "price": 140,
+      "description": " Creator: Anna Sergeevna Volkova Anna Sergeevna Volkova, an accessory designer, created these glasses to protect your eyes and add style to any look. The Sunny Sunset glasses have unique colored lenses that resemble the colors of a sunset."
+    },
+    {
+      "id": 11,
+      "pic": "./catalog311.webp",
+      "text": "Belt “Classic Elegance” ",
+      "price": 85,
+      "description": "Tatiana Andreevna Grigorieva Tatiana Andreevna Grigorieva Tatiana Andreevna Grigorieva, a leather expert, created this belt to add an accent to a classic closet. Crafted from premium leather, the Classic Elegance belt emphasizes the refined taste of its wearer."
+    },
+    {
+      "id": 12,
+      "pic": "./catalog312.jpg",
+      "text": " Shoes  “Night Glamor” ",
+      "price": 165,
+      "description": "Creator: Ludmila Viktorovna Chernova Ludmila Viktorovna Chernova, a shoe designer, created these shoes for evening events. Combining comfort and elegance, the “Night Glamour” will perfectly complement any evening outfit."
+    }
+  ],
+  "copperDishesForCatalog4": [
+    {
+      "id": 1,
+      "pic": "./catalog41.webp",
+      "text": "Painting “Dream Vortex” ",
+      "price": 550,
+      "description": " This painting was created by the inspirational artist Natalia Sokolova, whose work is filled with fantasy and magic. The painting “Dream Vortex” captures the viewer's imagination with its bright colors and abstract style, embodying the endless possibilities of creative imagination."
+    },
+    {
+      "id": 2,
+      "pic": "./catalog42.jpg",
+      "text": " Sculpture “Harmony of Movement”",
+      "price": 750,
+      "description": "   Exquisite sculpture “Harmony of Movement” is created by talented sculptor Mikhail Petrov. Embodying the fluidity and grace of movement, this sculpture is designed to remind of the beauty and harmony in every moment."
+    },
+    {
+      "id": 3,
+      "pic": "./catalog43.jpg",
+      "text": "Photo “Mystic Sunset”",
+      "price": 400,
+      "description": "   The author's photo “Mystic Sunset” reflects the mystery and majesty of nature, capturing the moment of sunrise surrounded by misty horizons. Behind the lens of this picture is a talented photographer Elena Ivanova."
+    },
+    {
+      "id": 4,
+      "pic": "./catalog44.jpg",
+      "text": " Engraving “Captivity of Time”",
+      "price": 320,
+      "description": "   The engraving “Captivity of Time” was created by experienced engraver Alexander Kuznetsov. Its subtle elaboration and deep meaning make you think about the flight of time and infinity of space."
+    },
+    {
+      "id": 5,
+      "pic": "./catalog45.jpg",
+      "text": "Collage “Melody of the Soul”",
+      "price": 480,
+      "description": "   Author's collage “Melody of the Soul” reflects the harmony and inner beauty of the human soul. It was created by a creative person Maria Smirnova, who combined fragments of life and emotions in this work."
+    },
+    {
+      "id": 6,
+      "pic": "./catalog46.webp",
+      "text": " Image “Dance of Flowers”",
+      "price": 290,
+      "description": " This bright and dynamic image “Dance of Flowers” is created by talented graphic designer Anna Kozlova. In it each flower seems to come to life and dances in the rhythm of spring wind"
+    },
+    {
+      "id": 7,
+      "pic": "./catalog47.jpg",
+      "text": "Installation “The Way to Infinity”",
+      "price": 620,
+      "description": " The installation “Path to Infinity” reflects the philosophy of time and space, represented through the symbolism of the path and direction. Its author, artist Artem Belov, is called to remind about eternity and multidimensionality of existence. "
+    },
+    {
+      "id": 8,
+      "pic": "./catalog48.webp",
+      "text": "Graphics “Dreams of the Sea”   ",
+      "price": 380,
+      "description": "   A series of graphic works “Dreams of the Sea” is created by the talented artist Victor Ivanov. They take the viewer to the world of sea adventures and fantasies, filling the heart with fresh emotions."
+    },
+    {
+      "id": 9,
+      "pic": "./catalog49.jpg",
+      "text": "Mosaic “Rainbow in the Heart”",
+      "price": 540,
+      "description": "   The mosaic “Rainbow in the Heart” is a creation of the experienced master Anton Smirnov. Its bright colors and complex patterns symbolize the joy and diversity of the inner world of man."
+    },
+    {
+      "id": 10,
+      "pic": "./catalog410.jpg",
+      "text": " Composition “Harmony of Sounds”",
+      "price": 690,
+      "description": " The composition “Harmony of Sounds” is created by musical composer and sound engineer Pavel Nikitin. It is a combination of sounds and melodies inspired by the theme of harmony and balance."
+    },
+    {
+      "id": 11,
+      "pic": "./catalog411.avif",
+      "text": " Theater mask “The Face of the Soul”",
+      "price": 470,
+      "description": "   The theater mask “The Face of the Soul” is created by Olga Petrova, an experienced master of masquerade art. It is a symbol of hidden emotions and multifaceted experiences of the human soul."
+    },
+    {
+      "id": 12,
+      "pic": "./catalog412.jpg",
+      "text": " Illustration “Singing Forest”",
+      "price": 420,
+      "description": "  The illustration “Singing Forest” is a magical world of fantasy embodied by the talented illustrator Sofia Ivanova. Her works are filled with magic and mysteries of nature."
+    }
+  ]
 }

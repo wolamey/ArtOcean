@@ -10,23 +10,23 @@ export default function DarkCarousel() {
         <Carousel data-bs-theme="dark">
         <Carousel.Item>
             <div className="containerCarousel">
-                <CardInCarousel firstCard="firstCard"/>
-                <CardInCarousel secondCard="secondCard"/>
-                <CardInCarousel thirdCard="thirdCard"/>
+                <CardInCarousel firstCard="firstCard" numClass="1"/>
+                <CardInCarousel secondCard="secondCard" numClass="2"/>
+                <CardInCarousel thirdCard="thirdCard" numClass="3"/>
             </div>
         </Carousel.Item>
         <Carousel.Item>
             <div className="containerCarousel">
-                <CardInCarousel firstCrad="firstCard"/>
-                <CardInCarousel secondCard="secondCard"/>
-                <CardInCarousel thirdCard="thirdCard"/>
+                <CardInCarousel firstCrad="firstCard" numClass="4"/>
+                <CardInCarousel secondCard="secondCard" numClass="5"/>
+                <CardInCarousel thirdCard="thirdCard" numClass="6"/>
             </div>
         </Carousel.Item>
         <Carousel.Item>
             <div className="containerCarousel">
-                <CardInCarousel firstCrad="firstCard"/>
-                <CardInCarousel secondCard="secondCard"/>
-                <CardInCarousel thirdCard="thirdCard"/>
+                <CardInCarousel firstCrad="firstCard" numClass="7"/>
+                <CardInCarousel secondCard="secondCard" numClass="8"/>
+                <CardInCarousel thirdCard="thirdCard" numClass="9"/>
             </div>
         </Carousel.Item>
         </Carousel>
