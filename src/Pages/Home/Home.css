@@ -4,7 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
+}
+
+.containerCarousel {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.containerCarousel1 {
+  background-image: url("/catalog32.jpg");
+}
+.containerCarousel2 {
+  background-image: url("/catalog18.webp");
+}
+.containerCarousel3 {
+  background-image: url("/catalog19.webp");
 }
 
 .container {
@@ -29,7 +43,8 @@ button {
   width: 100%;
 }
 
-.shoping_choice .firstPart, .shoping_choice .secondPart {
+.shoping_choice .firstPart,
+.shoping_choice .secondPart {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -52,170 +67,177 @@ button {
 
 .shoping_choice .ourProducts_textBlock p {
   font-size: 18px;
-  background: linear-gradient(0deg, rgba(208, 155,123, .7), transparent);
+  background: linear-gradient(0deg, rgba(208, 155, 123, 0.7), transparent);
   padding: 96px 0 10px 0;
 }
 
 .shoping_choice .ourProducts_textBlock p:hover {
-  background: linear-gradient(0deg, rgba(7, 44, 38, .7), transparent);
+  background: linear-gradient(0deg, rgba(7, 44, 38, 0.7), transparent);
 }
 
 .main .ourProducts h1 {
   margin-bottom: 46px;
 }
 
-.main .ourProducts, .main .newItems, .main .weRecomend, .main .whyPeopleChooseUs {
-    margin: 80px 0  ;
-  }
-  
-  .main .bestSells, .main .whyPeopleChooseUs {
-    background: #F5F6F6;
-    padding: 80px 0;
-  }
-  
-  .main .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 29px;
-    margin-top: 46px;
-  }
-  
-  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
-    color: #fff;
-    background: linear-gradient(90deg, #5E3928, #E4A15F);
-    padding: 16px 77px !important;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 45px;
-    cursor: pointer;
-    width: 337px;
-  }
-  
-  .main .littleBaner {
-    background: linear-gradient(135deg, #7E6E51, #0F4138);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    color: #fff;
-    padding: 80px 0;
-  }
-  
-  .main .littleBaner .littleBanerTextContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
-  }
-  
-  .main .littleBaner .littleBanerTextContent .number {
-    font-size: 140px;
-  }
-  
-  .main .littleBaner .littleBanerTextContent p {
-    font-size: 35px;
-    font-weight: 400;
-    width: 533px;
-    text-align: left;
-  }
-  
-  .main .littleBaner .littleBanerTextContent button {
-    color: #fff;
-    background: linear-gradient(90deg, #5E3928, #E4A15F);
-    padding: 16px 77px !important;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-  
-  .main .whyPeopleChooseUs {
-    margin: 80px 0 0 0;
-  }
-  
-  .main .whyPeopleChooseUs h1 {
-    margin-bottom: 49px;
-  }
-  
-  .main .whyPeopleChooseUs .blocks {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 65px;
-    justify-content: space-between;
-  }
+.main .ourProducts,
+.main .newItems,
+.main .weRecomend,
+.main .whyPeopleChooseUs {
+  margin: 80px 0;
+}
 
-  .main .whyPeopleChooseUs .block h1 {
-    margin-bottom: 0px;
-  }
+.main .bestSells,
+.main .whyPeopleChooseUs {
+  background: #f5f6f6;
+  padding: 80px 0;
+}
 
-  .firstBlock {
-    background: linear-gradient(135deg, #7E6E51, #0F4138);
-    padding: 30px;
-  }
-  
-  .firstBlock .carousel-indicators {
-    justify-content: flex-start;
-  }
-  
-  .homeTextBlock {
-    color: #fff;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    max-width: 624px;
-  }
-  
-  .homeTextBlock h1 {
-    font-size: 100px;
-  }
-  
-  .homeTextBlock h1::after {
-    content: " ";
-    background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
-    height: 2px;
-    width: 100%;
-    display: block;
-    margin-top: 50px;
-  }
-  
-  .homeTextBlock .h3 {
-    font-size: 50px;
-    font-weight: 700;
-    margin: 50px 0 40px 0;
-  }
-  
-  .homeTextBlock .price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 326px;
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
-  
-  .homeTextBlock .price h3 {
-    font-weight: 300;
-  }
-  
-  .homeTextBlock .price p {
-    font-weight: 700;
-  }
-  
-  .homeTextBlock button {
-    color: #fff;
-    background: linear-gradient(90deg, #5E3928, #E4A15F);
-    padding: 16px 77px !important;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    width: 327px;
-  }
+.main .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 29px;
+  margin-top: 46px;
+}
 
+.main .ourProducts .katalogButton,
+.main .bestSells .katalogButton,
+.main .newItems .katalogButton,
+.main .weRecomend .katalogButton,
+.main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+  color: #fff;
+  background: linear-gradient(90deg, #5e3928, #e4a15f);
+  padding: 16px 77px !important;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 45px;
+  cursor: pointer;
+  width: 337px;
+}
+
+.main .littleBaner {
+  background: linear-gradient(135deg, #7e6e51, #0f4138);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.main .littleBaner .littleBanerTextContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.main .littleBaner .littleBanerTextContent .number {
+  font-size: 140px;
+}
+
+.main .littleBaner .littleBanerTextContent p {
+  font-size: 35px;
+  font-weight: 400;
+  width: 533px;
+  text-align: left;
+}
+
+.main .littleBaner .littleBanerTextContent a {
+  color: #fff;
+  background: linear-gradient(90deg, #5e3928, #e4a15f);
+  padding: 16px 77px !important;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main .whyPeopleChooseUs {
+  margin: 80px 0 0 0;
+}
+
+.main .whyPeopleChooseUs h1 {
+  margin-bottom: 49px;
+}
+
+.main .whyPeopleChooseUs .blocks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 65px;
+  justify-content: space-between;
+}
+
+.main .whyPeopleChooseUs .block h1 {
+  margin-bottom: 0px;
+}
+
+.firstBlock {
+  background: linear-gradient(135deg, #7e6e51, #0f4138);
+  padding: 30px;
+}
+
+.firstBlock .carousel-indicators {
+  justify-content: flex-start;
+}
+
+.homeTextBlock {
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 400;
+  max-width: 624px;
+}
+
+.homeTextBlock h1 {
+  font-size: 100px;
+}
+
+.homeTextBlock h1::after {
+  content: " ";
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+  height: 2px;
+  width: 100%;
+  display: block;
+  margin-top: 50px;
+}
+
+.homeTextBlock .h3 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 50px 0 40px 0;
+}
+
+.homeTextBlock .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 326px;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.homeTextBlock .price h3 {
+  font-weight: 300;
+}
+
+.homeTextBlock .price p {
+  font-weight: 700;
+}
+
+.homeTextBlock button {
+  color: #fff;
+  background: linear-gradient(90deg, #5e3928, #e4a15f);
+  padding: 16px 77px !important;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 327px;
+}
 @media (max-width: 1340px) {
   .firstBlock .carousel {
     height: 590px !important;
@@ -225,7 +247,10 @@ button {
     height: 440px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 340px !important;
   }
 
@@ -245,7 +270,8 @@ button {
     width: 95%;
   }
 
-  .shoping_choice .firstPart, .shoping_choice .secondPart {
+  .shoping_choice .firstPart,
+  .shoping_choice .secondPart {
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -261,7 +287,10 @@ button {
     height: 410px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 310px !important;
   }
 
@@ -279,7 +308,10 @@ button {
     height: 380px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 290px !important;
   }
 
@@ -297,7 +329,10 @@ button {
     height: 340px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 260px !important;
   }
 
@@ -315,7 +350,10 @@ button {
     height: 320px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 240px !important;
   }
 
@@ -346,7 +384,10 @@ button {
     height: 300px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard{
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 210px !important;
   }
 
@@ -376,7 +417,7 @@ button {
   }
 
   .main .littleBaner .container {
-    margin: 0 auto ;
+    margin: 0 auto;
   }
 
   .main .littleBaner .littleBanerTextContent {
@@ -392,7 +433,11 @@ button {
     width: 306px;
   }
 
-  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+  .main .ourProducts .katalogButton,
+  .main .bestSells .katalogButton,
+  .main .newItems .katalogButton,
+  .main .weRecomend .katalogButton,
+  .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     margin-top: 40px;
   }
 }
@@ -406,7 +451,10 @@ button {
     height: 360px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 270px !important;
   }
 }
@@ -420,7 +468,10 @@ button {
     height: 320px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 240px !important;
   }
 }
@@ -434,7 +485,10 @@ button {
     height: 280px !important;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 200px !important;
   }
 }
@@ -445,7 +499,10 @@ button {
     flex-direction: column;
   }
 
-  .card, .firstCard, .secondCard, .thirdCard {
+  .card,
+  .firstCard,
+  .secondCard,
+  .thirdCard {
     width: 200px !important;
   }
 
@@ -488,7 +545,7 @@ button {
   }
 
   .main .littleBaner .container {
-    margin: 0 auto ;
+    margin: 0 auto;
   }
 
   .main .littleBaner .littleBanerTextContent {
@@ -504,7 +561,13 @@ button {
     width: 165px;
   }
 
-  .main .homeTextBlock button, .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .littleBaner .littleBanerTextContent .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+  .main .homeTextBlock button,
+  .main .ourProducts .katalogButton,
+  .main .bestSells .katalogButton,
+  .main .littleBaner .littleBanerTextContent .katalogButton,
+  .main .newItems .katalogButton,
+  .main .weRecomend .katalogButton,
+  .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     padding: 16px 40px !important;
     width: 271px;
     font-size: 14px;
@@ -514,16 +577,24 @@ button {
     width: 150px;
   }
 
-  .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
+  .main .ourProducts .katalogButton,
+  .main .bestSells .katalogButton,
+  .main .newItems .katalogButton,
+  .main .weRecomend .katalogButton,
+  .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     margin-top: 30px;
   }
 
-  .main .ourProducts, .main .newItems, .main .weRecomend, .main .whyPeopleChooseUs {
+  .main .ourProducts,
+  .main .newItems,
+  .main .weRecomend,
+  .main .whyPeopleChooseUs {
     margin: 40px 0;
   }
 
-  .main .bestSells, .main .whyPeopleChooseUs {
-    padding: 40px 0 ;
+  .main .bestSells,
+  .main .whyPeopleChooseUs {
+    padding: 40px 0;
   }
 
   .main .littleBaner {

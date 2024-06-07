@@ -1,149 +1,142 @@
-import './Home.css'
+import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import authenticity from "../../../public/authenticity.jpg"
-import sophistication from "../../../public/sophistication.jpg"
-import fairPayment from "../../../public/fairPayment.jpg"
-import bigAsortiment from "../../../public/bigAsortiment.jpg"
-import deliviryAllOverTheWorld from "../../../public/deliviryAllOverTheWorld.jpg"
-import qualityAssurance from "../../../public/qualityAssurance.jpg"
-import comfortToUse from "../../../public/comfortToUse.jpg"
-import carryAboutNature from "../../../public/carryAboutNature.jpg"
+import { NavLink } from "react-router-dom";
 
-import choice1 from "../../../public/choice1.png"
-import choice2 from "../../../public/choice2.png"
-import choice3 from "../../../public/choice3.png"
-import choice4 from "../../../public/choice4.png"
-
-import BlockMaker from './Components/BlockMaker/BlockMaker';
-import DarkCarousel from './Components/Carousel/Carousel';
-import { Carousel } from 'react-bootstrap';
+import BlockMaker from "./Components/BlockMaker/BlockMaker";
+import DarkCarousel from "./Components/Carousel/Carousel";
+import { Carousel } from "react-bootstrap";
 
 function App() {
-
   return (
     <>
       <div className="main">
         <div className="firstBlock">
-          <Carousel >
+          <Carousel>
             <Carousel.Item>
-              <div className="containerCarousel">
+              <div className="containerCarousel containerCarousel1">
                 <div className="homeTextBlock">
                   <h1>Хит продаж</h1>
-                  <h3 className='h3'>Дистиллятор для эфирных масел</h3>
+                  <h3 className="h3">Dress “Moon Inspiration”</h3>
                   <div className="price">
                     <h3>Цена : </h3>
-                    <p>4 906 грн</p>
+                    <p>150$</p>
                   </div>
-                  <button>Купить</button>
                 </div>
               </div>
             </Carousel.Item>
             <Carousel.Item>
-                <div className="containerCarousel">
+              <div className="containerCarousel containerCarousel2">
                 <div className="homeTextBlock">
-                  <h1>Хит продаж</h1>
-                  <h3 className='h3'>Дистиллятор для эфирных масел</h3>
+                  <h1>Лучшее из новинок</h1>
+                  <h3 className="h3">Macramé weave “Evening Tranquility”</h3>
                   <div className="price">
                     <h3>Цена : </h3>
-                    <p>4 906 грн</p>
+                    <p>150$</p>
                   </div>
-                  <button>Купить</button>
                 </div>
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <div className="containerCarousel">
+              <div className="containerCarousel containerCarousel3">
                 <div className="homeTextBlock">
                   <h1>Хит продаж</h1>
-                  <h3 className='h3'>Дистиллятор для эфирных масел</h3>
+                  <h3 className="h3">Embroidered shawl “Oriental motifs”</h3>
                   <div className="price">
                     <h3>Цена : </h3>
-                    <p>4 906 грн</p>
-                  </div>
-                  <button>Купить</button>
-                </div>
-              </div>
-              </Carousel.Item>
-            </Carousel>
-          </div>
-          <div className="ourProducts">
-            <div className="container">
-              <h1>Наша продукция</h1>
-              <div className="shoping_choice">
-                <div className="firstPart">
-                  <div className="ourProducts_firstCard ourProducts_card">
-                    <img src={choice1} />
-                    <div className="ourProducts_textBlock">
-                      <p>Рукоделие</p>
-                    </div>
-                  </div>
-                  <div className="ourProducts_secondCard ourProducts_card">
-                    <img src={choice2} />
-                    <div className="ourProducts_textBlock">
-                      <p>Ювилирные изделия</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="secondPart">
-                  <div className="ourProducts_thirdCard ourProducts_card">
-                    <img src={choice3} />
-                    <div className="ourProducts_textBlock">
-                      <p>Одежда и аксессуары</p>
-                    </div>
-                  </div>
-                  <div className="ourProducts_foursCard ourProducts_card">
-                    <img src={choice4} />
-                    <div className="ourProducts_textBlock">
-                      <p>Искусство</p>
-                    </div>
+                    <p>70$</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
         <div className="bestSells">
-          <div className="container"><h1>Лучшие продажи</h1></div>
-          <DarkCarousel/>
-          <div className="container"><button className='katalogButton'>Перейти в каталог</button></div>
+          <div className="container">
+            <h1>Лучшие продажи</h1>
+          </div>
+          <DarkCarousel />
+          <div className="container">
+            <NavLink to="catalog" className="katalogButton">Перейти в каталог</NavLink>
+          </div>
         </div>
         <div className="newItems">
-            <div className="container"><h1>Новинки</h1></div>
-            <DarkCarousel />
-            <div className="container"><button className='katalogButton'>Перейти в каталог</button></div>
+          <div className="container">
+            <h1>Новинки</h1>
+          </div>
+          <DarkCarousel />
+          <div className="container">
+            <NavLink to="catalog" className="katalogButton">Перейти в каталог</NavLink>
+          </div>
         </div>
         <div className="littleBaner">
           <div className="container">
             <div className="littleBanerTextContent">
               <div className="number">1 + 1 = 3</div>
               <p>Закажите два товара и получите третий в подарок</p>
-              <button className='katalogButton'>Перейти в каталог</button>
+              <NavLink to="catalog" className="katalogButton">Перейти в каталог</NavLink>
             </div>
           </div>
-        </div>
-        <div className="weRecomend">
-          <div className="container"><h1>Мы рекомендуем</h1></div>
-          <DarkCarousel/>
-          <div className="container"><button className='katalogButton'>Перейти в каталог</button></div>
         </div>
         <div className="whyPeopleChooseUs">
           <div className="container">
             <h1>Почему выбирают нас</h1>
             <div className="blocks">
-              <BlockMaker i={authenticity}/>
-              <BlockMaker i={sophistication}/>
-              <BlockMaker i={fairPayment}/>
-              <BlockMaker i={bigAsortiment}/>
-              <BlockMaker i={deliviryAllOverTheWorld}/>
-              <BlockMaker i={qualityAssurance}/>
-              <BlockMaker i={comfortToUse}/>
-              <BlockMaker i={carryAboutNature}/>
+              <div className="block">
+                <img src="/authenticity.jpg" />
+                <h1>Лучшие</h1>
+                <p>Наш сай является лучшим в этой сфере</p>
+              </div>
+              <div className="block">
+                <img src="/sophistication.jpg" />
+                <h1>изысканность</h1>
+                <p>изысканность - наш приоретет</p>
+              </div>
+              <div className="block">
+                <img src="/fairPayment.jpg" />
+                <h1>справедливая оплата</h1>
+                <p>Все товары стоят справедливую цену</p>
+              </div>
+              <div className="block">
+                <img src="/bigAsortiment.jpg" />
+                <h1>большой асортимент</h1>
+                <p>
+                  У нас самый большой выбор товаров среди подобных магазинов
+                </p>
+              </div>
+              <div className="block">
+                <img src="/deliviryAllOverTheWorld.jpg" />
+                <h1>Доставка по всему миру</h1>
+                <p>Мы предостовляем недорогую доставку по всему миру</p>
+              </div>
+              <div className="block">
+                <img src="/qualityAssurance.jpg" />
+                <h1>гарантия качества</h1>
+                <p>
+                  Мы гарантируем качество наших товаров и безопасную их
+                  транспортировку
+                </p>
+              </div>
+              <div className="block">
+                <img src="/comfortToUse.jpg" />
+                <h1>лёгкое использование</h1>
+                <p>
+                  Всё легко и понятно
+                </p>
+              </div>
+              <div className="block">
+                <img src="/carryAboutNature.jpg" />
+                <h1>Забота о природе</h1>
+                <p>
+                  Все товары в магазине экологически чистые
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

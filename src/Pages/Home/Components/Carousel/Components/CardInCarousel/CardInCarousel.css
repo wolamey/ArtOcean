@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.allCard{
+    height: 350px;
+}
+
 .card, .firstCard, .secondCard, .thirdCard {
     position: relative;
     display: flex;
