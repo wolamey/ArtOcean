@@ -7,19 +7,8 @@
   font-family: "Montserrat";
 }
 
-.containerCarousel {
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-.containerCarousel1 {
-  background-image: url("/catalog32.jpg");
-}
-.containerCarousel2 {
-  background-image: url("/catalog18.webp");
-}
-.containerCarousel3 {
-  background-image: url("/catalog19.webp");
-}
+
+
 
 .container {
   max-width: 1600px !important;
@@ -177,7 +166,7 @@ button {
 
 .firstBlock {
   background: linear-gradient(135deg, #7e6e51, #0f4138);
-  padding: 30px;
+  padding: 100px 0;
 }
 
 .firstBlock .carousel-indicators {
@@ -238,20 +227,37 @@ button {
   cursor: pointer;
   width: 327px;
 }
+
+
+.carousel__img{
+  justify-self: end;
+  max-height: 700px;
+  height: 100%;
+  object-fit: contain;
+  /* width: 100%;
+  max-width: 700px; */
+}
 @media (max-width: 1340px) {
-  .firstBlock .carousel {
+  /* .firstBlock .carousel {
     height: 590px !important;
-  }
+  } */
 
   .carousel {
     height: 440px !important;
+    overflow: hidden;
+  }
+
+  .firstBlock .carousel {
+    height: max-content !important;
+    overflow: visible !important;
+
   }
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 340px !important;
+    /* width: 340px !important; */
   }
 
   .block {
@@ -283,15 +289,15 @@ button {
     height: 530px;
   }
 
-  .carousel {
+  /* .carousel {
     height: 410px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 310px !important;
+    /* width: 310px !important; */
   }
 
   .block {
@@ -304,15 +310,15 @@ button {
     height: 500px;
   }
 
-  .carousel {
+  /* .carousel {
     height: 380px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 290px !important;
+    /* width: 290px !important; */
   }
 
   .block {
@@ -325,15 +331,15 @@ button {
     height: 450px;
   }
 
-  .carousel {
+  /* .carousel {
     height: 340px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 260px !important;
+    /* width: 260px !important; */
   }
 
   .block {
@@ -346,15 +352,15 @@ button {
     height: 400px;
   }
 
-  .carousel {
+  /* .carousel {
     height: 320px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 240px !important;
+    /* width: 240px !important; */
   }
 
   .block {
@@ -376,19 +382,19 @@ button {
     height: 350px;
   }
 
-  .firstBlock .carousel {
+  /* .firstBlock .carousel {
     height: 500px !important;
-  }
+  } */
 
-  .carousel {
+  /* .carousel {
     height: 300px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 210px !important;
+    /* width: 210px !important; */
   }
 
   .block {
@@ -440,6 +446,10 @@ button {
   .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
     margin-top: 40px;
   }
+
+  .allCard {
+    width: calc(100% - 10px); /* 1 блок в ряду */
+  }
 }
 
 @media (max-width: 768px) {
@@ -447,16 +457,7 @@ button {
     height: 320px;
   }
 
-  .carousel {
-    height: 360px !important;
-  }
 
-  .card,
-  .firstCard,
-  .secondCard,
-  .thirdCard {
-    width: 270px !important;
-  }
 }
 
 @media (max-width: 640px) {
@@ -464,15 +465,15 @@ button {
     height: 280px;
   }
 
-  .carousel {
+  /* .carousel {
     height: 320px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 240px !important;
+    /* width: 240px !important; */
   }
 }
 
@@ -480,44 +481,48 @@ button {
   .shoping_choice {
     height: 240px;
   }
-
+/* 
   .carousel {
     height: 280px !important;
-  }
+  } */
 
   .card,
   .firstCard,
   .secondCard,
   .thirdCard {
-    width: 200px !important;
+    /* width: 200px !important; */
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .shoping_choice {
     height: 640px;
     flex-direction: column;
   }
 
-  .card,
-  .firstCard,
-  .secondCard,
-  .thirdCard {
-    width: 200px !important;
-  }
+  
+
 
   .firstBlock {
     padding: 30px 0;
+  } 
+  .carousel__img{
+    width: 100%;
+    height: auto;
+    max-height: none;
+    max-width: 300px;
+    justify-self: center;
+    /* max-height: 300px; */
   }
 
-  .firstBlock .carousel {
+  /* .firstBlock .carousel {
     height: 350px !important;
     margin-top: 30px !important;
-  }
+  } */
 
   .carousel {
-    margin-top: 30px;
-    height: 390px !important;
+    /* margin-top: 30px; */
+    /* height: 390px !important; */
   }
 
   .homeTextBlock {
@@ -604,7 +609,7 @@ button {
 
 @media (max-width: 375px) {
   .carousel {
-    height: 360px !important;
+    /* height: 360px !important; */
   }
 }
 
@@ -614,6 +619,6 @@ button {
   }
 
   .carousel {
-    height: 310px !important;
+    /* height: 310px !important; */
   }
 }

@@ -7,14 +7,35 @@
     font-family: 'Montserrat';
 }
 
-.containerCarousel {
+.Carousel{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.containerCarousel1 {
     max-width: 1600px;
     width: 80%;
     margin: 0 auto;
-    display: flex;
+    display: grid;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
+
+
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    
+}
+.containerCarousel__mini{
+    /* max-width: 1600px; */
+    width: 70%;
+    margin: 50px auto 100px auto;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 40px;
+    /* flex-direction: row;
+    align-items: start;
+    justify-content: space-between; */
+
 }
 
 .firstBlock .containerCarousel {
@@ -22,13 +43,12 @@
 }
 
 .carousel {
-    margin-top: 80px;
-    height: 450px;
+    margin: 30px 0;
 }
 
 .firstBlock .carousel {
-    height: 600px;
-    margin-top: 50px;
+/* padding: 100px 0; */
+    /* margin-top: 50px; */
 }
 
 
@@ -41,4 +61,10 @@
 
 .carousel-indicators .active {
     background: linear-gradient(135deg, #A36F4D, #E4A16F);
+}
+
+@media(max-width:426px){
+    .containerCarousel__mini{
+        width: 95%;
+    }
 }
