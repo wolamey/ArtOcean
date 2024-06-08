@@ -16,10 +16,10 @@ function App() {
             <Carousel.Item>
               <div className="containerCarousel containerCarousel1">
                 <div className="homeTextBlock">
-                  <h1>Хит продаж</h1>
+                  <h1>Bestseller</h1>
                   <h3 className="h3">Dress “Moon Inspiration”</h3>
                   <div className="price">
-                    <h3>Цена : </h3>
+                    <h3>Price : </h3>
                     <p>150$</p>
                   </div>
                 </div>
@@ -28,10 +28,10 @@ function App() {
             <Carousel.Item>
               <div className="containerCarousel containerCarousel2">
                 <div className="homeTextBlock">
-                  <h1>Лучшее из новинок</h1>
+                  <h1>The best of new</h1>
                   <h3 className="h3">Macramé weave “Evening Tranquility”</h3>
                   <div className="price">
-                    <h3>Цена : </h3>
+                    <h3>Price : </h3>
                     <p>150$</p>
                   </div>
                 </div>
@@ -40,10 +40,10 @@ function App() {
             <Carousel.Item>
               <div className="containerCarousel containerCarousel3">
                 <div className="homeTextBlock">
-                  <h1>Хит продаж</h1>
+                  <h1>Bestseller</h1>
                   <h3 className="h3">Embroidered shawl “Oriental motifs”</h3>
                   <div className="price">
-                    <h3>Цена : </h3>
+                    <h3>Price : </h3>
                     <p>70$</p>
                   </div>
                 </div>
@@ -53,83 +53,85 @@ function App() {
         </div>
         <div className="bestSells">
           <div className="container">
-            <h1>Лучшие продажи</h1>
+            <h1>Best selling</h1>
           </div>
           <DarkCarousel />
           <div className="container">
-            <NavLink to="catalog" className="katalogButton">Перейти в каталог</NavLink>
+            <NavLink to="catalog" className="katalogButton">
+              Go to catalog
+            </NavLink>
           </div>
         </div>
         <div className="newItems">
           <div className="container">
-            <h1>Новинки</h1>
+            <h1>New</h1>
           </div>
           <DarkCarousel />
           <div className="container">
-            <NavLink to="catalog" className="katalogButton">Перейти в каталог</NavLink>
+            <NavLink to="catalog" className="katalogButton">
+              Go to catalog
+            </NavLink>
           </div>
         </div>
         <div className="littleBaner">
           <div className="container">
             <div className="littleBanerTextContent">
               <div className="number">1 + 1 = 3</div>
-              <p>Закажите два товара и получите третий в подарок</p>
-              <NavLink to="catalog" className="katalogButton">Перейти в каталог</NavLink>
+              <p>Order two products and get the third one for free</p>
+              <NavLink to="catalog" className="katalogButton">
+                Go to catalog
+              </NavLink>
             </div>
           </div>
         </div>
         <div className="whyPeopleChooseUs">
           <div className="container">
-            <h1>Почему выбирают нас</h1>
+            <h1>Why choose us</h1>
             <div className="blocks">
               <div className="block">
                 <img src="/authenticity.jpg" />
-                <h1>Лучшие</h1>
-                <p>Наш сай является лучшим в этой сфере</p>
+                <h1>best</h1>
+                <p>Our store is the best in this area</p>
               </div>
               <div className="block">
                 <img src="/sophistication.jpg" />
-                <h1>изысканность</h1>
-                <p>изысканность - наш приоретет</p>
+                <h1>sophistication</h1>
+                <p>sophistication is our priority</p>
               </div>
               <div className="block">
                 <img src="/fairPayment.jpg" />
-                <h1>справедливая оплата</h1>
-                <p>Все товары стоят справедливую цену</p>
+                <h1>fair pay</h1>
+                <p>All items are fairly priced</p>
               </div>
               <div className="block">
                 <img src="/bigAsortiment.jpg" />
-                <h1>большой асортимент</h1>
+                <h1>large assortment</h1>
                 <p>
-                  У нас самый большой выбор товаров среди подобных магазинов
+                  We have the largest selection of products among similar stores
                 </p>
               </div>
               <div className="block">
                 <img src="/deliviryAllOverTheWorld.jpg" />
-                <h1>Доставка по всему миру</h1>
-                <p>Мы предостовляем недорогую доставку по всему миру</p>
+                <h1>Worldwide delivery</h1>
+                <p>We provide low cost shipping worldwide</p>
               </div>
               <div className="block">
                 <img src="/qualityAssurance.jpg" />
-                <h1>гарантия качества</h1>
+                <h1>quality assurance</h1>
                 <p>
-                  Мы гарантируем качество наших товаров и безопасную их
-                  транспортировку
+                  We guarantee the quality of our products and their safety
+                  transportation
                 </p>
               </div>
               <div className="block">
                 <img src="/comfortToUse.jpg" />
-                <h1>лёгкое использование</h1>
-                <p>
-                  Всё легко и понятно
-                </p>
+                <h1>easy in use</h1>
+                <p>Everything is simple</p>
               </div>
               <div className="block">
                 <img src="/carryAboutNature.jpg" />
-                <h1>Забота о природе</h1>
-                <p>
-                  Все товары в магазине экологически чистые
-                </p>
+                <h1>Caring for nature</h1>
+                <p>All products in the store are environmentally friendly</p>
               </div>
             </div>
           </div>
