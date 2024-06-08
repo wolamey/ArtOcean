@@ -97,6 +97,7 @@ a.bottom:hover:after {
   max-width: 1600px;
   width: 90%;
   align-items: center;
+  overflow: hidden;
 }
 
 .nav__container__adapt{

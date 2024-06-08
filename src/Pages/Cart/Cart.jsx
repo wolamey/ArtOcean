@@ -10,11 +10,36 @@ import closeImg from "../../../public/cross.png";
 export default function Cart({ cartCounter, setCartCounter }) {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalMessage, setModalMessage] = useState("");
+    const [messageOpen, setMessageOpen] = useState(false);
 
     const handlePlaceOrderClick = () => {
-        setIsModalOpen(true);
+        if(cartCounter.length === 0){
+            handleOrderClick();
+            setMessageOpen(true);
+        }
+        else{
+            setIsModalOpen(true);
+
+        }
+        
     };
 
+    const handleOrderClick = () =>{
+        if (cartCounter.length === 0) {
+            setModalMessage("Your cart is empty");
+        
+        } else {
+            clearCart();
+            setIsModalOpen(true);
+            setModalMessage("Thank you for your order. We will contact you shortly.");
+        }
+    }
+
+    const clearCart = () => {
+        setCartCounter([]);
+        localStorage.setItem('cartCounter', JSON.stringify([]));
+    };
     const itemCounts = cartCounter.reduce((acc, item) => {
         acc[item.id] = (acc[item.id] || 0) + 1;
         return acc;
@@ -70,10 +95,22 @@ export default function Cart({ cartCounter, setCartCounter }) {
                                     </tr>
                                 ))}</div>
 
-                            <button className='order__button'>Order</button></div>
-                        <button onClick={() => setIsModalOpen(false)}><img className='closeimg' src={closeImg} alt="" /></button>
+                            <button onClick={()=>{ setMessageOpen(true); handleOrderClick(); setIsModalOpen(false)}} className='order__button'>Order</button></div>
+                        <button className='closeimg'  onClick={() => setIsModalOpen(false)}><img src={closeImg} alt="" /></button>
                     </div>
                 </div>
+            )}
+
+
+            { messageOpen &&(
+               <div  className="orderMessage"  onClick={() => setMessageOpen(false)}>
+                <div className="orderMessage__container" onClick={(event) => { event.stopPropagation() }}>
+                {modalMessage}
+                <button className='orderMessage__closeimg'  onClick={() => setMessageOpen(false)}><img src={closeImg} alt="" /></button>
+
+                </div>
+
+               </div> 
             )}
 
 

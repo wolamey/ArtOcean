@@ -89,7 +89,7 @@ export default function CatalogElement({ componentData, setLikeCount, setPopup, 
           <div onClick={() => {
             openPopup(item)
           }} className='item_catalog_element' key={item.id}>
-            <img src={item.pic} alt="" />
+            <img className='catalog_main-img' src={item.pic} alt="" />
             <div className="item_description">
               <p className="prod_name">{item.text}</p>
               <p className="prod_price">{item.price} $</p>

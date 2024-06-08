@@ -111,3 +111,12 @@
         padding: 33.857% 0 0 0;
     }
 }
+@media(max-width: 426px){
+    .catalog_top_part .shop_choice{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .catalog_top_part .shop_choice .choice {
+        padding: 18.857% 0 0 0;
+    }
+
+}

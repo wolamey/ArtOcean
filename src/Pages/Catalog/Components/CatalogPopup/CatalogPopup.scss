@@ -1,239 +1,233 @@
-button{
-    border: none;
-    outline: none;
-    background-color: white;
+button {
+  border: none;
+  outline: none;
+  background-color: white;
 }
 .menu_popup {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background-color: #000000CC !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    z-index: 1;
 
+    transition: 0.5s;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #000000cc !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 1;
 
-    .popup_container {
-        width: 684px;
-        height: 432px;
-        margin: auto;
-        background-color: #FFFFFF;
+  .popup_container {
+    transition: 0.5s;
 
-        padding: 20px;
-        position: relative;
+    max-width: 90%;
+    margin: auto;
+    background-color: #ffffff;
 
+    padding: 40px;
+    position: relative;
 
-        // transition: 0.3s ease all; 
-        .popup_top_block {
-            display: flex;
-            justify-content: space-between;
-
-            button{
-                border: none;
-                background: none;
-                outline: none;
-                width: fit-content;
-            }
-        }
-
-        .pop_name {
-            color: black;
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 48px;
-            word-wrap: break-word;
-        }
-
-        .pop_content {
-            display: flex;
-            padding: 20px 0;
-            display: flex;
-            align-items: flex-start;
-
-            img {
-                width: 220px;
-            }
-
-            .full_info {
-                padding: 0 20px;
-
-
-                ul {
-                    list-style-type: none;
-
-                    li {
-                        color: black;
-                        font-size: 12px;
-                        font-weight: 400;
-                        line-height: 15.60px;
-                        word-wrap: break-word
-                    }
-                }
-
-                .info {
-                    color: black;
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: 20.80px;
-                    word-wrap: break-word
-                }
-
-                .constituents {
-                    padding: 10px 0;
-                    color: black;
-                    font-size: 12px;
-                    font-weight: 600;
-                    line-height: 15.60px;
-                    word-wrap: break-word
-                }
-
-                .weight_calories {
-                    color: #B1B1B1;
-                    font-size: 12px;
-                    font-weight: 400;
-                    line-height: 15.60px;
-                    word-wrap: break-word
-                }
-            }
-        }
-
-        .popup_bottom_part {
-            display: flex;
-            width: 90%;
-            justify-content: space-between;
-            align-items: center;
-            position: absolute;
-            bottom: 20px;
-            .calc {
-                width: 208px;
-                height: 40px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: #ffffff;
-                align-items: center;
-                border:  1px #E6E8E7 solid;
-                font-weight: bold;
-                p{
-                    margin-bottom: 0rem;
-
-                }
-                button{
-                    width: 30%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100%;
-                    transition: 0.3s;
-                    &:hover{
-                        font-size: 27px;
-                    }
-                }
-                .menus{
-                    font-weight: bold;
-
-                    border-right:  1px #E6E8E7 solid;
-                }
-                .plus{
-                    font-weight: bold;
-
-                    border-left:  1px #E6E8E7 solid;
-                }
-            }
-
-            .add_to_cart_button {
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 16px;
-                word-wrap: break-word;
-                width: 276px;
-                height: 40px;
-                border: none;
-                outline: none;
-                color: white;
-                transition: 0.3s;
-                background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
-                &:hover{
-                    scale: 1.1;
-                    background: linear-gradient(20.18deg, #5E3928 20.13%, #E4A16F 92.93%);
-                }
-            }
-
-
-
-            .item_price {
-                color: black;
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 31.20px;
-                word-wrap: break-word
-            }
-        }
-
-
-
+    .close-button-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background: none;
+      outline: none;
+      width: fit-content;
     }
-    
-.none{
+    .popup_top_block {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pop_name {
+      color: black;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 48px;
+      word-wrap: break-word;
+    }
+
+    .pop_content {
+      display: flex;
+      padding: 40px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+
+      .pop__img-main {
+        width: 220px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .full_info {
+        padding: 0 20px;
+        .about-item-thing{
+max-width: 300px;
+font-size: 18px;
+        }
+
+
+
+        .info {
+          color: black;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20.8px;
+          word-wrap: break-word;
+        }
+
+        .constituents {
+          padding: 10px 0;
+          color: black;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 15.6px;
+          word-wrap: break-word;
+        }
+
+        .weight_calories {
+          color: #b1b1b1;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 15.6px;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .popup_bottom_part {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+ 
+      .calc {
+        width: 208px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        align-items: center;
+        border: 1px #e6e8e7 solid;
+        font-weight: bold;
+        p {
+          margin-bottom: 0rem;
+        }
+        button {
+          width: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          transition: 0.3s;
+          &:hover {
+            font-size: 27px;
+          }
+        }
+        .menus {
+          font-weight: bold;
+
+          border-right: 1px #e6e8e7 solid;
+        }
+        .plus {
+          font-weight: bold;
+
+          border-left: 1px #e6e8e7 solid;
+        }
+      }
+
+      .add_to_cart_button {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        word-wrap: break-word;
+        // width: 276px;
+        // height: 40px;
+        border: none;
+        padding: 20px 50px !important;
+        outline: none;
+        color: white;
+        transition: 0.3s;
+        background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+        &:hover {
+          scale: 1.1;
+          background: linear-gradient(20.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+        }
+      }
+
+      .item_price {
+        color: black;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31.2px;
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .none {
     opacity: 0;
     display: none;
     visibility: hidden;
+  }
 }
 
-}
-
-
-@media(max-width: 700px){
-    .menu_popup{
-        .popup_container{
-            width: 90%;
-            .pop_content{
-                img{
-                    width: 33%;
-                }
-            }
-            .popup_bottom_part{
-                .add_to_cart_button{
-                    width: 33%;
-                }
-                .calc{
-                    right: auto;
-                }
-            }
+@media (max-width: 700px) {
+  .menu_popup {
+    .popup_container {
+      width: 90%;
+      .pop_content {
+        img {
+          width: 33%;
         }
-    }
-}
-
-@media(max-width: 500px){
-    .menu_popup{
-        .popup_container{
-            height: auto;
-            .pop_name{
-                font-size: 25px;
-
-            }
-
-            .pop_content{
-                padding: 0 0 52px 0;
-                .full_info{
-                    padding: 0 10px;
-                    .info{
-                        font-size: 14px;
-                        line-height: 15.8px;
-                    }
-                }
-
-            }
-            .popup_bottom_part{
-                .add_to_cart_button{
-                    font-size: 14px;
-                }
-
-            }
+      }
+      .popup_bottom_part {
+    
+        .calc {
+          right: auto;
         }
+      }
     }
+  }
 }
 
+@media (max-width: 500px) {
+  .menu_popup {
+    .popup_container {
+        padding: 20px;
+     max-height: 90%;
+      overflow-y: scroll;
+      .pop_name {
+        font-size: 25px;
+        line-height: normal;
+        margin: 0 0 20px 0;
+      }
+
+      .pop_content {
+        padding: 0 0 30px 0;
+        flex-direction: column;
+        .pop__img-main{
+            width: 100%;
+            height: 200px;
+        }
+        .full_info {
+          padding: 0 10px;
+          .about-item-thing{
+     font-size: 14px;
+            line-height: 15.8px;
+          }
+        
+        }
+      }
+      .popup_bottom_part {
+        .add_to_cart_button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
