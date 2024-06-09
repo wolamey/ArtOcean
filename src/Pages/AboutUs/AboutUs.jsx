@@ -6,15 +6,6 @@ import operativity from "../../../public/operativity.svg";
 import quality from "../../../public/quality.svg";
 import flexibility from "../../../public/flexibility.svg";
 
-import authenticity from "../../../public/authenticity.jpg"
-import sophistication from "../../../public/sophistication.jpg"
-import fairPayment from "../../../public/fairPayment.jpg"
-import bigAsortiment from "../../../public/bigAsortiment.jpg"
-import deliviryAllOverTheWorld from "../../../public/deliviryAllOverTheWorld.jpg"
-import qualityAssurance from "../../../public/qualityAssurance.jpg"
-import comfortToUse from "../../../public/comfortToUse.jpg"
-import carryAboutNature from "../../../public/carryAboutNature.jpg"
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import BlockMaker from './Components/BlockMaker/BlockMaker';
@@ -69,16 +60,53 @@ function App() {
         </div>
         <div className="whyPeopleChooseUs">
           <div className="container">
-            <h1>Почему выбирают нас</h1>
+            <h1>Why choose us</h1>
             <div className="blocks">
-              <BlockMaker i={authenticity}/>
-              <BlockMaker i={sophistication}/>
-              <BlockMaker i={fairPayment}/>
-              <BlockMaker i={bigAsortiment}/>
-              <BlockMaker i={deliviryAllOverTheWorld}/>
-              <BlockMaker i={qualityAssurance}/>
-              <BlockMaker i={comfortToUse}/>
-              <BlockMaker i={carryAboutNature}/>
+              <div className="block">
+                <img src="/authenticity.jpg" />
+                <h1>best</h1>
+                <p>Our store is the best in this area</p>
+              </div>
+              <div className="block">
+                <img src="/sophistication.jpg" />
+                <h1>sophistication</h1>
+                <p>sophistication is our priority</p>
+              </div>
+              <div className="block">
+                <img src="/fairPayment.jpg" />
+                <h1>fair pay</h1>
+                <p>All items are fairly priced</p>
+              </div>
+              <div className="block">
+                <img src="/bigAsortiment.jpg" />
+                <h1>large assortment</h1>
+                <p>
+                  We have the largest selection of products among similar stores
+                </p>
+              </div>
+              <div className="block">
+                <img src="/deliviryAllOverTheWorld.jpg" />
+                <h1>Worldwide delivery</h1>
+                <p>We provide low cost shipping worldwide</p>
+              </div>
+              <div className="block">
+                <img src="/qualityAssurance.jpg" />
+                <h1>quality assurance</h1>
+                <p>
+                  We guarantee the quality of our products and their safety
+                  transportation
+                </p>
+              </div>
+              <div className="block">
+                <img src="/comfortToUse.jpg" />
+                <h1>easy in use</h1>
+                <p>Everything is simple</p>
+              </div>
+              <div className="block">
+                <img src="/carryAboutNature.jpg" />
+                <h1>Caring for nature</h1>
+                <p>All products in the store are environmentally friendly</p>
+              </div>
             </div>
           </div>
         </div>

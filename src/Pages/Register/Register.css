@@ -3,6 +3,22 @@
   max-width: 1600px;
   margin: auto;
 }
+.register_but {
+  padding: 12px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  transition: all 0.1s;
+  cursor: pointer;
+  color: #ffffff;
+}
+.register_but {
+  background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+  transition-duration: 0.2s;
+}
+.register_but:hover {
+  background: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+  transform: scale(1.015);
+}
 .register {
   border: 1px solid #a1a1a100;
   background-color: #ffffff;

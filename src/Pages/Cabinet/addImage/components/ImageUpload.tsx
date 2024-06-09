@@ -46,7 +46,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
     const handleFile = async (e: any) => {
       const file = e.currentTarget.files[0];
       if (props.sizeLimit && file.size > props.sizeLimit) {
-        setStatusMessage("Файл слишком большой.");
+        setStatusMessage("The file is too large.");
       } else {
         setFileName(file.name);
         getBase64(file);
@@ -64,7 +64,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
       props.setCroppedImage(croppedImage);
       props.setOriginalImage(fileInput);
 
-      setStatusMessage("Картинка сохранена успешно");
+      setStatusMessage("The image was saved successfully");
     };
 
     const dropHandler = (ev: any) => {
@@ -83,13 +83,13 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
           ) {
             const file = item.getAsFile();
             if (props.sizeLimit && file.size > props.sizeLimit) {
-              setStatusMessage("Файл слишком большой.");
+              setStatusMessage("The file is too large.");
             } else {
               setFileName(file.name);
               getBase64(file);
             }
           } else {
-            setStatusMessage("Неправильный тип данных.");
+            setStatusMessage("Invalid data type.");
           }
         });
       } else {
@@ -135,11 +135,11 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
       <div>
         <div className="save save_off">
           <img className="no_save_img" src="/cabinet/save.svg" alt="" />
-          <p className="save_p">Данные сохраненны</p>
+          <p className="save_p">Data saved</p>
         </div>
         <div className="no_save save_off">
           <img className="no_save_img" src="/cabinet/noSave.svg" alt="" />
-          <p className="no_save_p">Данные не сохраненны</p>
+          <p className="no_save_p">Data not saved</p>
         </div>
         {croppedImage && (
           <div id="img-display">
@@ -162,7 +162,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
             />
             <div id="options-row" style={{ width: props.width || 250 + "px" }}>
               <button id="edit-button" onClick={showEditor}>
-                Изменить
+                Change
               </button>
               <button
                 id="save-button"
@@ -171,7 +171,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
                 }}
                 onClick={() => saveImage()}
               >
-                Сохранить
+                Save
               </button>
             </div>
           </div>
@@ -187,7 +187,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
         >
           <img src="/cabinet/downloud.svg" alt="" />
           <p className="downloud_photo_p" id="drop-label">
-            Загрузить фото
+            Upload photo
           </p>
           <p>(jpeg, png)</p>
           <input
@@ -216,7 +216,7 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
           </div>
           <div id="editor-button-row">
             <button id="crop-button" onClick={onCrop}>
-              обрезать
+              trim
             </button>
           </div>
         </dialog>
@@ -225,5 +225,3 @@ const ImageUpload = (props: IMGProps, { onChange }) =>
   };
 
 export default ImageUpload;
-
-//<img src={fileInput} />
