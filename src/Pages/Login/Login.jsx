@@ -23,8 +23,9 @@ export default function Login() {
   }
   return (
     <div className="All_login">
+
       <div className="login">
-        <p className="login_p">ENTRANCE</p>
+        <p className="login_p">ВХОД</p>
         <form className="login_inputs" onSubmit={getLoginData}>
           <input
             className="input_login"
@@ -37,18 +38,18 @@ export default function Login() {
           <input
             className="input_login"
             required
-            placeholder="Password"
+            placeholder="Пароль"
             type="password"
             value={pasvord}
             onChange={(e) => setPasvord(e.target.value)}
           />
-          {error && <p className="error_login">Wrong login or password</p>}
-          <input className="input_login login_but" type="submit" value="entrance" />
+          {error && <p className="error_login">Не верный логин или пароль</p>}
+          <input className="input_login" type="submit" value="Вход" />
         </form>
         <div className="register_div">
-          <p className="register_div_p">Don't have an account?</p>
+          <p className="register_div_p">Нет аккаунта?</p>
           <NavLink className="register_link" to="/register">
-            register
+            зарегистрироваться
           </NavLink>
         </div>
       </div>

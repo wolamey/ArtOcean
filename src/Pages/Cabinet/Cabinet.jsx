@@ -90,8 +90,12 @@ export default function Cabinet(item) {
                 <input type="submit" value="${item.key}" class="key key${i}">
                   <input type="submit" value="${item.payCart}" class="card_num">
                   <div class="card_cab_div">
-                    <input type="submit" value="дата: ${item.payDate}" class="card_date">
-                    <input type="submit" value="CVV: ${item.CVV}" class="card_cvv">
+                    <input type="submit" value="дата: ${
+                      item.payDate
+                    }" class="card_date">
+                    <input type="submit" value="CVV: ${
+                      item.CVV
+                    }" class="card_cvv">
                   </div>
               </div>
               `;
@@ -132,38 +136,35 @@ export default function Cabinet(item) {
           if (card_date.value.length == 5) {
             if (card_cvv.value.length == 3) {
               const template = `
-            <p class="error_div_p_successful">Data saved successfully</p>
+            <p class="error_div_p_successful">Данные сохранены успешно</p>
             `;
               error.innerHTML = template;
               conteiner_error.append(error);
               editDataBasePay();
             } else {
               const template = `
-          <p>
-          Incorrect CVV</p>
+          <p>Неправильный CVV</p>
           `;
               error.innerHTML = template;
               conteiner_error.append(error);
             }
           } else {
             const template = `
-        <p>
-        Incorrect date</p>
+        <p>Неправильная дата</p>
         `;
             error.innerHTML = template;
             conteiner_error.append(error);
           }
         } else {
           const template = `
-      <p>
-      Wrong card number</p>
+      <p>Неправильный номер карты</p>
       `;
           error.innerHTML = template;
           conteiner_error.append(error);
         }
       } else {
         const template = `
-      <p>Enter all details</p>
+      <p>Введите все данные</p>
       `;
         error.innerHTML = template;
         conteiner_error.append(error);
@@ -196,8 +197,7 @@ export default function Cabinet(item) {
         //
       } else {
         const template = `
-      <p>
-      Enter all details</p>
+      <p>Введите все данные</p>
       `;
         error.innerHTML = template;
         conteiner_error.append(error);
@@ -328,19 +328,23 @@ export default function Cabinet(item) {
   return (
     <div>
       <div className="All">
-        <p className="p_big">PERSONAL AREA</p>
+        <p className="p_big">ЛИЧНЫЙ КАБИНЕТ</p>
         <div className="All_but">
           <div onClick={signOutUser} className="div_but_1 div_but">
             <img className="img_but" src="/cabinet/man.svg" alt="" />
-            <p className="p_but">Log from account</p>
+            <p className="p_but">Выйти из аккаунта</p>
           </div>
           <div className="div_but_2 div_but">
             <img className="img_but" src="/cabinet/busket.svg" alt="" />
-            <p className="p_but">Orders</p>
+            <p className="p_but">Заказы</p>
           </div>
           <div className="div_but_3 div_but">
             <img className="img_but" src="/cabinet/heart.svg" alt="" />
-            <p className="p_but">Wishlist</p>
+            <p className="p_but">Список желаемого</p>
+          </div>
+          <div onClick={signOutUser} className="div_but_4">
+            <img className="img_but" src="/cabinet/exit.svg" alt="" />
+            <p className="p_but_4">Выйти</p>
           </div>
         </div>
         <div className="All_akk">
@@ -353,7 +357,7 @@ export default function Cabinet(item) {
                   setCroppedImage={setCroppedImage}
                 />
               </div>
-              <p className="p_margin_0">Good afternoon</p>
+              <p className="p_margin_0">Добрый день</p>
               <p className="big_text_cabinet">
                 {iLastName} {iName}
               </p>
@@ -363,28 +367,28 @@ export default function Cabinet(item) {
             <div className="form">
               <input
                 className="input_db telephone"
-                placeholder="Phone number"
+                placeholder="Номер телефона"
                 defaultValue={iNumber}
                 onChange={(event) => setINumber(event.target.value)}
                 type="text"
               />
               <input
                 className="input_db country"
-                placeholder="Country"
+                placeholder="Страна"
                 defaultValue={iCountry}
                 onChange={(event) => setICountry(event.target.value)}
                 type="text"
               />
               <input
                 className="input_db city"
-                placeholder="City"
+                placeholder="Город"
                 defaultValue={iCity}
                 onChange={(event) => setICity(event.target.value)}
                 type="text"
               />
               <input
                 className="input_db street"
-                placeholder="Street"
+                placeholder="Улица"
                 defaultValue={iStreet}
                 onChange={(event) => setIStreet(event.target.value)}
                 type="text"
@@ -396,7 +400,7 @@ export default function Cabinet(item) {
                 }
                 className="button_all button_all_2"
               >
-                <p className="p_margin_0">Save</p>
+                <p className="p_margin_0">Сохранить</p>
               </div>
               <div className="conteiner_error_div2">
                 <div className="error_div2"></div>
@@ -404,7 +408,7 @@ export default function Cabinet(item) {
             </div>
           </div>
           <div>
-            <p className="big_text_cabinet">Account</p>
+            <p className="big_text_cabinet">Учётная запись</p>
             <div>
               <input
                 className="input_db e-mail"
@@ -413,7 +417,7 @@ export default function Cabinet(item) {
                 type="text"
               />
               <input
-                placeholder="Password"
+                placeholder="Пароль"
                 className="input_db"
                 value={iPassword}
                 type={type ? "password" : "text"}
@@ -427,10 +431,10 @@ export default function Cabinet(item) {
             </div>
           </div>
           <div>
-            <p className="big_text_cabinet">Payment system</p>
+            <p className="big_text_cabinet">Платежная система</p>
             <div>
               <input
-                placeholder="Card number"
+                placeholder="Номер карты"
                 className="input_db input_card_num"
                 onChange={(event) => setPayCart(event.target.value)}
                 type="number"
@@ -442,7 +446,7 @@ export default function Cabinet(item) {
               />
               <div>
                 <input
-                  placeholder="Date"
+                  placeholder="Дата"
                   className="input_db input_card_date"
                   onChange={(event) => setPayDate(event.target.value)}
                   type="text"
@@ -463,7 +467,7 @@ export default function Cabinet(item) {
             onClick={() => setHelp(help + 1)}
             className="button_all button_all_2"
           >
-            <p className="p_margin_0">Save</p>
+            <p className="p_margin_0">Сохранить</p>
           </div>
           <div className="All_cards"></div>
         </div>

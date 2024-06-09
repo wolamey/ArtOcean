@@ -60,7 +60,7 @@ export default function Register() {
       city: city,
     };
     await ref.set(dataWithKey);
-    userDB(newKey);
+    userDB(newKey)
   }
 
   // function writeUserData(userId, email, telephone) {
@@ -73,10 +73,10 @@ export default function Register() {
   //   });
   // }
 
-  async function userDB(newKey) {
+  async function userDB(newKey){
     const onjectUser = {
       key: newKey,
-      email: email,
+      email: email
     };
     let json = JSON.stringify(onjectUser);
     const responce = await fetch("http://localhost:5173/comments", {
@@ -85,6 +85,8 @@ export default function Register() {
       body: JSON.stringify(onjectUser),
     });
   }
+  
+  
 
   function getRegisterData(event) {
     event.preventDefault();
@@ -105,34 +107,34 @@ export default function Register() {
         })
         .catch((e) => console.log(e));
     }
-    addUser();
+    addUser()
   }
   return (
     <div className="All_register">
       <div className="register">
-        <p className="register_p">REGISTRATION</p>
+        <p className="register_p">РЕГИСТРАЦИЯ</p>
         <form
           className="register_inputs"
           onSubmit={
             // () => {
             // addUser();
             getRegisterData
-            // ;}
-          }
+          // ;}
+        }
         >
           <input
             className="input_register"
             required
             value={firstName}
             type="text"
-            placeholder="Name"
+            placeholder="Имя"
             onChange={(e) => setFirstName(e.target.value)}
           />
           <input
             className="input_register"
             required
             value={lastName}
-            placeholder="Surname"
+            placeholder="Фамилия"
             type="text"
             onChange={(e) => setLastName(e.target.value)}
           />
@@ -140,7 +142,7 @@ export default function Register() {
             className="input_register"
             required
             value={telephone}
-            placeholder="Phone number"
+            placeholder="Номер телефона"
             type="text"
             onChange={(e) => setTelephone(e.target.value)}
           />
@@ -156,7 +158,7 @@ export default function Register() {
             className="input_register"
             required
             value={country}
-            placeholder="Country"
+            placeholder="Страна"
             type="text"
             onChange={(e) => setСountry(e.target.value)}
           />
@@ -164,7 +166,7 @@ export default function Register() {
             className="input_register"
             required
             value={city}
-            placeholder="City"
+            placeholder="Город"
             type="text"
             onChange={(e) => setСity(e.target.value)}
           />
@@ -172,7 +174,7 @@ export default function Register() {
             className="input_register"
             required
             value={street}
-            placeholder="Street"
+            placeholder="Улица"
             type="text"
             onChange={(e) => setStreet(e.target.value)}
           />
@@ -180,7 +182,7 @@ export default function Register() {
             className="input_register"
             required
             value={pasvord}
-            placeholder="Password"
+            placeholder="Пароль"
             type="password"
             onChange={(e) => setPasvord(e.target.value)}
           />
@@ -188,21 +190,17 @@ export default function Register() {
             className="input_register"
             required
             value={resPasvord}
-            placeholder="Retype password"
+            placeholder="Павторите пароль"
             type="password"
             onChange={(e) => setResPasvord(e.target.value)}
           />
-          <input
-            className="input_register register_but"
-            type="submit"
-            value="Registration"
-          />
+          <input className="input_register" type="submit" value="Регистрация" />
         </form>
-        {error && <p>Password mismatch</p>}
+        {error && <p>Пароли не совпадают</p>}
         <div className="login_div">
-          <p className="login_div_p">Have an account?</p>
+          <p className="login_div_p">Есть аккаунт?</p>
           <NavLink className="login_link" to="/login">
-            entrance
+            войти
           </NavLink>
         </div>
       </div>
