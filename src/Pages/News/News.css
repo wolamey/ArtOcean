@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1600px;
+  width: 90%;
+  margin: auto;
+}
+
+.way {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 32px;
+}
+
+.pageTitle {
+  margin: 23px 0 31px 0;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.mainNewsBlock {
+  display: grid;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));  gap: 34px;
+
+  margin: 0 0 50px 0;
+}
+
+@media (max-width: 425px) {
+  .way {
+    font-size: 16px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+}

@@ -28,8 +28,8 @@ export default function Nav(likeCount, cartCounter) {
         <NavLink to="aboutus" className="nav_p a">
           About us
         </NavLink>
-        <NavLink to="#" className="nav_p a">
-          Sell
+        <NavLink to="news" className="nav_p a">
+          News
         </NavLink>
       </div>
       <div className="nav_2">

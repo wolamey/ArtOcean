@@ -24,7 +24,8 @@ export default function Header({likeCount,cartCounter}) {
 
 
                             <NavLink onClick={()=>setPage('aboutus')} to='/aboutus'>About Us</NavLink>
-                            <a href="#">Sell the product</a>
+                            <NavLink onClick={()=>setPage('news')} to='/news'>News</NavLink>
+
                         </div>
                     </div></div>
                 <div className="head_container_right">

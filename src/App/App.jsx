@@ -25,6 +25,7 @@ import Cart from "../Pages/Cart/Cart";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import Policy from "../Pages/Policy/Policy";
 import Register from "../Pages/Register/Register";
+import News from '../Pages/News/News'
 import Login from "../Pages/Login/Login";
 import Favourites from "../Pages/Favourites/Favourites";
 import Header from "../Components/Header/Header";
@@ -174,7 +175,9 @@ function App() {
             />
           }
         />
-
+        <Route path='/news' element={
+          <News />
+          } />
         <Route
           path="/login"
           element={
