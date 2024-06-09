@@ -206,7 +206,7 @@ button {
   align-items: center;
   width: 326px;
   font-size: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 .homeTextBlock .price h3 {
@@ -361,6 +361,9 @@ button {
   .secondCard,
   .thirdCard {
     /* width: 240px !important; */
+  }
+  .homeTextBlock .price{
+    margin-bottom: 0px;
   }
 
   .block {

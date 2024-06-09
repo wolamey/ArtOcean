@@ -40,6 +40,9 @@ a:hover{
   background: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
   padding: 80px 0;
 }
+.footer_up_button{
+  width: 50px;
+}
 
 .footer__container {
   width: 90%;

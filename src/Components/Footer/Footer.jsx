@@ -22,50 +22,65 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footer__container">
-        <div onClick={() => setHelp(help + 1)} className="footer_up_button none">
-          <p className="footer_up_p">ВВЕРХ</p>
+        <div
+          onClick={() => setHelp(help + 1)}
+          className="footer_up_button none"
+        >
+          <p className="footer_up_p">UP</p>
         </div>
         <div className="footer_div">
           <NavLink to="/">
             <img className="img_logo" src="/cabinet/logo.png" alt="" />
           </NavLink>
           {/* <NavLink to="policy"> */}
-            <p className="footer_p">© 2021 “Copper Pro” Все права защищенны</p>
+          <p className="footer_p">© 2021 “Copper Pro” All rights reserved</p>
           {/* </NavLink> */}
-          <NavLink className='footer__a' to="policy">
-            <p className="footer_p a">Политика конфиденциальности</p>
+          <NavLink className="footer__a" to="policy">
+            <p className="footer_p a">Privacy Policy</p>
           </NavLink>
         </div>
         <div className="footer_alt">
           <div className="footer_div">
-            <p className="footer_p_top a">Навигация</p>
+            <p className="footer_p_top a">Navigation</p>
             <NavLink to="">
-              <p className="footer_p a">Главная</p>
+              <p className="footer_p a">Home</p>
             </NavLink>
             <NavLink to="catalog">
-              <p className="footer_p a">Каталог</p>
+              <p className="footer_p a">Catalog</p>
             </NavLink>
             <NavLink to="aboutus">
-              <p className="footer_p a">О нас</p>
+              <p className="footer_p a">About us</p>
             </NavLink>
             <NavLink to="#">
-              <p className="footer_p a">Продажа</p>
+              <p className="footer_p a">Sale</p>
             </NavLink>
           </div>
           <div className="footer_div">
-            <p className="footer_p_top">Каталог</p>
+            <p className="footer_p_top">Catalog</p>
             {/* <NavLink to="catalog"> */}
-              <a href="#" className="footer_p a">Для эфирных масел</a>
-              <a href="#" className="footer_p a">Для гидролатов</a>
-              <a href="#" className="footer_p a">Медная посуда</a>
-              <a href="#" className="footer_p a">Аксессуары из меди</a>
-              <a href="#" className="footer_p a">Индивидуальный заказ</a>
-              <a href="#" className="footer_p a">Скидки и предложения</a>
+            <a href="#" className="footer_p a">
+              For essential oils
+            </a>
+            <a href="#" className="footer_p a">
+              For hydrosols
+            </a>
+            <a href="#" className="footer_p a">
+              Copper utensils
+            </a>
+            <a href="#" className="footer_p a">
+              Copper accessories
+            </a>
+            <a href="#" className="footer_p a">
+              Individual order
+            </a>
+            <a href="#" className="footer_p a">
+              Discounts and offers
+            </a>
             {/* </NavLink> */}
           </div>
           <div className="footer_div">
-            <p className="footer_p_top">Контакты</p>
-            <p className="footer_p_alt">Первомайская 8, Минск, Беларусь</p>
+            <p className="footer_p_top">Contacts</p>
+            <p className="footer_p_alt">Pervomayskaya 8, Minsk, Belarus</p>
             <p className="footer_p_alt">+375 (33) 333 33 33</p>
             <p className="footer_p_alt">salamen@gmail.com</p>
             <div className="footer_div_alt">
@@ -87,6 +102,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div></div>
+      </div>
+    </div>
   );
 }
