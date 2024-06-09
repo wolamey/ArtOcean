@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nBlock {
+    max-width: 100%;
+    width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.imageBlock {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.nImage {
+    width: 100%;
+    height: auto;
+}
+
+.nTitleInsideImage {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(0deg, #072C26, transparent);
+    padding: 100px 0 24px 42px;
+}
+
+.nParagraph {
+    margin: 26px 0 20px 0;
+    font-size: 14px;
+}
+
+.continueReading {
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #A36F4D, #E4A16F);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+@media (max-width: 1340px) {
+    /* .nBlock {
+        max-width: 574px;
+    } */
+}
+
+@media (max-width: 1240px) {
+    /* .nBlock {
+        max-width: 529px;
+    } */
+}
+
+@media (max-width: 1140px) {
+    /* .nBlock{
+        max-width: 484px;
+    } */
+}
+
+@media (max-width: 1040px) {
+    /* .nBlock{
+        max-width: 439px;
+    } */
+
+    .nTitleInsideImage {
+        padding: 50px 0 24px 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* .nBlock{
+        max-width: 431px;
+    } */
+}
+
+@media (max-width: 940px) {
+    /* .nBlock{
+        max-width: 394px;
+    } */
+
+    .nTitleInsideImage {
+        padding: 30px 0 24px 42px;
+    }
+
+    .nTitleInsideImage, .nParagraph {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 840px) {
+    /* .nBlock{
+        max-width: 100%;
+    } */
+}
+
+@media (max-width: 425px) {
+    .nBlock{
+        /* max-width: 251px; */
+        margin: auto;
+    }
+    .mainNewsBlock{
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+}
+
+@media (max-width: 375px) {
+    .nTitleInsideImage {
+        padding: 20px 0 15px 20px;
+    }
+}
