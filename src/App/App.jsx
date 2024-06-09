@@ -11,6 +11,7 @@ import Cabinet from '../Pages/Cabinet/Cabinet'
 import Cart from '../Pages/Cart/Cart'
 import AboutUs from '../Pages/AboutUs/AboutUs'
 import Header from '../Components/Header/Header'
+import News from '../Pages/News/News'
 
 
 function App() {
@@ -83,6 +84,10 @@ function App() {
 
           <Route path='/aboutus' element={
             <AboutUs />
+          } />
+
+          <Route path='/news' element={
+          <News />
           } />
 
         </Routes>

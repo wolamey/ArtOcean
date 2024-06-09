@@ -39,7 +39,7 @@ console.log(count);
       </div>
 
       <div className="nav_1">
-        <NavLink to="/">
+        <NavLink to="/"></NavLink>
         <NavLink to="home">
           <img className="img_logo" src="/cabinet/logo.png" alt="" />
         </NavLink>
@@ -49,8 +49,8 @@ console.log(count);
         <NavLink to="aboutus" className="nav_p">
           О нас
         </NavLink>
-        <NavLink to="#" className="nav_p">
-          Продажа
+        <NavLink to="news" className="nav_p">
+          News
         </NavLink>
         <div
           onClick={() => setMenu(menu + 1)}
@@ -61,7 +61,7 @@ console.log(count);
         </div>
       </div>
       <div className="nav_2">
-        <NavLink to="#" className="nav_div">
+        <NavLink to="favourites" className="nav_div">
           <img className="nav_img" src="/cabinet/heart_nav.svg" alt="" />
         </NavLink>
         <NavLink to="cabinet" className="nav_div">
@@ -73,5 +73,5 @@ console.log(count);
         </NavLink>
       </div>
     </div>
-  );
+  )
 }

@@ -36,6 +36,7 @@ function App() {
                     <p>4 906 грн</p>
                   </div>
                   <button>Купить</button>
+                  <button className='toTheBascket'>В корзину</button>
                 </div>
               </div>
             </Carousel.Item>
@@ -49,6 +50,7 @@ function App() {
                     <p>4 906 грн</p>
                   </div>
                   <button>Купить</button>
+                  <button className='toTheBascket'>В корзину</button>
                 </div>
               </div>
             </Carousel.Item>
@@ -62,6 +64,7 @@ function App() {
                     <p>4 906 грн</p>
                   </div>
                   <button>Купить</button>
+                  <button className='toTheBascket'>В корзину</button>
                 </div>
               </div>
               </Carousel.Item>
@@ -120,11 +123,6 @@ function App() {
               <button className='katalogButton'>Перейти в каталог</button>
             </div>
           </div>
-        </div>
-        <div className="weRecomend">
-          <div className="container"><h1>Мы рекомендуем</h1></div>
-          <DarkCarousel/>
-          <div className="container"><button className='katalogButton'>Перейти в каталог</button></div>
         </div>
         <div className="whyPeopleChooseUs">
           <div className="container">

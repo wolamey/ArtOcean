@@ -45,7 +45,7 @@ export default function Header({likeCount,cartCounter}) {
                     <p>{cartCounter.length}</p>
 
                         <img src={cartIcon} alt="" />
-                    </div>                        
+                        </div>
                     </NavLink>
 
                 </div>

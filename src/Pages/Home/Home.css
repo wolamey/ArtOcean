@@ -7,6 +7,11 @@
   font-family: 'Montserrat';
 }
 
+.carousel-indicators button, .block button {
+  margin-top: 0px;
+  padding: 0px 0px !important;
+}
+
 .container {
   max-width: 1600px !important;
   width: 90% !important;
@@ -212,12 +217,16 @@ button {
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    width: 327px;
+    width: 300px;
+  }
+
+  .toTheBascket {
+    margin-left: 24px;
   }
 
 @media (max-width: 1340px) {
   .firstBlock .carousel {
-    height: 590px !important;
+    height: 665px !important;
   }
 
   .carousel {
@@ -333,12 +342,16 @@ button {
 }
 
 @media (max-width: 840px) {
+  .toTheBascket {
+    margin: 20px 0 0 0;
+  }
+
   .shoping_choice {
     height: 350px;
   }
 
   .firstBlock .carousel {
-    height: 500px !important;
+    height: 570px !important;
   }
 
   .carousel {
@@ -429,6 +442,10 @@ button {
     height: 240px;
   }
 
+  .firstBlock .carousel {
+    height: 630px !important;
+  }
+
   .carousel {
     height: 280px !important;
   }
@@ -439,6 +456,10 @@ button {
 }
 
 @media (max-width: 425px) {
+  .toTheBascket {
+    display: block;
+  }
+
   .shoping_choice {
     height: 640px;
     flex-direction: column;
@@ -453,7 +474,7 @@ button {
   }
 
   .firstBlock .carousel {
-    height: 350px !important;
+    height: 430px !important;
     margin-top: 30px !important;
   }
 
@@ -510,7 +531,7 @@ button {
   }
 
   .main .homeTextBlock button {
-    width: 150px;
+    width: 200px;
   }
 
   .main .ourProducts .katalogButton, .main .bestSells .katalogButton, .main .newItems .katalogButton, .main .weRecomend .katalogButton, .main .whyPeopleChooseUs .mainButtonInBlock .katalogButton {
