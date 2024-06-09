@@ -26,22 +26,22 @@ function App() {
       <div className="main">
         <div className="firstBlock_aboutUs">
           <div className="container">
-            <p>Главная / О нас</p>
+            <p>Home / About us</p>
             <div className="textBlock_aboutUs">
-              <h1>О нас</h1>
-              <h3>Мы любим все, что сделно своими руками</h3>
-              <p>Директор фирмы</p>
+              <h1>About us</h1>
+              <h3>We like everysthing, that made by hands</h3>
+              <p>Director of the firm</p>
             </div>
           </div>
         </div>
         <div className="container">
           <div className="ourClients">
             <div className="textBlock">
-              <h1>Наши клиенты</h1>
-              <p>Мы требовательны к себе, чтобы каждый день становится лучше для наших клиентов и находить лучшие решения для каждого из них</p>
+              <h1>Our clients</h1>
+              <p>We are demanding of ourselves so that every day we become better for our clients and find the best solutions for each of them</p>
             </div>
             <div className="counterOfClients">
-              <h1>Счетчик клиентов</h1>
+              <h1>Clients counter</h1>
               <p>12 346</p>
             </div>
           </div>
@@ -49,8 +49,8 @@ function App() {
         <div className="ourGeography">
           <div className="container">
             <div className="textBlock">
-              <h1>Наша география</h1>
-              <p>Наше производство находится в Украине, но клиенты из более чем 50 стран радуются товарам, приобретенным в нащем магазине.</p>
+              <h1>Our geography</h1>
+              <p>Our production is located in Ukraine, but customers from more than 50 countries enjoy the goods purchased in our store.</p>
             </div>
           </div>
         </div>
@@ -58,18 +58,18 @@ function App() {
           <div className="ourValues">
             <img className='mainImg' src={image_ourValues} />
             <div className="textBlock">
-            <h1>Наши ценности</h1>
+            <h1>Our values</h1>
               <ul>
-                <li> <img src={operativity}/> Оперативность</li>
-                <li className='second' > <img src={quality}/> Качественный товар и сервис</li>
-                <li className='third' > <img src={flexibility}/> Гибкость</li>
+                <li> <img src={operativity}/> Operativity</li>
+                <li className='second' > <img src={quality}/> Quality product and service</li>
+                <li className='third' > <img src={flexibility}/> Flexiblity</li>
               </ul>
             </div>
           </div>
         </div>
         <div className="whyPeopleChooseUs">
           <div className="container">
-            <h1>Почему выбирают нас</h1>
+            <h1>Why people choose us</h1>
             <div className="blocks">
               <BlockMaker i={authenticity}/>
               <BlockMaker i={sophistication}/>
